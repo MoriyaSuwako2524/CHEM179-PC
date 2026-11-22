@@ -1,0 +1,228 @@
+{
+ "machine": {
+  "cpu_model": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "numpy": "2.2.6",
+  "hostname": "n183.cluster",
+  "threads_env": {
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "SLURM_CPUS_PER_TASK": "1"
+  },
+  "lscpu": "Architecture:          x86_64\nCPU op-mode(s):        32-bit, 64-bit\nByte Order:            Little Endian\nCPU(s):                32\nOn-line CPU(s) list:   0-31\nThread(s) per core:    1\nCore(s) per socket:    16\nSocket(s):             2\nNUMA node(s):          2\nVendor ID:             GenuineIntel\nCPU family:            6\nModel:                 85\nModel name:            Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz\nStepping:              7\nCPU MHz:               2901.000\nCPU max MHz:           2901.0000\nCPU min MHz:           1200.0000\nBogoMIPS:              5800.00\nVirtualization:        VT-x\nL1d cache:             32K\nL1i cache:             32K\nL2 cache:              1024K\nL3 cache:              22528K\nNUMA node0 CPU(s):     0-15\nNUMA node1 CPU(s):     16-31\nFlags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities\n"
+ },
+ "records": [
+  {
+   "variant": "sym8_reuse_strict",
+   "backend": "rust",
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531263,
+   "e_ref": -76.01050499531259,
+   "abs_err": 4.263256414560601e-14,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 0.13321169093251228,
+   "jk_s": 0.002001331187784672,
+   "jk_calls": 13,
+   "stv_s": 0.2233920251019299,
+   "scf_wall_s": 1.0412369361147285,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.2233920251019299
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.13321169093251228
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.40770010370761156
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.1703292210586369
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.002001331187784672
+    }
+   },
+   "eri_stats": {
+    "computed": 18145,
+    "screened": 0
+   }
+  },
+  {
+   "variant": "sym8_reuse_strict",
+   "backend": "rust",
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398206573491,
+   "e_ref": -56.18398206573501,
+   "abs_err": 9.947598300641403e-14,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 0.14660556404851377,
+   "jk_s": 0.002712625078856945,
+   "jk_calls": 13,
+   "stv_s": 0.21334854513406754,
+   "scf_wall_s": 1.3993975068442523,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.21334854513406754
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.14660556404851377
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.7517498095985502
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.18310859869234264
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.002712625078856945
+    }
+   },
+   "eri_stats": {
+    "computed": 26796,
+    "screened": 0
+   }
+  },
+  {
+   "variant": "sym8_reuse_strict",
+   "backend": "rust",
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195093226548195,
+   "e_ref": -40.195093226547954,
+   "abs_err": 2.4158453015843406e-13,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 0.1979666471015662,
+   "jk_s": 0.003494096687063575,
+   "jk_calls": 12,
+   "stv_s": 0.2652710780967027,
+   "scf_wall_s": 1.7800625849049538,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.2652710780967027
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.1979666471015662
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.9571194760501385
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.22046539094299078
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.003494096687063575
+    }
+   },
+   "eri_stats": {
+    "computed": 38226,
+    "screened": 0
+   }
+  },
+  {
+   "variant": "sym8_reuse_strict",
+   "backend": "rust",
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463234,
+   "e_ref": -78.03074400463223,
+   "abs_err": 1.1368683772161603e-13,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 1.6999565279111266,
+   "jk_s": 0.0270863794721663,
+   "jk_calls": 12,
+   "stv_s": 1.0563411470502615,
+   "scf_wall_s": 6.8825868929270655,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 1.0563411470502615
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6999565279111266
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 2.8507955360691994
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.9686722829937935
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.0270863794721663
+    }
+   },
+   "eri_stats": {
+    "computed": 274911,
+    "screened": 0
+   }
+  },
+  {
+   "variant": "sym8_reuse_strict",
+   "backend": "rust",
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70216365002463,
+   "e_ref": -230.70216365002167,
+   "abs_err": 2.9558577807620168e-12,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 90.88770869700238,
+   "jk_s": 1.9578235447406769,
+   "jk_calls": 13,
+   "stv_s": 14.194681171094999,
+   "scf_wall_s": 204.25329140597023,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 14.194681171094999
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 90.88770869700238
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 75.27647446282208
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 19.654505129437894
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 1.9578235447406769
+    }
+   },
+   "eri_stats": {
+    "computed": 13621436,
+    "screened": 178195
+   }
+  }
+ ]
+}

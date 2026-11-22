@@ -1,0 +1,4 @@
+==PROF== Connected to process 2888926 (/opt/oscer/software-el9/Python/3.11.3-GCCcore-12.3.0/bin/python3.11)
+==ERROR== ERR_NVGPUCTRPERM - The user does not have permission to access NVIDIA GPU Performance Counters on the target device 0. For instructions on enabling permissions and to get more information see https://developer.nvidia.com/ERR_NVGPUCTRPERM
+{'precision': 'fp32', 'nbf': 38, 'npair': 741, 'nprim_pairs': 2694, 'quartets_total': 274911, 'quartets_computed': 274911, 'quartets_screened': 0, 'block': 128, 'order': 'sorted', 'compile_or_load_s': 0.506591709330678, 'host_tables_s': 0.0006733406335115433, 'h2d_alloc_s': 0.0022968320846557615, 'pair_kernel_s': 0.0001894399970769882, 'schwarz_kernel_s': 0.009064448356628419, 'quartet_kernel_s': 0.009339903831481934, 'device_total_s': 0.020890623092651366, 'G_bytes': 8340544}
+==PROF== Disconnected from process 2888926

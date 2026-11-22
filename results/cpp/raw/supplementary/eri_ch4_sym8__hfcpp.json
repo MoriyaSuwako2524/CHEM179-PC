@@ -1,0 +1,39 @@
+{
+ "kind": "eri",
+ "molecule": "ch4",
+ "variant": "sym8",
+ "module": "_hfcpp",
+ "nbf": 23,
+ "eri_s_best": 0.09164100303314626,
+ "eri_s_all": [
+  0.09260057308711112,
+  0.0927223910111934,
+  0.09164100303314626
+ ],
+ "eri_stats": {
+  "computed": 38226,
+  "screened": 0
+ },
+ "max_abs_err_vs_pyscf": null,
+ "machine": {
+  "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "numpy": "2.2.6",
+  "host": "n183.cluster",
+  "build": {
+   "_hfcpp": {
+    "module": "_hfcpp",
+    "profile": "native",
+    "flags": [
+     "-O3",
+     "-march=native"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   }
+  }
+ }
+}

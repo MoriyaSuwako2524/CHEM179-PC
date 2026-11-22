@@ -1,0 +1,118 @@
+{
+ "meta": {
+  "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "numpy": "2.2.6",
+  "python": "3.10.14",
+  "host": "n192.cluster"
+ },
+ "rows": [
+  {
+   "rung": "R0",
+   "description": "full N^4, naive integrals",
+   "options": {
+    "eri": "full",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "h2o",
+   "nbf": 19,
+   "scf_seconds": 150.32730539888144,
+   "kernels": {
+    "S,T,V": 0.12013767310418189,
+    "ERI": 150.07409616583027,
+    "diag": 0.002337923040613532,
+    "matmul": 0.0014781639911234379,
+    "JK": 0.004011326236650348
+   },
+   "eri_seconds": 150.07409616583027,
+   "stats": {
+    "quartets": 0,
+    "contracted": 130321,
+    "primitive_quartets": 0,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -76.01050499531246,
+   "energy_error": 1.2789769243681803e-13,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R0",
+   "description": "full N^4, naive integrals",
+   "options": {
+    "eri": "full",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "nh3",
+   "nbf": 21,
+   "scf_seconds": 205.8077022721991,
+   "kernels": {
+    "S,T,V": 0.03694880590774119,
+    "ERI": 205.70007262704894,
+    "diag": 0.0015028398483991623,
+    "matmul": 0.0005024946294724941,
+    "JK": 0.0028121215291321278
+   },
+   "eri_seconds": 205.70007262704894,
+   "stats": {
+    "quartets": 0,
+    "contracted": 194481,
+    "primitive_quartets": 0,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -56.18398206573488,
+   "energy_error": 1.2789769243681803e-13,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R0",
+   "description": "full N^4, naive integrals",
+   "options": {
+    "eri": "full",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "ch4",
+   "nbf": 23,
+   "scf_seconds": 268.0746238150168,
+   "kernels": {
+    "S,T,V": 0.04629568406380713,
+    "ERI": 267.9396722090896,
+    "diag": 0.0013021302875131369,
+    "matmul": 0.0005117543041706085,
+    "JK": 0.003494289005175233
+   },
+   "eri_seconds": 267.9396722090896,
+   "stats": {
+    "quartets": 0,
+    "contracted": 279841,
+    "primitive_quartets": 0,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -40.19509322654788,
+   "energy_error": 7.105427357601002e-14,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  }
+ ]
+}

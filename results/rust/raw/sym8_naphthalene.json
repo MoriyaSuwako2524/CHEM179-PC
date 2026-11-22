@@ -1,0 +1,60 @@
+{
+ "machine": {
+  "cpu_model": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "numpy": "2.2.6",
+  "hostname": "n183.cluster",
+  "threads_env": {
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "SLURM_CPUS_PER_TASK": "1"
+  },
+  "lscpu": "Architecture:          x86_64\nCPU op-mode(s):        32-bit, 64-bit\nByte Order:            Little Endian\nCPU(s):                32\nOn-line CPU(s) list:   0-31\nThread(s) per core:    1\nCore(s) per socket:    16\nSocket(s):             2\nNUMA node(s):          2\nVendor ID:             GenuineIntel\nCPU family:            6\nModel:                 85\nModel name:            Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz\nStepping:              7\nCPU MHz:               2901.000\nCPU max MHz:           2901.0000\nCPU min MHz:           1200.0000\nBogoMIPS:              5800.00\nVirtualization:        VT-x\nL1d cache:             32K\nL1i cache:             32K\nL2 cache:              1024K\nL3 cache:              22528K\nNUMA node0 CPU(s):     0-15\nNUMA node1 CPU(s):     16-31\nFlags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities\n"
+ },
+ "records": [
+  {
+   "variant": "sym8",
+   "backend": "rust",
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "energy": -383.3459213222654,
+   "e_ref": -383.3459213222806,
+   "abs_err": 1.5234036254696548e-11,
+   "converged": true,
+   "iterations": 15,
+   "eri_s": 2143.3552985920105,
+   "jk_s": 16.177467519650236,
+   "jk_calls": 16,
+   "stv_s": 0.9780842792242765,
+   "scf_wall_s": 2166.1597991141025,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.9780842792242765
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 2143.3552985920105
+    },
+    "diag": {
+     "calls": 17,
+     "total_s": 0.050525245955213904
+    },
+    "matmul": {
+     "calls": 64,
+     "total_s": 0.02367421519011259
+    },
+    "JK": {
+     "calls": 16,
+     "total_s": 16.177467519650236
+    }
+   },
+   "eri_stats": {
+    "computed": 80658247,
+    "screened": 15412344
+   }
+  }
+ ]
+}

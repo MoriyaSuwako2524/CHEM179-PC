@@ -1,0 +1,141 @@
+E(RHF) = -76.0105049953 Eh   converged=True
+wall time 0.450 s
+kernel          calls     wall s   share  cpu/wall
+diag               14     0.1810   40.7%      0.79
+ERI                 1     0.1705   38.4%      0.94
+matmul             52     0.0515   11.6%      1.00
+S,T,V               1     0.0279    6.3%         -
+JK                 13     0.0135    3.0%         -
+Generating '/tmp/nsys-report-6093.qdstrm'
+[1/8] [0%                          ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [0%                          ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=16%                        ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==18%                       ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==20%                       ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==21%                       ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [===22%                      ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [===23%                      ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [===24%                      ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [====25%                     ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [====26%                     ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [====27%                     ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [====28%                     ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=====29%                    ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=====30%                    ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=====31%                    ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==========48%               ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==========49%               ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [===========50%              ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [===========51%              ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [===========52%              ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [============54%             ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [============55%             ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [============56%             ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [============57%             ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=============58%            ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=============59%            ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=============60%            ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==============61%           ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==============62%           ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==============63%           ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [==============64%           ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [===============65%          ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [===============66%          ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=================72%        ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=================73%        ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=================74%        ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=======================95%  ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [=======================96%  ] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [========================100%] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep[1/8] [========================100%] nsys_h2o_NVIDIA_L40S_36366287.nsys-rep
+[2/8] [0%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [1%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [2%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [3%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [4%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [5%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [6%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [7%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [8%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [9%                          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [10%                         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [11%                         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [12%                         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [13%                         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [14%                         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=15%                        ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=16%                        ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=17%                        ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==18%                       ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==19%                       ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==20%                       ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==21%                       ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===22%                      ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===23%                      ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===24%                      ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [====25%                     ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [====26%                     ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [====27%                     ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [====28%                     ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=====29%                    ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=====30%                    ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=====31%                    ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=====32%                    ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [======33%                   ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [======34%                   ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [======35%                   ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=======36%                  ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=======37%                  ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=======38%                  ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=======39%                  ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [========40%                 ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [========41%                 ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [========42%                 ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=========43%                ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=========44%                ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=========45%                ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=========46%                ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==========47%               ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==========48%               ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==========49%               ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===========50%              ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===========51%              ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===========52%              ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===========53%              ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [============54%             ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [============55%             ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [============56%             ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [============57%             ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=============58%            ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=============59%            ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=============60%            ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==============61%           ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==============62%           ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==============63%           ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==============64%           ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===============65%          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===============66%          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===============67%          ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [================68%         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [================69%         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [================70%         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [================71%         ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=================72%        ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=================73%        ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=================74%        ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==================75%       ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==================76%       ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==================77%       ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [==================78%       ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===================79%      ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===================80%      ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===================81%      ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [===================82%      ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [====================83%     ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [====================84%     ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [====================85%     ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=====================86%    ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=====================87%    ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=====================88%    ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=====================89%    ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [======================90%   ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [======================91%   ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [======================92%   ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=======================93%  ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=======================94%  ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=======================95%  ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [=======================96%  ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [========================97% ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [========================98% ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [========================99% ] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [========================100%] nsys_h2o_NVIDIA_L40S_36366287.sqlite[2/8] [========================100%] nsys_h2o_NVIDIA_L40S_36366287.sqlite
+SKIPPED: /scratch/moriya2524/chem179/chem179-hf-perf/results/gpu/raw/nsys_h2o_NVIDIA_L40S_36366287.sqlite does not contain NV Tools Extension (NVTX) data.
+[3/8] Executing 'nvtx_sum' stats report
+[4/8] Executing 'osrt_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)     Med (ns)    Min (ns)   Max (ns)    StdDev (ns)            Name         
+ --------  ---------------  ---------  ------------  -----------  --------  -----------  ------------  ----------------------
+     75.1      846,294,429         19  44,541,812.1  8,239,363.0     1,338  144,925,018  50,927,226.6  poll                  
+     12.0      135,398,548        877     154,388.3     11,363.0     1,032   21,843,434     798,655.2  ioctl                 
+      8.4       94,367,615        691     136,566.7    140,305.0     1,950      348,788      63,429.7  open64                
+      1.7       18,623,725      3,021       6,164.8      2,977.0     1,023      374,565      20,644.6  stat64                
+      1.6       17,692,224        629      28,127.5      3,405.0     1,068    7,751,304     347,685.5  read                  
+      0.5        5,084,627      1,919       2,649.6      1,705.0     1,534      885,066      20,453.9  mmap64                
+      0.3        3,938,678      1,865       2,111.9      1,794.0     1,665      123,463       3,019.6  munmap                
+      0.1          952,033         48      19,834.0      5,682.5     1,159      168,708      41,504.0  fclose                
+      0.1          896,692         59      15,198.2      2,888.0     1,429      194,388      39,953.4  fopen                 
+      0.1          794,562         10      79,456.2     22,196.5    15,277      582,655     177,042.9  sem_timedwait         
+      0.0          486,786          3     162,262.0    156,332.0   150,606      179,848      15,496.7  pthread_create        
+      0.0          402,964          7      57,566.3     82,560.0     1,140      117,572      54,395.0  fcntl                 
+      0.0          370,006        312       1,185.9      1,164.0     1,001        2,871         161.2  fstat64               
+      0.0          342,620         16      21,413.8     10,970.0     3,492      150,414      36,493.4  mmap                  
+      0.0          235,011          7      33,573.0      6,822.0     2,747      101,298      45,994.1  fread                 
+      0.0          230,072        130       1,769.8      1,640.0     1,040        4,362         544.6  lstat64               
+      0.0          190,326          4      47,581.5      3,388.5     2,538      181,011      88,953.9  fopen64               
+      0.0          173,474          5      34,694.8     32,065.0    31,494       43,271       5,008.4  fgets                 
+      0.0          111,568          1     111,568.0    111,568.0   111,568      111,568           0.0  pthread_cond_wait     
+      0.0           30,048          6       5,008.0      4,748.0     2,502        7,960       2,430.9  pipe2                 
+      0.0           26,846          6       4,474.3      5,105.5     1,327        6,842       2,195.2  open                  
+      0.0           24,727         10       2,472.7      2,019.0     1,006        8,008       2,034.4  write                 
+      0.0           23,604          2      11,802.0     11,802.0     8,365       15,239       4,860.7  socket                
+      0.0           10,660          1      10,660.0     10,660.0    10,660       10,660           0.0  connect               
+      0.0           10,103          1      10,103.0     10,103.0    10,103       10,103           0.0  waitpid               
+      0.0            7,388          3       2,462.7      2,051.0     1,817        3,520         923.1  pthread_cond_broadcast
+      0.0            6,232          2       3,116.0      3,116.0     2,223        4,009       1,262.9  fflush                
+      0.0            3,931          2       1,965.5      1,965.5     1,508        2,423         647.0  fwrite                
+      0.0            3,339          3       1,113.0      1,111.0     1,097        1,131          17.1  pthread_mutex_trylock 
+      0.0            2,775          2       1,387.5      1,387.5     1,299        1,476         125.2  sigaction             
+      0.0            2,539          1       2,539.0      2,539.0     2,539        2,539           0.0  pthread_cond_signal   
+      0.0            1,823          1       1,823.0      1,823.0     1,823        1,823           0.0  bind                  
+      0.0            1,148          1       1,148.0      1,148.0     1,148        1,148           0.0  dup2                  
+      0.0            1,012          1       1,012.0      1,012.0     1,012        1,012           0.0  listen                
+
+[5/8] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)               Name             
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ------------------------------
+     23.8       15,093,852        376      40,143.2       4,301.5       3,416   5,702,128    405,877.8  cudaLaunchKernel              
+     21.0       13,300,851         15     886,723.4     879,510.0     375,099   1,686,051    406,472.8  cuLibraryLoadData             
+     18.4       11,678,718          1  11,678,718.0  11,678,718.0  11,678,718  11,678,718          0.0  cudaEventSynchronize          
+      8.6        5,470,900        340      16,090.9       6,942.0       4,274     209,826     36,636.0  cudaMemcpyAsync               
+      6.4        4,029,671        213      18,918.6       7,921.0       3,916   2,401,024    164,015.1  cuLaunchKernel                
+      4.7        2,949,673         22     134,076.0       4,527.5         511   1,914,868    405,228.1  cudaFree                      
+      4.0        2,513,090          8     314,136.3     222,807.5      24,455     845,986    285,817.7  cuLibraryUnload               
+      2.1        1,315,587          3     438,529.0       4,607.0       2,609   1,308,371    753,305.9  cudaStreamCreateWithFlags     
+      1.6        1,002,386          6     167,064.3      99,472.0      89,743     452,452    143,108.8  cuModuleLoadData              
+      1.5          925,630         35      26,446.6       3,729.0       2,250     165,050     47,455.1  cudaMalloc                    
+      1.4          857,448          4     214,362.0       4,877.0       4,216     843,478    419,411.1  cudaHostAlloc                 
+      1.1          728,046        382       1,905.9       1,521.0         557     169,494      8,658.1  cudaEventQuery                
+      1.1          701,792         77       9,114.2         445.0         315     667,746     76,045.7  cuKernelGetFunction           
+      0.9          557,870        199       2,803.4       2,588.0       2,049      13,595      1,442.6  cudaEventRecord               
+      0.7          445,964        172       2,592.8       2,486.5       1,784       9,193        730.1  cudaStreamSynchronize         
+      0.6          403,613          4     100,903.3      71,581.0      49,664     210,787     75,643.2  cuModuleUnload                
+      0.6          377,771        290       1,302.7       1,109.5         349      13,919      1,398.7  cudaEventCreateWithFlags      
+      0.4          266,684        292         913.3         823.5         298       7,253        602.2  cudaEventDestroy              
+      0.4          238,517      1,222         195.2         162.0          97      14,047        405.4  cuGetProcAddress_v2           
+      0.4          228,172        457         499.3         465.0         324       2,202        167.6  cudaStreamIsCapturing_v10000  
+      0.2          108,648         15       7,243.2       5,407.0       5,141      28,496      5,933.9  cudaMemsetAsync               
+      0.1           54,547         20       2,727.4       1,080.0         824      28,868      6,186.7  cudaDeviceSynchronize         
+      0.1           39,056          1      39,056.0      39,056.0      39,056      39,056          0.0  cudaMemGetInfo                
+      0.0           19,567          3       6,522.3       3,308.0       2,457      13,802      6,318.7  cudaStreamDestroy             
+      0.0            7,576          5       1,515.2       1,280.0       1,086       2,304        491.7  cuInit                        
+      0.0            7,513         15         500.9         489.0         454         664         53.0  cuLibraryGetKernel            
+      0.0            3,243          3       1,081.0         782.0         702       1,759        588.5  cudaEventCreate               
+      0.0            1,137          4         284.3         107.5          88         834        366.6  cuModuleGetLoadingMode        
+      0.0            1,055          2         527.5         527.5         327         728        283.5  cudaGetDriverEntryPoint_v11030
+
+[6/8] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)                                                  Name                                                
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  ----------------------------------------------------------------------------------------------------
+     45.3        7,677,462          1  7,677,462.0  7,677,462.0  7,677,462  7,677,462          0.0  quartet_kernel                                                                                      
+     23.9        4,048,445          1  4,048,445.0  4,048,445.0  4,048,445  4,048,445          0.0  schwarz_kernel                                                                                      
+     10.0        1,697,326         14    121,237.6    120,865.0    120,832    126,241      1,440.2  void sytrd4_cta<sytrd_params<double, (int)16, (int)32, (int)32, (int)32, (int)0, (int)1, (int)2>, (…
+      5.5          933,192         14     66,656.6     67,136.5     60,257     70,401      2,309.4  void steqr_ker<stedc_params_<double, (int)8, (int)16>, double, (int)0>(long, T1::data_type *, T1::d…
+      4.0          683,330         77      8,874.4      9,472.0      5,728      9,760      1,414.4  void cutlass::Kernel2<cutlass_80_tensorop_d884gemm_32x32_16x5_nn_align1>(T1::Params)                
+      2.9          499,684         14     35,691.7     39,312.0     12,672     45,120      9,675.0  void laed4_par<stedc_params_<double, (int)8, (int)32>>(int, int, int, int *, T1::data_type *, T1::d…
+      1.2          209,473         14     14,962.4     14,304.5     11,936     27,360      3,663.1  void laed4_par<stedc_params_<double, (int)8, (int)16>>(int, int, int, int *, T1::data_type *, T1::d…
+      1.2          199,364         14     14,240.3     14,240.0     14,239     14,241          0.6  void ormqr_cta_kernel<double, (int)5, (int)1>(long, long, long, const T1 *, unsigned long, const T1…
+      0.9          160,930         14     11,495.0     11,328.0     10,656     13,024        578.4  void laed2_par<stedc_params_<double, (int)8, (int)16>>(int, int, int, int *, T1::data_type *, T1::d…
+      0.9          156,352         14     11,168.0     10,928.0     10,592     11,809        566.9  void laed2_par<stedc_params_<double, (int)8, (int)32>>(int, int, int, int *, T1::data_type *, T1::d…
+      0.5           83,489         78      1,070.4      1,072.0        959      1,216         94.0  cupy_mat_ptrs                                                                                       
+      0.3           49,946         42      1,189.2      1,184.0      1,151      1,344         39.3  cupy_copy__float64_float64                                                                          
+      0.3           46,338         14      3,309.9      3,296.5      3,296      3,360         20.6  void laed3_epi2<stedc_params_<double, (int)8, (int)32>>(int, int, int, int *, T1::data_type *, int,…
+      0.3           46,174         14      3,298.1      3,296.0      3,200      3,360         36.5  void laed3_epi2<stedc_params_<double, (int)8, (int)16>>(int, int, int, int *, T1::data_type *, int,…
+      0.3           42,400         13      3,261.5      3,264.0      3,232      3,296         20.4  std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, double, double, double, double, (…
+      0.2           38,239         42        910.5        896.0        895        959         17.6  copy_info_kernel(int, int *)                                                                        
+      0.2           36,863         28      1,316.5      1,312.0      1,248      1,472         49.7  void laed2_copy<double, (int)128>(int, int, T1 *, int, int *, int *, T1 *, int)                     
+      0.2           35,937         14      2,566.9      2,560.0      2,560      2,592         13.6  void laed3_epi1<stedc_params_<double, (int)8, (int)32>>(int, int, int, int *, T1::data_type *, T1::…
+      0.2           33,407         13      2,569.8      2,560.0      2,560      2,592         15.3  cupy_sum                                                                                            
+      0.2           32,289         13      2,483.8      2,496.0      2,432      2,560         30.8  std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, double, double, double, double, (…
+      0.2           29,439         14      2,102.8      2,079.5      2,015      2,272         80.9  void laed3_epi1<stedc_params_<double, (int)8, (int)16>>(int, int, int, int *, T1::data_type *, T1::…
+      0.2           27,807         14      1,986.2      1,984.0      1,951      2,112         40.7  void lansy_M_stage1<double, double, (int)8>(long, const T1 *, unsigned long, T2 *, int)             
+      0.2           27,743         14      1,981.6      1,984.0      1,952      2,015         15.0  void epilogue<sytrd_params<double, (int)32, (int)8, (int)512, (int)32, (int)16, (int)1, (int)2>, (i…
+      0.2           26,688         14      1,906.3      1,920.0      1,888      1,920         16.4  void scale_max<double, (int)32, (int)32, (int)1>(long, long, T1 *, T1 *, T1 *, int *)               
+      0.2           26,625         14      1,901.8      1,888.0      1,857      2,048         44.7  void lansy_M_stage2<double, (int)8>(long, T1 *)                                                     
+      0.1           19,871         14      1,419.4      1,408.0      1,407      1,440         16.0  void merge_ker<double, double, (int)128, (int)0, (int)0, (int)1>(long, long, T2 *, T2 *, long, int …
+      0.1           18,432          1     18,432.0     18,432.0     18,432     18,432          0.0  pair_kernel                                                                                         
+      0.1           16,931         14      1,209.4      1,200.5      1,184      1,344         41.9  void scale_max<double, (int)32, (int)128, (int)0>(long, long, T1 *, T1 *, T1 *, int *)              
+      0.1           16,898         14      1,207.0      1,216.0      1,183      1,217         15.3  void merge_ker<double, double, (int)128, (int)1, (int)0, (int)1>(long, long, T2 *, T2 *, long, int …
+      0.1           16,033         14      1,145.2      1,152.0      1,120      1,153         13.7  void lacpy_kernel<double, double, (int)5, (int)3>(long, long, const T1 *, long, long, T2 *, long, l…
+      0.1           12,990         14        927.9        928.0        927        928          0.4  xx_set_info_ker(int, int *)                                                                         
+
+[7/8] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ----------------------------
+     57.9          154,274    146   1,056.7   1,056.0       928     1,569         91.8  [CUDA memcpy Device-to-Host]
+     35.4           94,305    194     486.1     481.0       384       577         34.5  [CUDA memcpy Host-to-Device]
+      6.8           18,047     15   1,203.1   1,184.0       799     1,536        145.2  [CUDA memset]               
+
+[8/8] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+      1.083     15     0.072     0.003     0.003     1.043        0.268  [CUDA memset]               
+      0.488    194     0.003     0.003     0.000     0.006        0.001  [CUDA memcpy Host-to-Device]
+      0.342    146     0.002     0.003     0.000     0.003        0.001  [CUDA memcpy Device-to-Host]
+
+Generated:
+    /scratch/moriya2524/chem179/chem179-hf-perf/results/gpu/raw/nsys_h2o_NVIDIA_L40S_36366287.nsys-rep
+    /scratch/moriya2524/chem179/chem179-hf-perf/results/gpu/raw/nsys_h2o_NVIDIA_L40S_36366287.sqlite

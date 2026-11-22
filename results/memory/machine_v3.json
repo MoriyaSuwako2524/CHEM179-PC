@@ -1,0 +1,46 @@
+{
+ "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+ "lscpu": "Architecture:          x86_64\nCPU op-mode(s):        32-bit, 64-bit\nByte Order:            Little Endian\nCPU(s):                32\nOn-line CPU(s) list:   0-31\nThread(s) per core:    1\nCore(s) per socket:    16\nSocket(s):             2\nNUMA node(s):          2\nVendor ID:             GenuineIntel\nCPU family:            6\nModel:                 85\nModel name:            Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz\nStepping:              7\nCPU MHz:               1200.000\nCPU max MHz:           2901.0000\nCPU min MHz:           1200.0000\nBogoMIPS:              5800.00\nVirtualization:        VT-x\nL1d cache:             32K\nL1i cache:             32K\nL2 cache:              1024K\nL3 cache:              22528K\nNUMA node0 CPU(s):     0-15\nNUMA node1 CPU(s):     16-31\nFlags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities\n",
+ "peak_theory": {
+  "base_ghz": 2.9,
+  "fp64_lanes": 8,
+  "fma_units": 2,
+  "flop_per_cycle": 32,
+  "gflops_at_base": 92.8,
+  "note": "AVX-512 heavy code runs below the base clock (license-based frequency); turbo may be higher"
+ },
+ "stream_triad": {
+  "O2": {
+   "n": 20000000,
+   "seconds": 0.035611690022051334,
+   "GB_per_s": 13.478720041165591
+  },
+  "O3native": {
+   "n": 20000000,
+   "seconds": 0.03511140705086291,
+   "GB_per_s": 13.670770849617757
+  },
+  "O3native512": {
+   "n": 20000000,
+   "seconds": 0.035332103027030826,
+   "GB_per_s": 13.585378703123785
+  }
+ },
+ "peak_fma": {
+  "O2": {
+   "iters": 250000000,
+   "seconds": 7.54043782223016,
+   "gflops": 6.365678112017576
+  },
+  "O3native": {
+   "iters": 250000000,
+   "seconds": 0.40932294609956443,
+   "gflops": 117.26681940846872
+  },
+  "O3native512": {
+   "iters": 250000000,
+   "seconds": 0.4109281860291958,
+   "gflops": 116.80873114065162
+  }
+ }
+}

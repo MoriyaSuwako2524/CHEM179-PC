@@ -1,0 +1,730 @@
+{
+ "meta": {
+  "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "numpy": "2.2.6",
+  "python": "3.10.14",
+  "host": "n183.cluster"
+ },
+ "rows": [
+  {
+   "rung": "R1",
+   "description": "+ 8-fold symmetry",
+   "options": {
+    "eri": "sym8",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "h2o",
+   "nbf": 19,
+   "scf_seconds": 21.688423563027754,
+   "kernels": {
+    "S,T,V": 0.057443689089268446,
+    "ERI": 21.567002321826294,
+    "diag": 0.0016319158021360636,
+    "matmul": 0.0010722768492996693,
+    "JK": 0.0022256539668887854
+   },
+   "eri_seconds": 21.567002321826294,
+   "stats": {
+    "quartets": 0,
+    "contracted": 18145,
+    "primitive_quartets": 0,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -76.01050499531243,
+   "energy_error": 1.5631940186722204e-13,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R2",
+   "description": "+ shell quartets, shell-pair data reuse",
+   "options": {
+    "eri": "shell",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "h2o",
+   "nbf": 19,
+   "scf_seconds": 1.1524192159995437,
+   "kernels": {
+    "S,T,V": 0.06884733284823596,
+    "ERI": 1.0209536638576537,
+    "diag": 0.0014358160551637411,
+    "matmul": 0.0005857518408447504,
+    "JK": 0.002164658857509494
+   },
+   "eri_seconds": 1.0209536638576537,
+   "stats": {
+    "quartets": 1540,
+    "contracted": 23557,
+    "primitive_quartets": 47793,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -76.0105049953124,
+   "energy_error": 1.8474111129762605e-13,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R3",
+   "description": "+ Schwarz screening 1e-12",
+   "options": {
+    "eri": "shell",
+    "screening": 1e-12,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "h2o",
+   "nbf": 19,
+   "scf_seconds": 0.905299455858767,
+   "kernels": {
+    "S,T,V": 0.030368353938683867,
+    "ERI": 0.8133245529606938,
+    "diag": 0.0013258878607302904,
+    "matmul": 0.0005766358226537704,
+    "JK": 0.0021363471169024706
+   },
+   "eri_seconds": 0.8133245529606938,
+   "stats": {
+    "quartets": 1540,
+    "contracted": 23557,
+    "primitive_quartets": 47793,
+    "schwarz_quartets": 55,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -76.0105049953124,
+   "energy_error": 1.8474111129762605e-13,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R4",
+   "description": "+ Boys table/Taylor/downward recursion",
+   "options": {
+    "eri": "shell",
+    "screening": 1e-12,
+    "boys": "table",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "h2o",
+   "nbf": 19,
+   "scf_seconds": 0.9370595761574805,
+   "kernels": {
+    "S,T,V": 0.06646244414150715,
+    "ERI": 0.7980846099089831,
+    "diag": 0.0013563849497586489,
+    "matmul": 0.0005926983430981636,
+    "JK": 0.0021132647525519133
+   },
+   "eri_seconds": 0.7980846099089831,
+   "stats": {
+    "quartets": 1540,
+    "contracted": 23557,
+    "primitive_quartets": 47793,
+    "schwarz_quartets": 55,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -76.01050499531249,
+   "energy_error": 9.947598300641403e-14,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R5",
+   "description": "+ NumPy vectorization over primitive pairs",
+   "options": {
+    "eri": "vector",
+    "screening": 1e-12,
+    "boys": "table",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "h2o",
+   "nbf": 19,
+   "scf_seconds": 0.33325700112618506,
+   "kernels": {
+    "S,T,V": 0.030095088062807918,
+    "ERI": 0.24170213099569082,
+    "diag": 0.0013036415912210941,
+    "matmul": 0.000583557179197669,
+    "JK": 0.0020835145842283964
+   },
+   "eri_seconds": 0.24170213099569082,
+   "stats": {
+    "quartets": 1540,
+    "contracted": 23557,
+    "primitive_quartets": 47793,
+    "schwarz_quartets": 55,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -76.01050499531262,
+   "energy_error": -2.842170943040401e-14,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R1",
+   "description": "+ 8-fold symmetry",
+   "options": {
+    "eri": "sym8",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "nh3",
+   "nbf": 21,
+   "scf_seconds": 29.002003072062507,
+   "kernels": {
+    "S,T,V": 0.041072299936786294,
+    "ERI": 28.888865848071873,
+    "diag": 0.0017127359751611948,
+    "matmul": 0.0007037697359919548,
+    "JK": 0.003005838952958584
+   },
+   "eri_seconds": 28.888865848071873,
+   "stats": {
+    "quartets": 0,
+    "contracted": 26796,
+    "primitive_quartets": 0,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -56.18398206573481,
+   "energy_error": 1.9895196601282805e-13,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R2",
+   "description": "+ shell quartets, shell-pair data reuse",
+   "options": {
+    "eri": "shell",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "nh3",
+   "nbf": 21,
+   "scf_seconds": 1.6287165079265833,
+   "kernels": {
+    "S,T,V": 0.04035536991432309,
+    "ERI": 1.5159381779376417,
+    "diag": 0.0015305844135582447,
+    "matmul": 0.0006211844738572836,
+    "JK": 0.002879658481106162
+   },
+   "eri_seconds": 1.5159381779376417,
+   "stats": {
+    "quartets": 3081,
+    "contracted": 33111,
+    "primitive_quartets": 85551,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -56.18398206573495,
+   "energy_error": 5.684341886080802e-14,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R3",
+   "description": "+ Schwarz screening 1e-12",
+   "options": {
+    "eri": "shell",
+    "screening": 1e-12,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "nh3",
+   "nbf": 21,
+   "scf_seconds": 1.6352301689330488,
+   "kernels": {
+    "S,T,V": 0.040886021917685866,
+    "ERI": 1.5219405668321997,
+    "diag": 0.0015474651008844376,
+    "matmul": 0.0006306690629571676,
+    "JK": 0.002897061873227358
+   },
+   "eri_seconds": 1.5219405668321997,
+   "stats": {
+    "quartets": 3081,
+    "contracted": 33111,
+    "primitive_quartets": 85551,
+    "schwarz_quartets": 78,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -56.18398206573495,
+   "energy_error": 5.684341886080802e-14,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R4",
+   "description": "+ Boys table/Taylor/downward recursion",
+   "options": {
+    "eri": "shell",
+    "screening": 1e-12,
+    "boys": "table",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "nh3",
+   "nbf": 21,
+   "scf_seconds": 1.1836160609964281,
+   "kernels": {
+    "S,T,V": 0.04054619208909571,
+    "ERI": 1.0708670939784497,
+    "diag": 0.0015222190413624048,
+    "matmul": 0.0006273435428738594,
+    "JK": 0.00287168612703681
+   },
+   "eri_seconds": 1.0708670939784497,
+   "stats": {
+    "quartets": 3081,
+    "contracted": 33111,
+    "primitive_quartets": 85551,
+    "schwarz_quartets": 78,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -56.183982065734895,
+   "energy_error": 1.1368683772161603e-13,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R5",
+   "description": "+ NumPy vectorization over primitive pairs",
+   "options": {
+    "eri": "vector",
+    "screening": 1e-12,
+    "boys": "table",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "nh3",
+   "nbf": 21,
+   "scf_seconds": 0.5682286650408059,
+   "kernels": {
+    "S,T,V": 0.04091220907866955,
+    "ERI": 0.45449555409140885,
+    "diag": 0.0015255874022841454,
+    "matmul": 0.0006357536185532808,
+    "JK": 0.002883806824684143
+   },
+   "eri_seconds": 0.45449555409140885,
+   "stats": {
+    "quartets": 3081,
+    "contracted": 33111,
+    "primitive_quartets": 85551,
+    "schwarz_quartets": 78,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -56.183982065734824,
+   "energy_error": 1.8474111129762605e-13,
+   "converged": true,
+   "iterations": 12,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R1",
+   "description": "+ 8-fold symmetry",
+   "options": {
+    "eri": "sym8",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "ch4",
+   "nbf": 23,
+   "scf_seconds": 38.08614131901413,
+   "kernels": {
+    "S,T,V": 0.052204601000994444,
+    "ERI": 37.939261310966685,
+    "diag": 0.0015723712276667356,
+    "matmul": 0.0006178633775562048,
+    "JK": 0.0037792923394590616
+   },
+   "eri_seconds": 37.939261310966685,
+   "stats": {
+    "quartets": 0,
+    "contracted": 38226,
+    "primitive_quartets": 0,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -40.19509322654791,
+   "energy_error": 4.263256414560601e-14,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R2",
+   "description": "+ shell quartets, shell-pair data reuse",
+   "options": {
+    "eri": "shell",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "ch4",
+   "nbf": 23,
+   "scf_seconds": 2.9444795069284737,
+   "kernels": {
+    "S,T,V": 0.10352073004469275,
+    "ERI": 2.7459554681554437,
+    "diag": 0.0013786284253001213,
+    "matmul": 0.0005457133520394564,
+    "JK": 0.003689828095957637
+   },
+   "eri_seconds": 2.7459554681554437,
+   "stats": {
+    "quartets": 5565,
+    "contracted": 45528,
+    "primitive_quartets": 142720,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -40.19509322654787,
+   "energy_error": 8.526512829121202e-14,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R3",
+   "description": "+ Schwarz screening 1e-12",
+   "options": {
+    "eri": "shell",
+    "screening": 1e-12,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "ch4",
+   "nbf": 23,
+   "scf_seconds": 2.783365790033713,
+   "kernels": {
+    "S,T,V": 0.05798085802234709,
+    "ERI": 2.6309263159055263,
+    "diag": 0.0013788717333227396,
+    "matmul": 0.0005361882504075766,
+    "JK": 0.0036818860098719597
+   },
+   "eri_seconds": 2.6309263159055263,
+   "stats": {
+    "quartets": 5565,
+    "contracted": 45528,
+    "primitive_quartets": 142720,
+    "schwarz_quartets": 105,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -40.19509322654787,
+   "energy_error": 8.526512829121202e-14,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R4",
+   "description": "+ Boys table/Taylor/downward recursion",
+   "options": {
+    "eri": "shell",
+    "screening": 1e-12,
+    "boys": "table",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "ch4",
+   "nbf": 23,
+   "scf_seconds": 1.8744515830185264,
+   "kernels": {
+    "S,T,V": 0.05207576905377209,
+    "ERI": 1.727698874892667,
+    "diag": 0.0014917459338903427,
+    "matmul": 0.0005427927244454622,
+    "JK": 0.0037484881468117237
+   },
+   "eri_seconds": 1.727698874892667,
+   "stats": {
+    "quartets": 5565,
+    "contracted": 45528,
+    "primitive_quartets": 142720,
+    "schwarz_quartets": 105,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -40.19509322654784,
+   "energy_error": 1.1368683772161603e-13,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R5",
+   "description": "+ NumPy vectorization over primitive pairs",
+   "options": {
+    "eri": "vector",
+    "screening": 1e-12,
+    "boys": "table",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "ch4",
+   "nbf": 23,
+   "scf_seconds": 1.0290738169569522,
+   "kernels": {
+    "S,T,V": 0.10422992892563343,
+    "ERI": 0.8251650400925428,
+    "diag": 0.0014180552680045366,
+    "matmul": 0.0005596026312559843,
+    "JK": 0.00363194290548563
+   },
+   "eri_seconds": 0.8251650400925428,
+   "stats": {
+    "quartets": 5565,
+    "contracted": 45528,
+    "primitive_quartets": 142720,
+    "schwarz_quartets": 105,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -40.195093226547925,
+   "energy_error": 2.842170943040401e-14,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R1",
+   "description": "+ 8-fold symmetry",
+   "options": {
+    "eri": "sym8",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "c2h4",
+   "nbf": 38,
+   "scf_seconds": 441.65956308180466,
+   "kernels": {
+    "S,T,V": 0.11135787097737193,
+    "ERI": 441.33652780600823,
+    "diag": 0.00374390184879303,
+    "matmul": 0.0010225996375083923,
+    "JK": 0.026568620465695858
+   },
+   "eri_seconds": 441.33652780600823,
+   "stats": {
+    "quartets": 0,
+    "contracted": 274911,
+    "primitive_quartets": 0,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -78.03074400463191,
+   "energy_error": 3.126388037344441e-13,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R2",
+   "description": "+ shell quartets, shell-pair data reuse",
+   "options": {
+    "eri": "shell",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "c2h4",
+   "nbf": 38,
+   "scf_seconds": 13.293076138012111,
+   "kernels": {
+    "S,T,V": 0.11197032197378576,
+    "ERI": 12.965448189992458,
+    "diag": 0.00355892488732934,
+    "matmul": 0.000977496150881052,
+    "JK": 0.026985233183950186
+   },
+   "eri_seconds": 12.965448189992458,
+   "stats": {
+    "quartets": 22155,
+    "contracted": 310998,
+    "primitive_quartets": 650854,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -78.03074400463197,
+   "energy_error": 2.5579538487363607e-13,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R3",
+   "description": "+ Schwarz screening 1e-12",
+   "options": {
+    "eri": "shell",
+    "screening": 1e-12,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "c2h4",
+   "nbf": 38,
+   "scf_seconds": 13.333192415069789,
+   "kernels": {
+    "S,T,V": 0.11074065207503736,
+    "ERI": 13.008555273059756,
+    "diag": 0.0035599241964519024,
+    "matmul": 0.0009900073055177927,
+    "JK": 0.02678125654347241
+   },
+   "eri_seconds": 13.008555273059756,
+   "stats": {
+    "quartets": 22155,
+    "contracted": 310998,
+    "primitive_quartets": 650854,
+    "schwarz_quartets": 210,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -78.03074400463197,
+   "energy_error": 2.5579538487363607e-13,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R4",
+   "description": "+ Boys table/Taylor/downward recursion",
+   "options": {
+    "eri": "shell",
+    "screening": 1e-12,
+    "boys": "table",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "c2h4",
+   "nbf": 38,
+   "scf_seconds": 8.507163418922573,
+   "kernels": {
+    "S,T,V": 0.11120110703632236,
+    "ERI": 8.179040480870754,
+    "diag": 0.0035870629362761974,
+    "matmul": 0.0009831702336668968,
+    "JK": 0.02672982239164412
+   },
+   "eri_seconds": 8.179040480870754,
+   "stats": {
+    "quartets": 22155,
+    "contracted": 310998,
+    "primitive_quartets": 650854,
+    "schwarz_quartets": 210,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -78.03074400463177,
+   "energy_error": 4.547473508864641e-13,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "rung": "R5",
+   "description": "+ NumPy vectorization over primitive pairs",
+   "options": {
+    "eri": "vector",
+    "screening": 1e-12,
+    "boys": "table",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "c2h4",
+   "nbf": 38,
+   "scf_seconds": 3.859184515895322,
+   "kernels": {
+    "S,T,V": 0.1809978939127177,
+    "ERI": 3.4657434448599815,
+    "diag": 0.003696129657328129,
+    "matmul": 0.0009006785694509745,
+    "JK": 0.026675306959077716
+   },
+   "eri_seconds": 3.4657434448599815,
+   "stats": {
+    "quartets": 22155,
+    "contracted": 310998,
+    "primitive_quartets": 650854,
+    "schwarz_quartets": 210,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -78.03074400463191,
+   "energy_error": 3.126388037344441e-13,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  }
+ ]
+}

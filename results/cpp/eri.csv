@@ -1,0 +1,6 @@
+source,molecule,nbf,variant,module,eri_s_best,repeats,quartets_computed,quartets_screened,max_abs_err_vs_pyscf,cpu
+eri_h2o_sym8-noreuse__hfcpp.json,h2o,19,sym8-noreuse,_hfcpp,0.5705581360962242,1,18145,0,2.1926904736346842e-14,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+eri_nh3_sym8-noreuse__hfcpp.json,nh3,21,sym8-noreuse,_hfcpp,0.7629817938432097,1,26796,0,2.148281552649678e-14,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+eri_ch4_sym8-noreuse__hfcpp.json,ch4,23,sym8-noreuse,_hfcpp,0.997740704100579,1,38226,0,,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+eri_c2h4_sym8-noreuse__hfcpp.json,c2h4,38,sym8-noreuse,_hfcpp,11.12293303804472,1,274911,0,,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+eri_benzene_sym8-noreuse__hfcpp.json,benzene,102,sym8-noreuse,_hfcpp,766.4269307258073,1,13621436,178195,,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz

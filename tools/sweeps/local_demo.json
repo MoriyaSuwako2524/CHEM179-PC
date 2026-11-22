@@ -1,0 +1,4 @@
+{"runs": [
+  {"label": "naive", "backend": "naive", "molecules": ["h2", "h2o"], "threads": [1], "timeout_s": 600},
+  {"label": "numpy-R5", "backend": "numpy", "molecules": ["h2o", "ch4", "c2h4"], "threads": [1]}
+]}

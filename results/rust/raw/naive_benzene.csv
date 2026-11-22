@@ -1,0 +1,2 @@
+variant,molecule,nbf,eri_s,jk_s,jk_calls,stv_s,scf_wall_s,iterations,energy,e_ref,abs_err,converged,eri_computed,eri_screened,jk_iter_s,jk_checked_s,jk_unchecked_s,cpu_model
+naive,benzene,102,3073.4843484919984,2.1088191736489534,13,0.3006714158691466,3077.3912555789575,12,-230.70216365002577,-230.70216365002167,4.092726157978177e-12,True,108243216,0,,,,Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz

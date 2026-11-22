@@ -1,0 +1,642 @@
+{
+ "argv": [
+  "ext/cuda/bench_gpu.py",
+  "--out",
+  "results/gpu/raw/bench_naphthalene_NVIDIA_A100_PCIE_40GB_36366284.json",
+  "--molecules",
+  "naphthalene",
+  "--student-molecules",
+  "--sections",
+  "info",
+  "eri",
+  "transfer",
+  "kernels",
+  "scf"
+ ],
+ "started": "2026-11-21 16:22:21",
+ "info": {
+  "gpu": {
+   "name": "NVIDIA A100-PCIE-40GB",
+   "compute_capability": "8.0",
+   "sm_count": 108,
+   "total_mem_GB": 42.429251584,
+   "clock_MHz": 1410.0,
+   "cupy": "14.2.0",
+   "cuda_runtime": 12090,
+   "driver": 13030
+  },
+  "cpu_model": "Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz",
+  "lscpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  128\nOn-line CPU(s) list:                     0-127\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz\nCPU family:                              6\nModel:                                   106\nThread(s) per core:                      2\nCore(s) per socket:                      32\nSocket(s):                               2\nStepping:                                6\nCPU(s) scaling MHz:                      30%\nCPU max MHz:                             3200.0000\nCPU min MHz:                             800.0000\nBogoMIPS:                                4000.00\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               3 MiB (64 instances)\nL1i cache:                               2 MiB (64 instances)\nL2 cache:                                80 MiB (64 instances)\nL3 cache:                                96 MiB (2 instances)\nNUMA node(s):                            2\nNUMA node0 CPU(s):                       0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110,112,114,116,118,120,122,124,126\nNUMA node1 CPU(s):                       1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111,113,115,117,119,121,123,125,127\nVulnerability Gather data sampling:      Mitigation; Microcode\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n",
+  "host": "c851.oscer.ou.edu",
+  "nvidia_smi": "name, driver_version, memory.total [MiB], clocks.max.sm [MHz]\nNVIDIA A100-PCIE-40GB, 610.57.04, 40960 MiB, 1410 MHz\nNVIDIA A100-PCIE-40GB, 610.57.04, 40960 MiB, 1410 MHz\n",
+  "python": "3.11.3 (main, Jul  5 2024, 12:14:59) [GCC 12.3.0]",
+  "numpy": "2.4.6",
+  "omp_threads": "1",
+  "slurm_job": "36366284"
+ },
+ "eri": [
+  {
+   "molecule": "naphthalene",
+   "precision": "fp64",
+   "nbf": 166,
+   "npair": 13861,
+   "nprim_pairs": 49122,
+   "quartets_total": 96070591,
+   "quartets_computed": 80658247,
+   "quartets_screened": 15412344,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 3.344286233186722e-05,
+   "host_tables_s": 0.00446665845811367,
+   "h2d_alloc_s": 0.008082624435424804,
+   "pair_kernel_s": 6.143999844789505e-05,
+   "schwarz_kernel_s": 0.008080384254455567,
+   "quartet_kernel_s": 0.5647892456054687,
+   "device_total_s": 0.581013671875,
+   "G_bytes": 6074665088,
+   "quartet_resources": {
+    "num_regs": 100,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 512,
+    "block": 128,
+    "active_blocks_per_sm": 4,
+    "occupancy": 0.25,
+    "max_threads_per_sm": 2048,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.5625,
+    "max_threads_per_sm": 2048,
+    "regs_per_sm": 65536
+   }
+  },
+  {
+   "molecule": "naphthalene",
+   "precision": "fp32",
+   "nbf": 166,
+   "npair": 13861,
+   "nprim_pairs": 49122,
+   "quartets_total": 96070591,
+   "quartets_computed": 80658247,
+   "quartets_screened": 15412344,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 2.664513885974884e-05,
+   "host_tables_s": 0.004434334114193916,
+   "h2d_alloc_s": 0.005045440196990967,
+   "pair_kernel_s": 3.686400130391121e-05,
+   "schwarz_kernel_s": 0.005092351913452148,
+   "quartet_kernel_s": 0.27656500244140625,
+   "device_total_s": 0.28673965454101563,
+   "G_bytes": 3037332544,
+   "quartet_resources": {
+    "num_regs": 72,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 896,
+    "block": 128,
+    "active_blocks_per_sm": 7,
+    "occupancy": 0.4375,
+    "max_threads_per_sm": 2048,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.625,
+    "max_threads_per_sm": 2048,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1029695836661801e-06,
+   "max_rel_err_vs_gpu_fp64": 3.120306943915405e-07
+  },
+  {
+   "molecule": "naphthalene",
+   "precision": "fp64",
+   "nbf": 166,
+   "npair": 13861,
+   "nprim_pairs": 49122,
+   "quartets_total": 96070591,
+   "quartets_computed": 80658247,
+   "quartets_screened": 15412344,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 2.7655623853206635e-05,
+   "host_tables_s": 0.002572675235569477,
+   "h2d_alloc_s": 0.007874239921569824,
+   "pair_kernel_s": 6.45119994878769e-05,
+   "schwarz_kernel_s": 0.008080384254455567,
+   "quartet_kernel_s": 1.483173828125,
+   "device_total_s": 1.4991929931640624,
+   "G_bytes": 6074665088,
+   "quartet_resources": {
+    "num_regs": 100,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 512,
+    "block": 128,
+    "active_blocks_per_sm": 4,
+    "occupancy": 0.25,
+    "max_threads_per_sm": 2048,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.5625,
+    "max_threads_per_sm": 2048,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1102230246251565e-15,
+   "max_rel_err_vs_gpu_fp64": 3.140826967791625e-16
+  }
+ ],
+ "transfer": [
+  {
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "precision": "fp64",
+   "bytes": 6074665088,
+   "h2d_pageable_s": 0.651811326853931,
+   "d2h_pageable_s": 1.3551009399816394,
+   "h2d_pinned_s": 0.24795186519622803,
+   "h2d_pageable_GBps": 9.319667881993272,
+   "h2d_pinned_GBps": 24.4993724213066,
+   "d2h_pageable_GBps": 4.482813721671765
+  },
+  {
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "precision": "fp32",
+   "bytes": 3037332544,
+   "h2d_pageable_s": 0.32380732614547014,
+   "d2h_pageable_s": 0.6907749008387327,
+   "h2d_pinned_s": 0.12333538755774498,
+   "h2d_pageable_GBps": 9.380061223925123,
+   "h2d_pinned_GBps": 24.62661044931599,
+   "d2h_pageable_GBps": 4.396993203302693
+  }
+ ],
+ "kernels": [
+  {
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "cpu_jk_matmul_s": 0.7711678249761462,
+   "cpu_eigh_s": 0.002163667231798172,
+   "cpu_matmul_s": 0.00018203631043434143,
+   "gpu_jk_matmul_fp64_s": 0.008750724606215954,
+   "gpu_jk_matmul_fp64_maxerr": 3.8191672047105385e-14,
+   "gpu_jk_einsum_fp64_s": 0.042522404342889786,
+   "gpu_jk_einsum_fp64_maxerr": 3.8191672047105385e-14,
+   "gpu_eigh_fp64_s": 0.0020959991961717606,
+   "gpu_matmul_fp64_s": 2.191215753555298e-05,
+   "roundtrip_NxN_fp64_s": 7.583014667034149e-05,
+   "gpu_jk_matmul_fp32_s": 0.004745876416563988,
+   "gpu_jk_matmul_fp32_maxerr": 7.882313589391288e-06,
+   "gpu_jk_einsum_fp32_s": 0.028613810427486897,
+   "gpu_jk_einsum_fp32_maxerr": 1.3651661518565561e-05,
+   "gpu_eigh_fp32_s": 0.0016755005344748497,
+   "gpu_matmul_fp32_s": 2.429261803627014e-05,
+   "roundtrip_NxN_fp32_s": 9.816046804189682e-05
+  }
+ ],
+ "scf": [
+  {
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "energy": -383.3459213222754,
+   "err_vs_ref": 5.229594535194337e-12,
+   "converged": true,
+   "iterations": 15,
+   "wall_s": 3.3174602845683694,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 1.254367956891656,
+     "cpu_s": 1.2512604179999869
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.838928029872477,
+     "cpu_s": 1.8353489699999983
+    },
+    "diag": {
+     "calls": 17,
+     "total_s": 0.04077144246548414,
+     "cpu_s": 0.04002533500000993
+    },
+    "matmul": {
+     "calls": 64,
+     "total_s": 0.021848992444574833,
+     "cpu_s": 0.02186564399993074
+    },
+    "JK": {
+     "calls": 16,
+     "total_s": 0.14354423992335796,
+     "cpu_s": 0.14324001999999325
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 6074665088,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 16,
+    "jk_h2d_s": 0.0011881403625011444,
+    "jk_kernel_s": 0.14042128529399633,
+    "jk_d2h_s": 0.0017686905339360237,
+    "fp64_builds": 16,
+    "fp32_builds": 0,
+    "linalg_calls": 112,
+    "linalg_s": 0.0606503002345562,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 166,
+    "npair": 13861,
+    "nprim_pairs": 49122,
+    "quartets_total": 96070591,
+    "quartets_computed": 80658247,
+    "quartets_screened": 15412344,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.5550834834575653e-05,
+    "host_tables_s": 0.0048102084547281265,
+    "h2d_alloc_s": 0.005996255874633789,
+    "pair_kernel_s": 6.143999844789505e-05,
+    "schwarz_kernel_s": 0.008073216438293456,
+    "quartet_kernel_s": 0.5642721557617187,
+    "device_total_s": 0.5784030151367188,
+    "G_bytes": 6074665088
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA A100-PCIE-40GB",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "energy": -383.3459955068524,
+   "err_vs_ref": -7.418457175845106e-05,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 3.7351234601810575,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 1.247528369538486,
+     "cpu_s": 1.2445298129999998
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5456727286800742,
+     "cpu_s": 1.5424752599999891
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.1943398518487811,
+     "cpu_s": 0.19307561599998735
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.13382646068930626,
+     "cpu_s": 0.1339896290000695
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.5015324847772717,
+     "cpu_s": 0.5004485350000607
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 3037332544,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.007309112697839737,
+    "jk_kernel_s": 0.4817416062578559,
+    "jk_d2h_s": 0.011575092561542988,
+    "fp64_builds": 0,
+    "fp32_builds": 101,
+    "linalg_calls": 707,
+    "linalg_s": 0.31921709701418877,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 166,
+    "npair": 13861,
+    "nprim_pairs": 49122,
+    "quartets_total": 96070591,
+    "quartets_computed": 80658247,
+    "quartets_screened": 15412344,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.8025748431682587e-05,
+    "host_tables_s": 0.004419298842549324,
+    "h2d_alloc_s": 0.004048031806945801,
+    "pair_kernel_s": 3.686400130391121e-05,
+    "schwarz_kernel_s": 0.005093376159667969,
+    "quartet_kernel_s": 0.276316162109375,
+    "device_total_s": 0.28549444580078126,
+    "G_bytes": 3037332544
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA A100-PCIE-40GB",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "energy": -383.3458921998526,
+   "err_vs_ref": 2.9122428031769232e-05,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 3.7770291147753596,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 1.2459172578528523,
+     "cpu_s": 1.2429175829999934
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5889939963817596,
+     "cpu_s": 1.5856672670000052
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.2097725961357355,
+     "cpu_s": 0.20927875899988635
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.11394608672708273,
+     "cpu_s": 0.11393681500001662
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.5046861609444022,
+     "cpu_s": 0.5035923199999104
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 3037332544,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.009454225189983845,
+    "jk_kernel_s": 0.4826202169060707,
+    "jk_d2h_s": 0.011676530353724957,
+    "fp64_builds": 0,
+    "fp32_builds": 101,
+    "linalg_calls": 707,
+    "linalg_s": 0.3173765270039439,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 166,
+    "npair": 13861,
+    "nprim_pairs": 49122,
+    "quartets_total": 96070591,
+    "quartets_computed": 80658247,
+    "quartets_screened": 15412344,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.939292997121811e-05,
+    "host_tables_s": 0.004421532154083252,
+    "h2d_alloc_s": 0.0033961920738220215,
+    "pair_kernel_s": 3.58400009572506e-05,
+    "schwarz_kernel_s": 0.005092351913452148,
+    "quartet_kernel_s": 0.27674624633789063,
+    "device_total_s": 0.2852706298828125,
+    "G_bytes": 3037332544
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA A100-PCIE-40GB",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "energy": -383.3459213222764,
+   "err_vs_ref": 4.206412995699793e-12,
+   "converged": true,
+   "iterations": 16,
+   "wall_s": 3.4054632307961583,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 1.2473067687824368,
+     "cpu_s": 1.2444059369999962
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.9719178164377809,
+     "cpu_s": 1.9311891210000027
+    },
+    "diag": {
+     "calls": 18,
+     "total_s": 0.04783113021403551,
+     "cpu_s": 0.04767382800000064
+    },
+    "matmul": {
+     "calls": 68,
+     "total_s": 0.02259330451488495,
+     "cpu_s": 0.02262442499996098
+    },
+    "JK": {
+     "calls": 17,
+     "total_s": 0.09879195969551802,
+     "cpu_s": 0.09859569199997509
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 3037332544,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 17,
+    "jk_h2d_s": 0.0012819673866033554,
+    "jk_kernel_s": 0.0930895684286952,
+    "jk_d2h_s": 0.001968049444258213,
+    "fp64_builds": 3,
+    "fp32_builds": 14,
+    "linalg_calls": 119,
+    "linalg_s": 0.06839157361537218,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 166,
+    "npair": 13861,
+    "nprim_pairs": 49122,
+    "quartets_total": 96070591,
+    "quartets_computed": 80658247,
+    "quartets_screened": 15412344,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.024136483669281e-05,
+    "host_tables_s": 0.004410026594996452,
+    "h2d_alloc_s": 0.005417280197143555,
+    "pair_kernel_s": 6.0416001826524736e-05,
+    "schwarz_kernel_s": 0.00807423973083496,
+    "quartet_kernel_s": 0.5651660766601563,
+    "device_total_s": 0.578718017578125,
+    "G_bytes": 6074665088
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA A100-PCIE-40GB",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "naphthalene",
+   "nbf": 166,
+   "energy": -383.3458882808713,
+   "err_vs_ref": 3.304140932414157e-05,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 4.098927952349186,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 1.2438893262296915,
+     "cpu_s": 1.2408078219999936
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.8474937928840518,
+     "cpu_s": 1.8438077879999923
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.24015176761895418,
+     "cpu_s": 0.23943560899999738
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.1346132755279541,
+     "cpu_s": 0.134733026000049
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.5190665610134602,
+     "cpu_s": 0.5179738699999348
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 3037332544,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.00756989698857069,
+    "jk_kernel_s": 0.4858962194994092,
+    "jk_d2h_s": 0.011154189705848694,
+    "fp64_builds": 1,
+    "fp32_builds": 100,
+    "linalg_calls": 707,
+    "linalg_s": 0.36258817091584206,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 166,
+    "npair": 13861,
+    "nprim_pairs": 49122,
+    "quartets_total": 96070591,
+    "quartets_computed": 80658247,
+    "quartets_screened": 15412344,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.0633451640605927e-05,
+    "host_tables_s": 0.0035976972430944443,
+    "h2d_alloc_s": 0.0067991681098937985,
+    "pair_kernel_s": 6.143999844789505e-05,
+    "schwarz_kernel_s": 0.008073216438293456,
+    "quartet_kernel_s": 0.5652612915039062,
+    "device_total_s": 0.5801951293945312,
+    "G_bytes": 6074665088
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA A100-PCIE-40GB",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "instructor (CUDA ERI)"
+  }
+ ],
+ "finished": "2026-11-21 16:23:49"
+}

@@ -1,0 +1,46 @@
+{
+ "meta": {
+  "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "numpy": "2.2.6",
+  "python": "3.10.14",
+  "host": "n183.cluster"
+ },
+ "rows": [
+  {
+   "rung": "R0",
+   "description": "full N^4, naive integrals",
+   "options": {
+    "eri": "full",
+    "screening": 0.0,
+    "boys": "series",
+    "onee": "vector",
+    "jk": "blas",
+    "linalg": "lapack"
+   },
+   "molecule": "c2h4",
+   "nbf": 38,
+   "scf_seconds": 3353.6229051190894,
+   "kernels": {
+    "S,T,V": 0.24199281097389758,
+    "ERI": 3353.1595654520206,
+    "diag": 0.004235909786075354,
+    "matmul": 0.001058440189808607,
+    "JK": 0.026433105347678065
+   },
+   "eri_seconds": 3353.1595654520206,
+   "stats": {
+    "quartets": 0,
+    "contracted": 2085136,
+    "primitive_quartets": 0,
+    "schwarz_quartets": 0,
+    "skipped_quartets": 0,
+    "skipped_contracted": 0
+   },
+   "energy": -78.03074400463203,
+   "energy_error": 1.9895196601282805e-13,
+   "converged": true,
+   "iterations": 11,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  }
+ ]
+}

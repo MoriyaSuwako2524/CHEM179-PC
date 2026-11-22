@@ -1,0 +1,20 @@
+[package]
+name = "hfperf_rust"
+version = "0.1.0"
+edition = "2021"
+description = "Chem179 stage 2b: McMurchie-Davidson ERIs and J/K in Rust, exposed to Python with PyO3"
+
+[lib]
+name = "hfperf_rust"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.22"
+numpy = "0.22"
+rayon = "1.10"    # stage 4: data-parallel iterators (work-stealing thread pool)
+libm = "0.2"      # erf() for the large-T branch of the Boys function (not in Rust's std)
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1

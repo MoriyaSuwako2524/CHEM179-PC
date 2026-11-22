@@ -1,0 +1,122 @@
+{
+ "kind": "jk",
+ "rows": [
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "G_bytes": 1042568,
+   "jk_fused_s": 0.00015208101831376553,
+   "jk_twopass_s": 0.0002921251580119133,
+   "jk_naive_order_s": 0.00021276995539665222,
+   "max_diff": 1.4210854715202004e-14,
+   "jk_python_s": 0.09939687605947256,
+   "max_diff_python": 1.4210854715202004e-14
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "G_bytes": 1555848,
+   "jk_fused_s": 0.00022155418992042542,
+   "jk_twopass_s": 0.0004374380223453045,
+   "jk_naive_order_s": 0.0003225018735975027,
+   "max_diff": 1.7763568394002505e-14,
+   "jk_python_s": 0.14785320381633937,
+   "max_diff_python": 1.7763568394002505e-14
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "G_bytes": 2238728,
+   "jk_fused_s": 0.000322198960930109,
+   "jk_twopass_s": 0.0006420498248189688,
+   "jk_naive_order_s": 0.0004644801374524832,
+   "max_diff": 1.3322676295501878e-14,
+   "jk_python_s": 0.2131578871048987,
+   "max_diff_python": 1.3322676295501878e-14
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "G_bytes": 16681088,
+   "jk_fused_s": 0.0026337169110774994,
+   "jk_twopass_s": 0.00450720707885921,
+   "jk_naive_order_s": 0.0036028919275850058,
+   "max_diff": 2.398081733190338e-14
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "G_bytes": 865945728,
+   "jk_fused_s": 0.15887404303066432,
+   "jk_twopass_s": 0.27707294980064034,
+   "jk_naive_order_s": 0.19830161496065557,
+   "max_diff": 2.6290081223123707e-13
+  }
+ ],
+ "machine": {
+  "cpu": "Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "numpy": "2.2.6",
+  "host": "n153.cluster",
+  "build": {
+   "_hfcpp_O0": {
+    "module": "_hfcpp_O0",
+    "profile": "O0",
+    "flags": [
+     "-O0"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp_O0.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   },
+   "_hfcpp_O2": {
+    "module": "_hfcpp_O2",
+    "profile": "O2",
+    "flags": [
+     "-O2"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp_O2.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   },
+   "_hfcpp_O3": {
+    "module": "_hfcpp_O3",
+    "profile": "O3",
+    "flags": [
+     "-O3"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp_O3.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   },
+   "_hfcpp_native": {
+    "module": "_hfcpp_native",
+    "profile": "native",
+    "flags": [
+     "-O3",
+     "-march=native"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp_native.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   },
+   "_hfcpp": {
+    "module": "_hfcpp",
+    "profile": "native",
+    "flags": [
+     "-O3",
+     "-march=native"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   }
+  }
+ }
+}

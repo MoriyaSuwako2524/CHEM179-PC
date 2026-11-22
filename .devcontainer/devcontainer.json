@@ -1,0 +1,6 @@
+{
+  "name": "chem179-hf-perf",
+  "build": { "dockerfile": "Dockerfile" },
+  "postCreateCommand": "pip install -e '.[dev,profile,mpi]'",
+  "customizations": { "vscode": { "extensions": ["ms-python.python", "rust-lang.rust-analyzer", "ms-vscode.cpptools"] } }
+}

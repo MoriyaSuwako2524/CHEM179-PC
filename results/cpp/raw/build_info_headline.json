@@ -1,0 +1,59 @@
+{
+ "_hfcpp_O0": {
+  "module": "_hfcpp_O0",
+  "profile": "O0",
+  "flags": [
+   "-O0"
+  ],
+  "compiler": "c++ (GCC) 13.2.0",
+  "file": "_hfcpp_O0.cpython-310-x86_64-linux-gnu.so",
+  "machine": "x86_64",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+ },
+ "_hfcpp_O2": {
+  "module": "_hfcpp_O2",
+  "profile": "O2",
+  "flags": [
+   "-O2"
+  ],
+  "compiler": "c++ (GCC) 13.2.0",
+  "file": "_hfcpp_O2.cpython-310-x86_64-linux-gnu.so",
+  "machine": "x86_64",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+ },
+ "_hfcpp_O3": {
+  "module": "_hfcpp_O3",
+  "profile": "O3",
+  "flags": [
+   "-O3"
+  ],
+  "compiler": "c++ (GCC) 13.2.0",
+  "file": "_hfcpp_O3.cpython-310-x86_64-linux-gnu.so",
+  "machine": "x86_64",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+ },
+ "_hfcpp_native": {
+  "module": "_hfcpp_native",
+  "profile": "native",
+  "flags": [
+   "-O3",
+   "-march=native"
+  ],
+  "compiler": "c++ (GCC) 13.2.0",
+  "file": "_hfcpp_native.cpython-310-x86_64-linux-gnu.so",
+  "machine": "x86_64",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+ },
+ "_hfcpp": {
+  "module": "_hfcpp",
+  "profile": "native",
+  "flags": [
+   "-O3",
+   "-march=native"
+  ],
+  "compiler": "c++ (GCC) 13.2.0",
+  "file": "_hfcpp.cpython-310-x86_64-linux-gnu.so",
+  "machine": "x86_64",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+ }
+}

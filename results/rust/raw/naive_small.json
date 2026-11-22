@@ -1,0 +1,186 @@
+{
+ "machine": {
+  "cpu_model": "Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "numpy": "2.2.6",
+  "hostname": "n059.cluster",
+  "threads_env": {
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "SLURM_CPUS_PER_TASK": "1"
+  },
+  "lscpu": "Architecture:          x86_64\nCPU op-mode(s):        32-bit, 64-bit\nByte Order:            Little Endian\nCPU(s):                32\nOn-line CPU(s) list:   0-31\nThread(s) per core:    1\nCore(s) per socket:    16\nSocket(s):             2\nNUMA node(s):          2\nVendor ID:             GenuineIntel\nCPU family:            6\nModel:                 85\nModel name:            Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz\nStepping:              4\nCPU MHz:               1700.000\nCPU max MHz:           2101.0000\nCPU min MHz:           1000.0000\nBogoMIPS:              4200.00\nVirtualization:        VT-x\nL1d cache:             32K\nL1i cache:             32K\nL2 cache:              1024K\nL3 cache:              22528K\nNUMA node0 CPU(s):     0-15\nNUMA node1 CPU(s):     16-31\nFlags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke md_clear spec_ctrl intel_stibp flush_l1d\n"
+ },
+ "records": [
+  {
+   "variant": "naive",
+   "backend": "rust-naive",
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531253,
+   "e_ref": -76.01050499531259,
+   "abs_err": 5.684341886080802e-14,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 2.453636363847181,
+   "jk_s": 0.003279983066022396,
+   "jk_calls": 13,
+   "stv_s": 0.007389091188088059,
+   "scf_wall_s": 2.58057859307155,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.007389091188088059
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 2.453636363847181
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.029720037011429667
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0027337234932929277
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.003279983066022396
+    }
+   },
+   "eri_stats": {
+    "computed": 130321,
+    "screened": 0
+   }
+  },
+  {
+   "variant": "naive",
+   "backend": "rust-naive",
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.183982065734625,
+   "e_ref": -56.18398206573501,
+   "abs_err": 3.836930773104541e-13,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 3.1928793520200998,
+   "jk_s": 0.0044906968250870705,
+   "jk_calls": 13,
+   "stv_s": 0.004037452861666679,
+   "scf_wall_s": 3.2960320140700787,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.004037452861666679
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 3.1928793520200998
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0019609322771430016
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0008407728746533394
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0044906968250870705
+    }
+   },
+   "eri_stats": {
+    "computed": 194481,
+    "screened": 0
+   }
+  },
+  {
+   "variant": "naive",
+   "backend": "rust-naive",
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195093226548124,
+   "e_ref": -40.195093226547954,
+   "abs_err": 1.7053025658242404e-13,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 4.390077841002494,
+   "jk_s": 0.00530739757232368,
+   "jk_calls": 12,
+   "stv_s": 0.0054779970087111,
+   "scf_wall_s": 4.523254489991814,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0054779970087111
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 4.390077841002494
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.0017521076370030642
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.0008332680445164442
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.00530739757232368
+    }
+   },
+   "eri_stats": {
+    "computed": 279841,
+    "screened": 0
+   }
+  },
+  {
+   "variant": "naive",
+   "backend": "rust-naive",
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463208,
+   "e_ref": -78.03074400463223,
+   "abs_err": 1.4210854715202004e-13,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 54.43908343301155,
+   "jk_s": 0.03460047650150955,
+   "jk_calls": 12,
+   "stv_s": 0.018937098095193505,
+   "scf_wall_s": 54.84936622204259,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.018937098095193505
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 54.43908343301155
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.10623573558405042
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.0014877698849886656
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.03460047650150955
+    }
+   },
+   "eri_stats": {
+    "computed": 2085136,
+    "screened": 0
+   }
+  }
+ ]
+}

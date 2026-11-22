@@ -1,0 +1,6636 @@
+{
+ "argv": [
+  "ext/cuda/bench_gpu.py",
+  "--out",
+  "results/gpu/raw/bench_NVIDIA_L40S_36366287.json"
+ ],
+ "started": "2026-11-21 16:27:37",
+ "info": {
+  "gpu": {
+   "name": "NVIDIA L40S",
+   "compute_capability": "8.9",
+   "sm_count": 142,
+   "total_mem_GB": 47.695921152,
+   "clock_MHz": 2520.0,
+   "cupy": "14.2.0",
+   "cuda_runtime": 12090,
+   "driver": 13030
+  },
+  "cpu_model": "Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz",
+  "lscpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  64\nOn-line CPU(s) list:                     0-63\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz\nCPU family:                              6\nModel:                                   106\nThread(s) per core:                      1\nCore(s) per socket:                      32\nSocket(s):                               2\nStepping:                                6\nCPU(s) scaling MHz:                      97%\nCPU max MHz:                             3200.0000\nCPU min MHz:                             800.0000\nBogoMIPS:                                4000.00\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect wbnoinvd dtherm ida arat pln pts vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid fsrm md_clear pconfig flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               3 MiB (64 instances)\nL1i cache:                               2 MiB (64 instances)\nL2 cache:                                80 MiB (64 instances)\nL3 cache:                                96 MiB (2 instances)\nNUMA node(s):                            2\nNUMA node0 CPU(s):                       0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62\nNUMA node1 CPU(s):                       1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63\nVulnerability Gather data sampling:      Mitigation; Microcode\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT disabled\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n",
+  "host": "c1033.oscer.ou.edu",
+  "nvidia_smi": "name, driver_version, memory.total [MiB], clocks.max.sm [MHz]\nNVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz\nNVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz\nNVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz\nNVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz\n",
+  "python": "3.11.3 (main, Jul  5 2024, 12:14:59) [GCC 12.3.0]",
+  "numpy": "2.4.6",
+  "omp_threads": "1",
+  "slurm_job": "36366287"
+ },
+ "eri": [
+  {
+   "molecule": "h2",
+   "precision": "fp64",
+   "nbf": 4,
+   "npair": 10,
+   "nprim_pairs": 42,
+   "quartets_total": 55,
+   "quartets_computed": 55,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.3286015018820763e-05,
+   "host_tables_s": 0.00018522422760725021,
+   "h2d_alloc_s": 0.0005954560041427612,
+   "pair_kernel_s": 2.969600073993206e-05,
+   "schwarz_kernel_s": 0.0005990399718284607,
+   "quartet_kernel_s": 0.0012165119647979737,
+   "device_total_s": 0.002440704107284546,
+   "G_bytes": 2048,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 9.492406860545088e-15
+  },
+  {
+   "molecule": "h2",
+   "precision": "fp32",
+   "nbf": 4,
+   "npair": 10,
+   "nprim_pairs": 42,
+   "quartets_total": 55,
+   "quartets_computed": 55,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.3523967936635017e-05,
+   "host_tables_s": 0.00018007704056799412,
+   "h2d_alloc_s": 0.0005597760081291199,
+   "pair_kernel_s": 2.380800060927868e-05,
+   "schwarz_kernel_s": 9.702400118112564e-05,
+   "quartet_kernel_s": 0.000159743994474411,
+   "device_total_s": 0.0008403519988059997,
+   "G_bytes": 1024,
+   "quartet_resources": {
+    "num_regs": 64,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 8,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.8333333333333334,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 1.542531496978583e-07,
+   "max_abs_err_vs_gpu_fp64": 1.5425315036399212e-07,
+   "max_rel_err_vs_gpu_fp64": 1.4328255897261414e-07
+  },
+  {
+   "molecule": "h2",
+   "precision": "fp64",
+   "nbf": 4,
+   "npair": 10,
+   "nprim_pairs": 42,
+   "quartets_total": 55,
+   "quartets_computed": 55,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 1.2638047337532043e-05,
+   "host_tables_s": 0.00014263996854424477,
+   "h2d_alloc_s": 0.0005608959794044494,
+   "pair_kernel_s": 2.764800004661083e-05,
+   "schwarz_kernel_s": 0.0005980160236358643,
+   "quartet_kernel_s": 0.0012165119647979737,
+   "device_total_s": 0.0024030721187591553,
+   "G_bytes": 2048,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 9.492406860545088e-15,
+   "max_abs_err_vs_gpu_fp64": 2.7755575615628914e-17,
+   "max_rel_err_vs_gpu_fp64": 2.5781579764049607e-17
+  },
+  {
+   "molecule": "h2o",
+   "precision": "fp64",
+   "nbf": 19,
+   "npair": 190,
+   "nprim_pairs": 699,
+   "quartets_total": 18145,
+   "quartets_computed": 18145,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.3316050171852112e-05,
+   "host_tables_s": 0.00026322295889258385,
+   "h2d_alloc_s": 0.0006002560257911682,
+   "pair_kernel_s": 3.58400009572506e-05,
+   "schwarz_kernel_s": 0.004047872066497803,
+   "quartet_kernel_s": 0.007677951812744141,
+   "device_total_s": 0.012361920356750489,
+   "G_bytes": 1042568,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 2.1815882433884326e-14
+  },
+  {
+   "molecule": "h2o",
+   "precision": "fp32",
+   "nbf": 19,
+   "npair": 190,
+   "nprim_pairs": 699,
+   "quartets_total": 18145,
+   "quartets_computed": 18145,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.2756092473864555e-05,
+   "host_tables_s": 0.00025024404749274254,
+   "h2d_alloc_s": 0.0005796480178833007,
+   "pair_kernel_s": 2.457600086927414e-05,
+   "schwarz_kernel_s": 0.0019578880071640017,
+   "quartet_kernel_s": 0.0012410880327224732,
+   "device_total_s": 0.0038032000064849854,
+   "G_bytes": 521284,
+   "quartet_resources": {
+    "num_regs": 64,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 8,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.8333333333333334,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 1.4451349095168098e-06,
+   "max_abs_err_vs_gpu_fp64": 1.4451349095168098e-06,
+   "max_rel_err_vs_gpu_fp64": 3.0230126837742993e-07
+  },
+  {
+   "molecule": "h2o",
+   "precision": "fp64",
+   "nbf": 19,
+   "npair": 190,
+   "nprim_pairs": 699,
+   "quartets_total": 18145,
+   "quartets_computed": 18145,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 1.3862969353795052e-05,
+   "host_tables_s": 0.0002094600349664688,
+   "h2d_alloc_s": 0.000598367989063263,
+   "pair_kernel_s": 3.58400009572506e-05,
+   "schwarz_kernel_s": 0.004047872066497803,
+   "quartet_kernel_s": 0.005803008079528809,
+   "device_total_s": 0.010485088348388672,
+   "G_bytes": 1042568,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 2.1815882433884326e-14,
+   "max_abs_err_vs_gpu_fp64": 1.5543122344752192e-15,
+   "max_rel_err_vs_gpu_fp64": 3.251395816695898e-16
+  },
+  {
+   "molecule": "nh3",
+   "precision": "fp64",
+   "nbf": 21,
+   "npair": 231,
+   "nprim_pairs": 856,
+   "quartets_total": 26796,
+   "quartets_computed": 26796,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.651211641728878e-05,
+   "host_tables_s": 0.0002954269293695688,
+   "h2d_alloc_s": 0.0006304000020027161,
+   "pair_kernel_s": 3.686400130391121e-05,
+   "schwarz_kernel_s": 0.004051968097686768,
+   "quartet_kernel_s": 0.007825407981872558,
+   "device_total_s": 0.012544639587402344,
+   "G_bytes": 1555848,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 2.148281552649678e-14
+  },
+  {
+   "molecule": "nh3",
+   "precision": "fp32",
+   "nbf": 21,
+   "npair": 231,
+   "nprim_pairs": 856,
+   "quartets_total": 26796,
+   "quartets_computed": 26796,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.422991044819355e-05,
+   "host_tables_s": 0.00026889611035585403,
+   "h2d_alloc_s": 0.0006139839887619018,
+   "pair_kernel_s": 2.5599999353289605e-05,
+   "schwarz_kernel_s": 0.0019589120149612425,
+   "quartet_kernel_s": 0.0012451839447021485,
+   "device_total_s": 0.003843679904937744,
+   "G_bytes": 777924,
+   "quartet_resources": {
+    "num_regs": 64,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 8,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.8333333333333334,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 3.650087889717213e-06,
+   "max_abs_err_vs_gpu_fp64": 3.6500878870526776e-06,
+   "max_rel_err_vs_gpu_fp64": 8.778008454796033e-07
+  },
+  {
+   "molecule": "nh3",
+   "precision": "fp64",
+   "nbf": 21,
+   "npair": 231,
+   "nprim_pairs": 856,
+   "quartets_total": 26796,
+   "quartets_computed": 26796,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 1.3052951544523239e-05,
+   "host_tables_s": 0.00022594607435166836,
+   "h2d_alloc_s": 0.000579039990901947,
+   "pair_kernel_s": 3.580800071358681e-05,
+   "schwarz_kernel_s": 0.004048895835876465,
+   "quartet_kernel_s": 0.006714367866516113,
+   "device_total_s": 0.011378111839294434,
+   "G_bytes": 1555848,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_pyscf": 2.148281552649678e-14,
+   "max_abs_err_vs_gpu_fp64": 1.27675647831893e-15,
+   "max_rel_err_vs_gpu_fp64": 3.0704409066842374e-16
+  },
+  {
+   "molecule": "ch4",
+   "precision": "fp64",
+   "nbf": 23,
+   "npair": 276,
+   "nprim_pairs": 1029,
+   "quartets_total": 38226,
+   "quartets_computed": 38226,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.3485085219144821e-05,
+   "host_tables_s": 0.00028379494324326515,
+   "h2d_alloc_s": 0.000674239993095398,
+   "pair_kernel_s": 3.7888001650571824e-05,
+   "schwarz_kernel_s": 0.004045983791351318,
+   "quartet_kernel_s": 0.008018848419189453,
+   "device_total_s": 0.012776960372924804,
+   "G_bytes": 2238728,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   }
+  },
+  {
+   "molecule": "ch4",
+   "precision": "fp32",
+   "nbf": 23,
+   "npair": 276,
+   "nprim_pairs": 1029,
+   "quartets_total": 38226,
+   "quartets_computed": 38226,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.2725824490189552e-05,
+   "host_tables_s": 0.00029036193154752254,
+   "h2d_alloc_s": 0.0005972160100936889,
+   "pair_kernel_s": 2.457600086927414e-05,
+   "schwarz_kernel_s": 0.0019568639993667604,
+   "quartet_kernel_s": 0.0012687360048294067,
+   "device_total_s": 0.0038473920822143554,
+   "G_bytes": 1119364,
+   "quartet_resources": {
+    "num_regs": 64,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 8,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.8333333333333334,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1029695836661801e-06,
+   "max_rel_err_vs_gpu_fp64": 3.120306943915405e-07
+  },
+  {
+   "molecule": "ch4",
+   "precision": "fp64",
+   "nbf": 23,
+   "npair": 276,
+   "nprim_pairs": 1029,
+   "quartets_total": 38226,
+   "quartets_computed": 38226,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 1.3313023373484612e-05,
+   "host_tables_s": 0.00024022208526730537,
+   "h2d_alloc_s": 0.0006665920019149781,
+   "pair_kernel_s": 3.776000067591667e-05,
+   "schwarz_kernel_s": 0.004047872066497803,
+   "quartet_kernel_s": 0.007080959796905518,
+   "device_total_s": 0.011833184242248536,
+   "G_bytes": 2238728,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1102230246251565e-15,
+   "max_rel_err_vs_gpu_fp64": 3.140826967791625e-16
+  },
+  {
+   "molecule": "c2h4",
+   "precision": "fp64",
+   "nbf": 38,
+   "npair": 741,
+   "nprim_pairs": 2694,
+   "quartets_total": 274911,
+   "quartets_computed": 274911,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.3886019587516785e-05,
+   "host_tables_s": 0.00046821613796055317,
+   "h2d_alloc_s": 0.0007220479846000671,
+   "pair_kernel_s": 3.7888001650571824e-05,
+   "schwarz_kernel_s": 0.011743231773376465,
+   "quartet_kernel_s": 0.028630016326904296,
+   "device_total_s": 0.04113318252563476,
+   "G_bytes": 16681088,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   }
+  },
+  {
+   "molecule": "c2h4",
+   "precision": "fp32",
+   "nbf": 38,
+   "npair": 741,
+   "nprim_pairs": 2694,
+   "quartets_total": 274911,
+   "quartets_computed": 274911,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 1.537497155368328e-05,
+   "host_tables_s": 0.00047047599218785763,
+   "h2d_alloc_s": 0.0007453439831733704,
+   "pair_kernel_s": 2.969600073993206e-05,
+   "schwarz_kernel_s": 0.0022405118942260744,
+   "quartet_kernel_s": 0.0026163198947906493,
+   "device_total_s": 0.005631872177124023,
+   "G_bytes": 8340544,
+   "quartet_resources": {
+    "num_regs": 64,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 8,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.8333333333333334,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1029695836661801e-06,
+   "max_rel_err_vs_gpu_fp64": 3.120306943915405e-07
+  },
+  {
+   "molecule": "c2h4",
+   "precision": "fp64",
+   "nbf": 38,
+   "npair": 741,
+   "nprim_pairs": 2694,
+   "quartets_total": 274911,
+   "quartets_computed": 274911,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 3.274809569120407e-05,
+   "host_tables_s": 0.0004642140120267868,
+   "h2d_alloc_s": 0.0009315840005874634,
+   "pair_kernel_s": 4.710400104522705e-05,
+   "schwarz_kernel_s": 0.011759807586669922,
+   "quartet_kernel_s": 0.029194047927856445,
+   "device_total_s": 0.04193254470825195,
+   "G_bytes": 16681088,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1102230246251565e-15,
+   "max_rel_err_vs_gpu_fp64": 3.140826967791625e-16
+  },
+  {
+   "molecule": "c2h4",
+   "precision": "fp64",
+   "nbf": 38,
+   "npair": 741,
+   "nprim_pairs": 2694,
+   "quartets_total": 274911,
+   "quartets_computed": 274911,
+   "quartets_screened": 0,
+   "block": 64,
+   "order": "sorted",
+   "compile_or_load_s": 1.701992005109787e-05,
+   "host_tables_s": 0.0005098499823361635,
+   "h2d_alloc_s": 0.0007524799704551697,
+   "pair_kernel_s": 3.891199827194214e-05,
+   "schwarz_kernel_s": 0.011545599937438965,
+   "quartet_kernel_s": 0.02746895980834961,
+   "device_total_s": 0.03980595016479492,
+   "G_bytes": 16681088,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 64,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 64,
+    "active_blocks_per_sm": 18,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 0.0,
+   "max_rel_err_vs_gpu_fp64": 0.0
+  },
+  {
+   "molecule": "c2h4",
+   "precision": "fp64",
+   "nbf": 38,
+   "npair": 741,
+   "nprim_pairs": 2694,
+   "quartets_total": 274911,
+   "quartets_computed": 274911,
+   "quartets_screened": 0,
+   "block": 256,
+   "order": "sorted",
+   "compile_or_load_s": 1.7292099073529243e-05,
+   "host_tables_s": 0.000502496026456356,
+   "h2d_alloc_s": 0.0007593600153923035,
+   "pair_kernel_s": 5.3247999399900436e-05,
+   "schwarz_kernel_s": 0.013990912437438965,
+   "quartet_kernel_s": 0.034841598510742186,
+   "device_total_s": 0.049645118713378907,
+   "G_bytes": 16681088,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 256,
+    "active_blocks_per_sm": 2,
+    "occupancy": 0.3333333333333333,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 256,
+    "active_blocks_per_sm": 4,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 0.0,
+   "max_rel_err_vs_gpu_fp64": 0.0
+  },
+  {
+   "molecule": "c2h4",
+   "precision": "fp32",
+   "nbf": 38,
+   "npair": 741,
+   "nprim_pairs": 2694,
+   "quartets_total": 274911,
+   "quartets_computed": 274911,
+   "quartets_screened": 0,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 1.60860363394022e-05,
+   "host_tables_s": 0.0003963741473853588,
+   "h2d_alloc_s": 0.0007311040163040161,
+   "pair_kernel_s": 3.174399957060814e-05,
+   "schwarz_kernel_s": 0.002233536005020142,
+   "quartet_kernel_s": 0.003311424016952515,
+   "device_total_s": 0.006307807922363282,
+   "G_bytes": 8340544,
+   "quartet_resources": {
+    "num_regs": 64,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 8,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.8333333333333334,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1029695836661801e-06,
+   "max_rel_err_vs_gpu_fp64": 3.120306943915405e-07
+  },
+  {
+   "molecule": "benzene",
+   "precision": "fp64",
+   "nbf": 102,
+   "npair": 5253,
+   "nprim_pairs": 18708,
+   "quartets_total": 13799631,
+   "quartets_computed": 13621436,
+   "quartets_screened": 178195,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 3.0126888304948807e-05,
+   "host_tables_s": 0.0020587830804288387,
+   "h2d_alloc_s": 0.0024378559589385987,
+   "pair_kernel_s": 4.2975999414920804e-05,
+   "schwarz_kernel_s": 0.015711232185363768,
+   "quartet_kernel_s": 0.35038104248046875,
+   "device_total_s": 0.3685731201171875,
+   "G_bytes": 865945728,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   }
+  },
+  {
+   "molecule": "benzene",
+   "precision": "fp32",
+   "nbf": 102,
+   "npair": 5253,
+   "nprim_pairs": 18708,
+   "quartets_total": 13799631,
+   "quartets_computed": 13621436,
+   "quartets_screened": 178195,
+   "block": 128,
+   "order": "sorted",
+   "compile_or_load_s": 2.7658184990286827e-05,
+   "host_tables_s": 0.0019897869788110256,
+   "h2d_alloc_s": 0.003956928014755249,
+   "pair_kernel_s": 2.2528000175952913e-05,
+   "schwarz_kernel_s": 0.002675935983657837,
+   "quartet_kernel_s": 0.03165161514282227,
+   "device_total_s": 0.0383070068359375,
+   "G_bytes": 432972864,
+   "quartet_resources": {
+    "num_regs": 64,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 8,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.8333333333333334,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1029695836661801e-06,
+   "max_rel_err_vs_gpu_fp64": 3.120306943915405e-07
+  },
+  {
+   "molecule": "benzene",
+   "precision": "fp64",
+   "nbf": 102,
+   "npair": 5253,
+   "nprim_pairs": 18708,
+   "quartets_total": 13799631,
+   "quartets_computed": 13621436,
+   "quartets_screened": 178195,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 2.5002984330058098e-05,
+   "host_tables_s": 0.0013972169253975153,
+   "h2d_alloc_s": 0.004225759983062744,
+   "pair_kernel_s": 4.403200000524521e-05,
+   "schwarz_kernel_s": 0.015708160400390626,
+   "quartet_kernel_s": 0.718613525390625,
+   "device_total_s": 0.7385914306640625,
+   "G_bytes": 865945728,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 128,
+    "active_blocks_per_sm": 5,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 9,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1102230246251565e-15,
+   "max_rel_err_vs_gpu_fp64": 3.140826967791625e-16
+  },
+  {
+   "molecule": "benzene",
+   "precision": "fp64",
+   "nbf": 102,
+   "npair": 5253,
+   "nprim_pairs": 18708,
+   "quartets_total": 13799631,
+   "quartets_computed": 13621436,
+   "quartets_screened": 178195,
+   "block": 64,
+   "order": "sorted",
+   "compile_or_load_s": 3.436114639043808e-05,
+   "host_tables_s": 0.0020004319958388805,
+   "h2d_alloc_s": 0.004670752048492432,
+   "pair_kernel_s": 3.993599861860275e-05,
+   "schwarz_kernel_s": 0.014863360404968261,
+   "quartet_kernel_s": 0.3504005126953125,
+   "device_total_s": 0.3699745483398437,
+   "G_bytes": 865945728,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 64,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.4166666666666667,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 64,
+    "active_blocks_per_sm": 18,
+    "occupancy": 0.75,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 0.0,
+   "max_rel_err_vs_gpu_fp64": 0.0
+  },
+  {
+   "molecule": "benzene",
+   "precision": "fp64",
+   "nbf": 102,
+   "npair": 5253,
+   "nprim_pairs": 18708,
+   "quartets_total": 13799631,
+   "quartets_computed": 13621436,
+   "quartets_screened": 178195,
+   "block": 256,
+   "order": "sorted",
+   "compile_or_load_s": 3.42510174959898e-05,
+   "host_tables_s": 0.0019752599764615297,
+   "h2d_alloc_s": 0.002582240104675293,
+   "pair_kernel_s": 4.5056000351905825e-05,
+   "schwarz_kernel_s": 0.018141183853149414,
+   "quartet_kernel_s": 0.35158734130859376,
+   "device_total_s": 0.37235580444335936,
+   "G_bytes": 865945728,
+   "quartet_resources": {
+    "num_regs": 96,
+    "local_size_bytes": 3536,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 640,
+    "block": 256,
+    "active_blocks_per_sm": 2,
+    "occupancy": 0.3333333333333333,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 56,
+    "local_size_bytes": 560,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 256,
+    "active_blocks_per_sm": 4,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 0.0,
+   "max_rel_err_vs_gpu_fp64": 0.0
+  },
+  {
+   "molecule": "benzene",
+   "precision": "fp32",
+   "nbf": 102,
+   "npair": 5253,
+   "nprim_pairs": 18708,
+   "quartets_total": 13799631,
+   "quartets_computed": 13621436,
+   "quartets_screened": 178195,
+   "block": 128,
+   "order": "natural",
+   "compile_or_load_s": 6.357603706419468e-05,
+   "host_tables_s": 0.0016097628977149725,
+   "h2d_alloc_s": 0.002009439945220947,
+   "pair_kernel_s": 2.457600086927414e-05,
+   "schwarz_kernel_s": 0.0026748480796813965,
+   "quartet_kernel_s": 0.07816073608398437,
+   "device_total_s": 0.08286959838867188,
+   "G_bytes": 432972864,
+   "quartet_resources": {
+    "num_regs": 64,
+    "local_size_bytes": 1776,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 8,
+    "occupancy": 0.6666666666666666,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "pair_resources": {
+    "num_regs": 48,
+    "local_size_bytes": 280,
+    "shared_size_bytes": 0,
+    "max_threads_per_block": 1024,
+    "block": 128,
+    "active_blocks_per_sm": 10,
+    "occupancy": 0.8333333333333334,
+    "max_threads_per_sm": 1536,
+    "regs_per_sm": 65536
+   },
+   "max_abs_err_vs_gpu_fp64": 1.1029695836661801e-06,
+   "max_rel_err_vs_gpu_fp64": 3.120306943915405e-07
+  }
+ ],
+ "transfer": [
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "precision": "fp64",
+   "bytes": 2048,
+   "h2d_pageable_s": 3.056204877793789e-05,
+   "d2h_pageable_s": 1.3971002772450447e-05,
+   "h2d_pinned_s": 9.92603600025177e-06,
+   "h2d_pageable_GBps": 0.06701121429654967,
+   "h2d_pinned_GBps": 0.20632607013998874,
+   "d2h_pageable_GBps": 0.14658933459225065
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "precision": "fp32",
+   "bytes": 1024,
+   "h2d_pageable_s": 2.835690975189209e-05,
+   "d2h_pageable_s": 1.208786852657795e-05,
+   "h2d_pinned_s": 8.946983143687248e-06,
+   "h2d_pageable_GBps": 0.036111128079873885,
+   "h2d_pinned_GBps": 0.11445198717318553,
+   "d2h_pageable_GBps": 0.08471303255396113
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "precision": "fp64",
+   "bytes": 1042568,
+   "h2d_pageable_s": 0.00015050917863845825,
+   "d2h_pageable_s": 0.00036482210271060467,
+   "h2d_pinned_s": 5.320413038134575e-05,
+   "h2d_pageable_GBps": 6.926939668605713,
+   "h2d_pinned_GBps": 19.595621477642677,
+   "d2h_pageable_GBps": 2.857743520071254
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "precision": "fp32",
+   "bytes": 521284,
+   "h2d_pageable_s": 8.807284757494926e-05,
+   "d2h_pageable_s": 6.42719678580761e-05,
+   "h2d_pinned_s": 3.187195397913456e-05,
+   "h2d_pageable_GBps": 5.918782171274655,
+   "h2d_pinned_GBps": 16.35557080501767,
+   "d2h_pageable_GBps": 8.110596537997523
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "precision": "fp64",
+   "bytes": 1555848,
+   "h2d_pageable_s": 0.00021047890186309814,
+   "d2h_pageable_s": 0.00014803791418671608,
+   "h2d_pinned_s": 7.381197065114975e-05,
+   "h2d_pageable_GBps": 7.391942784897133,
+   "h2d_pinned_GBps": 21.0785321984323,
+   "d2h_pageable_GBps": 10.509794119617577
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "precision": "fp32",
+   "bytes": 777924,
+   "h2d_pageable_s": 0.00011703209020197392,
+   "d2h_pageable_s": 9.080092422664165e-05,
+   "h2d_pinned_s": 4.185596480965614e-05,
+   "h2d_pageable_GBps": 6.647099942054005,
+   "h2d_pinned_GBps": 18.58573810298439,
+   "d2h_pageable_GBps": 8.567357729292269
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "precision": "fp64",
+   "bytes": 2238728,
+   "h2d_pageable_s": 0.00028790300711989403,
+   "d2h_pageable_s": 0.0001968839205801487,
+   "h2d_pinned_s": 0.00010195188224315643,
+   "h2d_pageable_GBps": 7.775979912108756,
+   "h2d_pinned_GBps": 21.95867256928722,
+   "d2h_pageable_GBps": 11.370801604332362
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "precision": "fp32",
+   "bytes": 1119364,
+   "h2d_pageable_s": 0.00016153394244611263,
+   "d2h_pageable_s": 0.00012097391299903393,
+   "h2d_pinned_s": 5.582207813858986e-05,
+   "h2d_pageable_GBps": 6.929590048069416,
+   "h2d_pinned_GBps": 20.052352712862948,
+   "d2h_pageable_GBps": 9.252937036176874
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "precision": "fp64",
+   "bytes": 16681088,
+   "h2d_pageable_s": 0.002109806053340435,
+   "d2h_pageable_s": 0.001586560858413577,
+   "h2d_pinned_s": 0.000691539840772748,
+   "h2d_pageable_GBps": 7.906455654342729,
+   "h2d_pinned_GBps": 24.121658676035263,
+   "d2h_pageable_GBps": 10.513991891038858
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "precision": "fp32",
+   "bytes": 8340544,
+   "h2d_pageable_s": 0.0009670660365372896,
+   "d2h_pageable_s": 0.0005514328368008137,
+   "h2d_pinned_s": 0.00035012303851544857,
+   "h2d_pageable_GBps": 8.624585793400875,
+   "h2d_pinned_GBps": 23.821751448761027,
+   "d2h_pageable_GBps": 15.12522186453096
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "precision": "fp64",
+   "bytes": 865945728,
+   "h2d_pageable_s": 0.09779836912639439,
+   "d2h_pageable_s": 0.21466367598623037,
+   "h2d_pinned_s": 0.035365198040381074,
+   "h2d_pageable_GBps": 8.85439844994607,
+   "h2d_pinned_GBps": 24.485815886319553,
+   "d2h_pageable_GBps": 4.033964870961896
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "precision": "fp32",
+   "bytes": 432972864,
+   "h2d_pageable_s": 0.0488267729524523,
+   "d2h_pageable_s": 0.10780692985281348,
+   "h2d_pinned_s": 0.017688175896182656,
+   "h2d_pageable_GBps": 8.867529796032816,
+   "h2d_pinned_GBps": 24.478095793554456,
+   "d2h_pageable_GBps": 4.016187684698272
+  }
+ ],
+ "kernels": [
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "cpu_jk_matmul_s": 8.183065801858902e-06,
+   "cpu_eigh_s": 9.921146556735039e-06,
+   "cpu_matmul_s": 1.5238765627145767e-06,
+   "gpu_jk_matmul_fp64_s": 0.00020375405438244343,
+   "gpu_jk_matmul_fp64_maxerr": 2.220446049250313e-16,
+   "gpu_jk_einsum_fp64_s": 0.00025463197380304337,
+   "gpu_jk_einsum_fp64_maxerr": 2.220446049250313e-16,
+   "gpu_eigh_fp64_s": 0.00012350105680525303,
+   "gpu_matmul_fp64_s": 2.4232082068920135e-05,
+   "roundtrip_NxN_fp64_s": 3.729201853275299e-05,
+   "gpu_jk_matmul_fp32_s": 0.00019818590953946114,
+   "gpu_jk_matmul_fp32_maxerr": 1.4407410198202797e-07,
+   "gpu_jk_einsum_fp32_s": 0.0002494840882718563,
+   "gpu_jk_einsum_fp32_maxerr": 1.4407410198202797e-07,
+   "gpu_eigh_fp32_s": 9.989715181291103e-05,
+   "gpu_matmul_fp32_s": 1.7690006643533707e-05,
+   "roundtrip_NxN_fp32_s": 3.923894837498665e-05
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "cpu_jk_matmul_s": 0.00010560406371951103,
+   "cpu_eigh_s": 4.720012657344341e-05,
+   "cpu_matmul_s": 2.1720770746469498e-06,
+   "gpu_jk_matmul_fp64_s": 0.0002023950219154358,
+   "gpu_jk_matmul_fp64_maxerr": 7.105427357601002e-15,
+   "gpu_jk_einsum_fp64_s": 0.0002522040158510208,
+   "gpu_jk_einsum_fp64_maxerr": 7.105427357601002e-15,
+   "gpu_eigh_fp64_s": 0.00039434991776943207,
+   "gpu_matmul_fp64_s": 2.7278903871774673e-05,
+   "roundtrip_NxN_fp64_s": 4.093814641237259e-05,
+   "gpu_jk_matmul_fp32_s": 0.00020931893959641457,
+   "gpu_jk_matmul_fp32_maxerr": 1.1281515508443363e-06,
+   "gpu_jk_einsum_fp32_s": 0.00025075115263462067,
+   "gpu_jk_einsum_fp32_maxerr": 1.095858275235173e-06,
+   "gpu_eigh_fp32_s": 0.00018377997912466526,
+   "gpu_matmul_fp32_s": 2.254289574921131e-05,
+   "roundtrip_NxN_fp32_s": 4.0220096707344055e-05
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "cpu_jk_matmul_s": 0.00015333294868469238,
+   "cpu_eigh_s": 5.693407729268074e-05,
+   "cpu_matmul_s": 2.193031832575798e-06,
+   "gpu_jk_matmul_fp64_s": 0.00020375498570501804,
+   "gpu_jk_matmul_fp64_maxerr": 7.105427357601002e-15,
+   "gpu_jk_einsum_fp64_s": 0.00025116605684161186,
+   "gpu_jk_einsum_fp64_maxerr": 3.552713678800501e-15,
+   "gpu_eigh_fp64_s": 0.0004244130104780197,
+   "gpu_matmul_fp64_s": 2.7314992621541023e-05,
+   "roundtrip_NxN_fp64_s": 3.9005884900689125e-05,
+   "gpu_jk_matmul_fp32_s": 0.00021208706311881542,
+   "gpu_jk_matmul_fp32_maxerr": 1.2355747163184105e-06,
+   "gpu_jk_einsum_fp32_s": 0.00025238096714019775,
+   "gpu_jk_einsum_fp32_maxerr": 8.893307477109147e-07,
+   "gpu_eigh_fp32_s": 0.0001882379874587059,
+   "gpu_matmul_fp32_s": 2.2620894014835358e-05,
+   "roundtrip_NxN_fp32_s": 4.0133949369192123e-05
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "cpu_jk_matmul_s": 0.00022050784900784492,
+   "cpu_eigh_s": 6.720703095197678e-05,
+   "cpu_matmul_s": 2.396991476416588e-06,
+   "gpu_jk_matmul_fp64_s": 0.0002047519665211439,
+   "gpu_jk_matmul_fp64_maxerr": 7.105427357601002e-15,
+   "gpu_jk_einsum_fp64_s": 0.0002508549951016903,
+   "gpu_jk_einsum_fp64_maxerr": 7.105427357601002e-15,
+   "gpu_eigh_fp64_s": 0.0004371639806777239,
+   "gpu_matmul_fp64_s": 2.7284957468509674e-05,
+   "roundtrip_NxN_fp64_s": 3.939308226108551e-05,
+   "gpu_jk_matmul_fp32_s": 0.0002035140059888363,
+   "gpu_jk_matmul_fp32_maxerr": 2.7978663812433524e-06,
+   "gpu_jk_einsum_fp32_s": 0.0002525199670344591,
+   "gpu_jk_einsum_fp32_maxerr": 9.169699346500693e-07,
+   "gpu_eigh_fp32_s": 0.00019147689454257488,
+   "gpu_matmul_fp32_s": 2.2073974832892418e-05,
+   "roundtrip_NxN_fp32_s": 4.030601121485233e-05
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "cpu_jk_matmul_s": 0.001282357843592763,
+   "cpu_eigh_s": 0.00017631403170526028,
+   "cpu_matmul_s": 4.515983164310455e-06,
+   "gpu_jk_matmul_fp64_s": 0.0002044017892330885,
+   "gpu_jk_matmul_fp64_maxerr": 1.0658141036401503e-14,
+   "gpu_jk_einsum_fp64_s": 0.00028010900132358074,
+   "gpu_jk_einsum_fp64_maxerr": 1.0658141036401503e-14,
+   "gpu_eigh_fp64_s": 0.0010131201706826687,
+   "gpu_matmul_fp64_s": 3.108079545199871e-05,
+   "roundtrip_NxN_fp64_s": 4.2171915993094444e-05,
+   "gpu_jk_matmul_fp32_s": 0.00020190002396702766,
+   "gpu_jk_matmul_fp32_maxerr": 1.95685139559032e-06,
+   "gpu_jk_einsum_fp32_s": 0.0002525479067116976,
+   "gpu_jk_einsum_fp32_maxerr": 1.859498404144233e-06,
+   "gpu_eigh_fp32_s": 0.0004303161986172199,
+   "gpu_matmul_fp32_s": 2.331589348614216e-05,
+   "roundtrip_NxN_fp32_s": 4.4034095481038094e-05
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "cpu_jk_matmul_s": 0.11730786296539009,
+   "cpu_eigh_s": 0.0010805961210280657,
+   "cpu_matmul_s": 5.895690992474556e-05,
+   "gpu_jk_matmul_fp64_s": 0.0025156589690595865,
+   "gpu_jk_matmul_fp64_maxerr": 1.687538997430238e-14,
+   "gpu_jk_einsum_fp64_s": 0.012086234986782074,
+   "gpu_jk_einsum_fp64_maxerr": 1.7763568394002505e-14,
+   "gpu_eigh_fp64_s": 0.0033252451103180647,
+   "gpu_matmul_fp64_s": 4.66399360448122e-05,
+   "roundtrip_NxN_fp64_s": 5.863397382199764e-05,
+   "gpu_jk_matmul_fp32_s": 0.0011915569193661213,
+   "gpu_jk_matmul_fp32_maxerr": 4.734374385861884e-06,
+   "gpu_jk_einsum_fp32_s": 0.006174131063744426,
+   "gpu_jk_einsum_fp32_maxerr": 6.3874973008637426e-06,
+   "gpu_eigh_fp32_s": 0.0010618478991091251,
+   "gpu_matmul_fp32_s": 2.375105395913124e-05,
+   "roundtrip_NxN_fp32_s": 5.9592071920633316e-05
+  }
+ ],
+ "scf": [
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553134572041,
+   "err_vs_ref": -3.2862601528904634e-14,
+   "converged": true,
+   "iterations": 5,
+   "wall_s": 0.023817223962396383,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.004337320104241371,
+     "cpu_s": 0.004327694000000548
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.004664344014599919,
+     "cpu_s": 0.004646794000002785
+    },
+    "diag": {
+     "calls": 7,
+     "total_s": 0.0019302566070109606,
+     "cpu_s": 0.0019367109999990362
+    },
+    "matmul": {
+     "calls": 24,
+     "total_s": 0.007729161763563752,
+     "cpu_s": 0.0065296040000113464
+    },
+    "JK": {
+     "calls": 6,
+     "total_s": 0.0023276011925190687,
+     "cpu_s": 0.0023238530000000424
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 2048,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 6,
+    "jk_h2d_s": 0.0002989640925079584,
+    "jk_kernel_s": 0.001710645155981183,
+    "jk_d2h_s": 0.00024751294404268265,
+    "fp64_builds": 6,
+    "fp32_builds": 0,
+    "linalg_calls": 42,
+    "linalg_s": 0.009342000586912036,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 4,
+    "npair": 10,
+    "nprim_pairs": 42,
+    "quartets_total": 55,
+    "quartets_computed": 55,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.6548048481345177e-05,
+    "host_tables_s": 0.00021429406479001045,
+    "h2d_alloc_s": 0.0004111999869346619,
+    "pair_kernel_s": 3.891199827194214e-05,
+    "schwarz_kernel_s": 0.0006021119952201844,
+    "quartet_kernel_s": 0.001217535972595215,
+    "device_total_s": 0.0022697598934173584,
+    "G_bytes": 2048
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267543265306619,
+   "err_vs_ref": 9.869265094053503e-07,
+   "converged": true,
+   "iterations": 19,
+   "wall_s": 0.044336886843666434,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.003943274030461907,
+     "cpu_s": 0.003930716999999362
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.0027638000901788473,
+     "cpu_s": 0.002755475000000729
+    },
+    "diag": {
+     "calls": 21,
+     "total_s": 0.005278046941384673,
+     "cpu_s": 0.0052656809999973575
+    },
+    "matmul": {
+     "calls": 80,
+     "total_s": 0.019033560762181878,
+     "cpu_s": 0.017623411000005973
+    },
+    "JK": {
+     "calls": 20,
+     "total_s": 0.0072240259032696486,
+     "cpu_s": 0.007212640000009429
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1024,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 20,
+    "jk_h2d_s": 0.0009211204014718533,
+    "jk_kernel_s": 0.0052748145535588264,
+    "jk_d2h_s": 0.0008581771980971098,
+    "fp64_builds": 0,
+    "fp32_builds": 20,
+    "linalg_calls": 140,
+    "linalg_s": 0.023413903545588255,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 4,
+    "npair": 10,
+    "nprim_pairs": 42,
+    "quartets_total": 55,
+    "quartets_computed": 55,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.266606315970421e-05,
+    "host_tables_s": 0.00017229816876351833,
+    "h2d_alloc_s": 0.0004858559966087341,
+    "pair_kernel_s": 3.071999922394752e-05,
+    "schwarz_kernel_s": 0.00010035199671983719,
+    "quartet_kernel_s": 0.00016076800227165223,
+    "device_total_s": 0.0007776960134506226,
+    "G_bytes": 1024
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553745058374,
+   "err_vs_ref": -6.104866612233195e-08,
+   "converged": true,
+   "iterations": 5,
+   "wall_s": 0.011243602959439158,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.003920654067769647,
+     "cpu_s": 0.003908934999998337
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.0027268200647085905,
+     "cpu_s": 0.0027181710000014903
+    },
+    "diag": {
+     "calls": 7,
+     "total_s": 0.00026824651286005974,
+     "cpu_s": 0.0002741460000024176
+    },
+    "matmul": {
+     "calls": 24,
+     "total_s": 0.0002713294234126806,
+     "cpu_s": 0.0002864810000033913
+    },
+    "JK": {
+     "calls": 6,
+     "total_s": 0.0023714692797511816,
+     "cpu_s": 0.002369706000006744
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1024,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 6,
+    "jk_h2d_s": 0.00040183099918067455,
+    "jk_kernel_s": 0.0016646231524646282,
+    "jk_d2h_s": 0.0002603416796773672,
+    "fp64_builds": 0,
+    "fp32_builds": 6,
+    "linalg_calls": 42,
+    "linalg_s": 0.00043175462633371353,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 4,
+    "npair": 10,
+    "nprim_pairs": 42,
+    "quartets_total": 55,
+    "quartets_computed": 55,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.548510044813156e-05,
+    "host_tables_s": 0.00016248389147222042,
+    "h2d_alloc_s": 0.00048153600096702574,
+    "pair_kernel_s": 2.585599943995476e-05,
+    "schwarz_kernel_s": 9.702400118112564e-05,
+    "quartet_kernel_s": 0.00016076800227165223,
+    "device_total_s": 0.0007651839852333068,
+    "G_bytes": 1024
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553134572057,
+   "err_vs_ref": -3.441691376337985e-14,
+   "converged": true,
+   "iterations": 6,
+   "wall_s": 0.02190500288270414,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.003906999947503209,
+     "cpu_s": 0.00389602299999936
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.0055750098545104265,
+     "cpu_s": 0.00502986500000091
+    },
+    "diag": {
+     "calls": 8,
+     "total_s": 0.00208982708863914,
+     "cpu_s": 0.0020920939999982124
+    },
+    "matmul": {
+     "calls": 28,
+     "total_s": 0.005509223323315382,
+     "cpu_s": 0.005520098000005191
+    },
+    "JK": {
+     "calls": 7,
+     "total_s": 0.002685289829969406,
+     "cpu_s": 0.0026749330000015448
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1024,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 7,
+    "jk_h2d_s": 0.0003282190300524235,
+    "jk_kernel_s": 0.0018785172142088413,
+    "jk_d2h_s": 0.000299207866191864,
+    "fp64_builds": 2,
+    "fp32_builds": 5,
+    "linalg_calls": 49,
+    "linalg_s": 0.007287853630259633,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 4,
+    "npair": 10,
+    "nprim_pairs": 42,
+    "quartets_total": 55,
+    "quartets_computed": 55,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5015015378594398e-05,
+    "host_tables_s": 0.00016390997916460037,
+    "h2d_alloc_s": 0.00048230400681495666,
+    "pair_kernel_s": 2.969600073993206e-05,
+    "schwarz_kernel_s": 0.0005980160236358643,
+    "quartet_kernel_s": 0.0012165119647979737,
+    "device_total_s": 0.0023265280723571776,
+    "G_bytes": 2048
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553020320735,
+   "err_vs_ref": 1.1425097756756486e-08,
+   "converged": true,
+   "iterations": 5,
+   "wall_s": 0.01900679594837129,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0038963451515883207,
+     "cpu_s": 0.003883918999999736
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.004292685072869062,
+     "cpu_s": 0.004278511999999068
+    },
+    "diag": {
+     "calls": 7,
+     "total_s": 0.0018102149479091167,
+     "cpu_s": 0.0018107070000041858
+    },
+    "matmul": {
+     "calls": 24,
+     "total_s": 0.0047021901700645685,
+     "cpu_s": 0.004718205999999725
+    },
+    "JK": {
+     "calls": 6,
+     "total_s": 0.00230742827989161,
+     "cpu_s": 0.0023032890000003192
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1024,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 6,
+    "jk_h2d_s": 0.000276993028819561,
+    "jk_kernel_s": 0.0016198281664401293,
+    "jk_d2h_s": 0.0002501548733562231,
+    "fp64_builds": 1,
+    "fp32_builds": 5,
+    "linalg_calls": 42,
+    "linalg_s": 0.006238320376724005,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 4,
+    "npair": 10,
+    "nprim_pairs": 42,
+    "quartets_total": 55,
+    "quartets_computed": 55,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5020137652754784e-05,
+    "host_tables_s": 0.0001633400097489357,
+    "h2d_alloc_s": 0.0005436800122261047,
+    "pair_kernel_s": 2.969600073993206e-05,
+    "schwarz_kernel_s": 0.0005990399718284607,
+    "quartet_kernel_s": 0.001216639995574951,
+    "device_total_s": 0.0023890559673309325,
+    "G_bytes": 2048
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531237,
+   "err_vs_ref": 2.1316282072803006e-13,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.06803676602430642,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.026698125060647726,
+     "cpu_s": 0.026625464999998627
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.014702966902405024,
+     "cpu_s": 0.014662638000000783
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.007278612582013011,
+     "cpu_s": 0.007292134000003614
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.010671128518879414,
+     "cpu_s": 0.010676986
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.004678742028772831,
+     "cpu_s": 0.0046681429999928525
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1042568,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.0005958981346338987,
+    "jk_kernel_s": 0.0034498772583901882,
+    "jk_d2h_s": 0.0005265891086310148,
+    "fp64_builds": 13,
+    "fp32_builds": 0,
+    "linalg_calls": 91,
+    "linalg_s": 0.017333087511360645,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 19,
+    "npair": 190,
+    "nprim_pairs": 699,
+    "quartets_total": 18145,
+    "quartets_computed": 18145,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.4940043911337852e-05,
+    "host_tables_s": 0.0002647791989147663,
+    "h2d_alloc_s": 0.0004979200065135955,
+    "pair_kernel_s": 3.686400130391121e-05,
+    "schwarz_kernel_s": 0.004048895835876465,
+    "quartet_kernel_s": 0.007679999828338623,
+    "device_total_s": 0.012263680458068848,
+    "G_bytes": 1042568
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01059307059236,
+   "err_vs_ref": -8.807527977694463e-05,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 0.2190385169815272,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.026367502054199576,
+     "cpu_s": 0.026287958000001055
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.005915412912145257,
+     "cpu_s": 0.005895318999996846
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.03191065299324691,
+     "cpu_s": 0.03189909099999255
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.0889787282794714,
+     "cpu_s": 0.08916076200003431
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.037067400524392724,
+     "cpu_s": 0.03704065100003362
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 521284,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.004717661300674081,
+    "jk_kernel_s": 0.0270296863745898,
+    "jk_d2h_s": 0.0044922297820448875,
+    "fp64_builds": 0,
+    "fp32_builds": 101,
+    "linalg_calls": 707,
+    "linalg_s": 0.11602226994000375,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 19,
+    "npair": 190,
+    "nprim_pairs": 699,
+    "quartets_total": 18145,
+    "quartets_computed": 18145,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.501990482211113e-05,
+    "host_tables_s": 0.0002473390195518732,
+    "h2d_alloc_s": 0.0005037760138511658,
+    "pair_kernel_s": 2.643200010061264e-05,
+    "schwarz_kernel_s": 0.0019599360227584837,
+    "quartet_kernel_s": 0.0012410880327224732,
+    "device_total_s": 0.003731231927871704,
+    "G_bytes": 521284
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050598659806,
+   "err_vs_ref": -9.912854750382394e-07,
+   "converged": true,
+   "iterations": 29,
+   "wall_s": 0.05716808186843991,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.026369423838332295,
+     "cpu_s": 0.02629094099999918
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.0059746920596808195,
+     "cpu_s": 0.005959422999996633
+    },
+    "diag": {
+     "calls": 31,
+     "total_s": 0.002403560094535351,
+     "cpu_s": 0.0024237910000053375
+    },
+    "matmul": {
+     "calls": 120,
+     "total_s": 0.0016639619134366512,
+     "cpu_s": 0.0017557929999760802
+    },
+    "JK": {
+     "calls": 30,
+     "total_s": 0.012626085430383682,
+     "cpu_s": 0.012612064000002476
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 521284,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 30,
+    "jk_h2d_s": 0.002136887749657035,
+    "jk_kernel_s": 0.008790023857727647,
+    "jk_d2h_s": 0.0014541263226419687,
+    "fp64_builds": 0,
+    "fp32_builds": 30,
+    "linalg_calls": 210,
+    "linalg_s": 0.003490097587928176,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 19,
+    "npair": 190,
+    "nprim_pairs": 699,
+    "quartets_total": 18145,
+    "quartets_computed": 18145,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5434809029102325e-05,
+    "host_tables_s": 0.00025612814351916313,
+    "h2d_alloc_s": 0.0004958400130271912,
+    "pair_kernel_s": 2.5599999353289605e-05,
+    "schwarz_kernel_s": 0.0019589120149612425,
+    "quartet_kernel_s": 0.0012421120405197144,
+    "device_total_s": 0.0037224640846252443,
+    "G_bytes": 521284
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531236,
+   "err_vs_ref": 2.2737367544323206e-13,
+   "converged": true,
+   "iterations": 13,
+   "wall_s": 0.07031088205985725,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.026384014869108796,
+     "cpu_s": 0.026294531000001342
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.014916992047801614,
+     "cpu_s": 0.014877822999999069
+    },
+    "diag": {
+     "calls": 15,
+     "total_s": 0.007563127437606454,
+     "cpu_s": 0.007552322999995198
+    },
+    "matmul": {
+     "calls": 56,
+     "total_s": 0.011496318504214287,
+     "cpu_s": 0.011532644999999064
+    },
+    "JK": {
+     "calls": 14,
+     "total_s": 0.005468294955790043,
+     "cpu_s": 0.005494674999994231
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 521284,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 14,
+    "jk_h2d_s": 0.0006548655219376087,
+    "jk_kernel_s": 0.003820114303380251,
+    "jk_d2h_s": 0.0006200338248163462,
+    "fp64_builds": 3,
+    "fp32_builds": 11,
+    "linalg_calls": 98,
+    "linalg_s": 0.01838838797993958,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 19,
+    "npair": 190,
+    "nprim_pairs": 699,
+    "quartets_total": 18145,
+    "quartets_computed": 18145,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5097903087735176e-05,
+    "host_tables_s": 0.0002539569977670908,
+    "h2d_alloc_s": 0.0005019840002059937,
+    "pair_kernel_s": 3.686400130391121e-05,
+    "schwarz_kernel_s": 0.004046847820281982,
+    "quartet_kernel_s": 0.007678976058959961,
+    "device_total_s": 0.01226467227935791,
+    "G_bytes": 1042568
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050897829106,
+   "err_vs_ref": -3.982978469707632e-06,
+   "converged": true,
+   "iterations": 13,
+   "wall_s": 0.06974415108561516,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.026273519964888692,
+     "cpu_s": 0.026197270000000827
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.014721028972417116,
+     "cpu_s": 0.014688678000002398
+    },
+    "diag": {
+     "calls": 15,
+     "total_s": 0.007540482794865966,
+     "cpu_s": 0.0075519340000056445
+    },
+    "matmul": {
+     "calls": 56,
+     "total_s": 0.011518358252942562,
+     "cpu_s": 0.011502909999990152
+    },
+    "JK": {
+     "calls": 14,
+     "total_s": 0.005533159943297505,
+     "cpu_s": 0.005548428999997412
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 521284,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 14,
+    "jk_h2d_s": 0.0006718018557876348,
+    "jk_kernel_s": 0.0038425743114203215,
+    "jk_d2h_s": 0.0006278688088059425,
+    "fp64_builds": 1,
+    "fp32_builds": 13,
+    "linalg_calls": 98,
+    "linalg_s": 0.018392426893115044,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 19,
+    "npair": 190,
+    "nprim_pairs": 699,
+    "quartets_total": 18145,
+    "quartets_computed": 18145,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5928875654935837e-05,
+    "host_tables_s": 0.0002549870405346155,
+    "h2d_alloc_s": 0.0005023679733276367,
+    "pair_kernel_s": 3.779200091958046e-05,
+    "schwarz_kernel_s": 0.004045824050903321,
+    "quartet_kernel_s": 0.007679999828338623,
+    "device_total_s": 0.01226598358154297,
+    "G_bytes": 1042568
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398206573494,
+   "err_vs_ref": 7.105427357601002e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.07759603601880372,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.035389519995078444,
+     "cpu_s": 0.035300998000000305
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.014933602884411812,
+     "cpu_s": 0.014889766999999665
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.007874666946008801,
+     "cpu_s": 0.00781150399999575
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.010693951277062297,
+     "cpu_s": 0.010723691000006141
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.004638655576854944,
+     "cpu_s": 0.004662435000000187
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1555848,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.000568122835829854,
+    "jk_kernel_s": 0.003438319079577923,
+    "jk_d2h_s": 0.0005272179841995239,
+    "fp64_builds": 13,
+    "fp32_builds": 0,
+    "linalg_calls": 91,
+    "linalg_s": 0.017924333456903696,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 21,
+    "npair": 231,
+    "nprim_pairs": 856,
+    "quartets_total": 26796,
+    "quartets_computed": 26796,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.544901169836521e-05,
+    "host_tables_s": 0.0002688649110496044,
+    "h2d_alloc_s": 0.0006285120248794556,
+    "pair_kernel_s": 3.990399837493896e-05,
+    "schwarz_kernel_s": 0.0040430078506469725,
+    "quartet_kernel_s": 0.007823103904724122,
+    "device_total_s": 0.012534527778625489,
+    "G_bytes": 1555848
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18397803237556,
+   "err_vs_ref": 4.033359445543283e-06,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 0.23014592309482396,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.03556378581561148,
+     "cpu_s": 0.0354693339999983
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.006185277830809355,
+     "cpu_s": 0.006164402000003122
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.03304431168362498,
+     "cpu_s": 0.03302651299999937
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.08926535001955926,
+     "cpu_s": 0.08944050199999865
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.03700365498661995,
+     "cpu_s": 0.03699421499998934
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 777924,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.004720115102827549,
+    "jk_kernel_s": 0.026933797635138035,
+    "jk_d2h_s": 0.0045121831353753805,
+    "fp64_builds": 0,
+    "fp32_builds": 101,
+    "linalg_calls": 707,
+    "linalg_s": 0.11738343583419919,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 21,
+    "npair": 231,
+    "nprim_pairs": 856,
+    "quartets_total": 26796,
+    "quartets_computed": 26796,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.7070909962058067e-05,
+    "host_tables_s": 0.00027082208544015884,
+    "h2d_alloc_s": 0.0005154560208320617,
+    "pair_kernel_s": 2.643200010061264e-05,
+    "schwarz_kernel_s": 0.0019599360227584837,
+    "quartet_kernel_s": 0.0012441600561141969,
+    "device_total_s": 0.0037459840774536133,
+    "G_bytes": 777924
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398658755508,
+   "err_vs_ref": -4.5218200739327585e-06,
+   "converged": true,
+   "iterations": 16,
+   "wall_s": 0.056171503849327564,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.035458527971059084,
+     "cpu_s": 0.035359145000001035
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.006076738936826587,
+     "cpu_s": 0.006058809999998971
+    },
+    "diag": {
+     "calls": 18,
+     "total_s": 0.0015796085353940725,
+     "cpu_s": 0.0015903609999945445
+    },
+    "matmul": {
+     "calls": 68,
+     "total_s": 0.0009395494125783443,
+     "cpu_s": 0.0009882569999923874
+    },
+    "JK": {
+     "calls": 17,
+     "total_s": 0.007322400575503707,
+     "cpu_s": 0.0073182099999939965
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 777924,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 17,
+    "jk_h2d_s": 0.0012317635118961334,
+    "jk_kernel_s": 0.005109674762934446,
+    "jk_d2h_s": 0.0008390466682612896,
+    "fp64_builds": 0,
+    "fp32_builds": 17,
+    "linalg_calls": 119,
+    "linalg_s": 0.0021846944000571966,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 21,
+    "npair": 231,
+    "nprim_pairs": 856,
+    "quartets_total": 26796,
+    "quartets_computed": 26796,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.698383130133152e-05,
+    "host_tables_s": 0.00027769384905695915,
+    "h2d_alloc_s": 0.00050409597158432,
+    "pair_kernel_s": 2.655999921262264e-05,
+    "schwarz_kernel_s": 0.0019589120149612425,
+    "quartet_kernel_s": 0.0012462079524993897,
+    "device_total_s": 0.0037357759475708007,
+    "G_bytes": 777924
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.183982065734924,
+   "err_vs_ref": 8.526512829121202e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.07819645595736802,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.03536010393872857,
+     "cpu_s": 0.035265360000000356
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.015174102038145065,
+     "cpu_s": 0.015138361999998295
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.007999615743756294,
+     "cpu_s": 0.007951341999998363
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.010643559973686934,
+     "cpu_s": 0.010684284999992855
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.005111548118293285,
+     "cpu_s": 0.005107658000000015
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 777924,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.0006035489495843649,
+    "jk_kernel_s": 0.0035702770110219717,
+    "jk_d2h_s": 0.0005849793087691069,
+    "fp64_builds": 3,
+    "fp32_builds": 10,
+    "linalg_calls": 91,
+    "linalg_s": 0.018019528361037374,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 21,
+    "npair": 231,
+    "nprim_pairs": 856,
+    "quartets_total": 26796,
+    "quartets_computed": 26796,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5653902664780617e-05,
+    "host_tables_s": 0.00026182085275650024,
+    "h2d_alloc_s": 0.0006910079717636109,
+    "pair_kernel_s": 3.990399837493896e-05,
+    "schwarz_kernel_s": 0.004045824050903321,
+    "quartet_kernel_s": 0.007825407981872558,
+    "device_total_s": 0.012602144241333008,
+    "G_bytes": 1555848
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.183984520078354,
+   "err_vs_ref": -2.454343345448251e-06,
+   "converged": true,
+   "iterations": 14,
+   "wall_s": 0.08245631912723184,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.03537321905605495,
+     "cpu_s": 0.03526635100000064
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.015001042047515512,
+     "cpu_s": 0.014965382999999832
+    },
+    "diag": {
+     "calls": 16,
+     "total_s": 0.00915129971690476,
+     "cpu_s": 0.00913879300000886
+    },
+    "matmul": {
+     "calls": 60,
+     "total_s": 0.01238784845918417,
+     "cpu_s": 0.012383204999995456
+    },
+    "JK": {
+     "calls": 15,
+     "total_s": 0.00587583496235311,
+     "cpu_s": 0.005892597999999083
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 777924,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 15,
+    "jk_h2d_s": 0.0007035669405013323,
+    "jk_kernel_s": 0.004077819176018238,
+    "jk_d2h_s": 0.0006855607498437166,
+    "fp64_builds": 1,
+    "fp32_builds": 14,
+    "linalg_calls": 105,
+    "linalg_s": 0.02081097080372274,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 21,
+    "npair": 231,
+    "nprim_pairs": 856,
+    "quartets_total": 26796,
+    "quartets_computed": 26796,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5832949429750443e-05,
+    "host_tables_s": 0.00026305695064365864,
+    "h2d_alloc_s": 0.0006313279867172241,
+    "pair_kernel_s": 3.990399837493896e-05,
+    "schwarz_kernel_s": 0.004045824050903321,
+    "quartet_kernel_s": 0.007823359966278077,
+    "device_total_s": 0.01254041576385498,
+    "G_bytes": 1555848
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.19509322654794,
+   "err_vs_ref": 1.4210854715202004e-14,
+   "converged": true,
+   "iterations": 11,
+   "wall_s": 0.08628751104697585,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.045878954930230975,
+     "cpu_s": 0.04574691700000244
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.015171614941209555,
+     "cpu_s": 0.015136392000002274
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.00685474113561213,
+     "cpu_s": 0.006850631000006047
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.009885662700980902,
+     "cpu_s": 0.009924111999982443
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.004360434599220753,
+     "cpu_s": 0.004343818999995364
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 2238728,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 12,
+    "jk_h2d_s": 0.0005373999010771513,
+    "jk_kernel_s": 0.003234387142583728,
+    "jk_d2h_s": 0.0004903515800833702,
+    "fp64_builds": 12,
+    "fp32_builds": 0,
+    "linalg_calls": 84,
+    "linalg_s": 0.016156472032889724,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 23,
+    "npair": 276,
+    "nprim_pairs": 1029,
+    "quartets_total": 38226,
+    "quartets_computed": 38226,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.4844117686152458e-05,
+    "host_tables_s": 0.00028648506850004196,
+    "h2d_alloc_s": 0.000633791983127594,
+    "pair_kernel_s": 3.993599861860275e-05,
+    "schwarz_kernel_s": 0.004051968097686768,
+    "quartet_kernel_s": 0.008014847755432129,
+    "device_total_s": 0.012740544319152832,
+    "G_bytes": 2238728
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195081056645606,
+   "err_vs_ref": 1.2169902348091455e-05,
+   "converged": true,
+   "iterations": 10,
+   "wall_s": 0.07336772396229208,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.045629821019247174,
+     "cpu_s": 0.045500854000000146
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.006424409104511142,
+     "cpu_s": 0.006405856000000654
+    },
+    "diag": {
+     "calls": 12,
+     "total_s": 0.003952966304495931,
+     "cpu_s": 0.0039558719999917
+    },
+    "matmul": {
+     "calls": 44,
+     "total_s": 0.00974142411723733,
+     "cpu_s": 0.009770221999986006
+    },
+    "JK": {
+     "calls": 11,
+     "total_s": 0.004036151338368654,
+     "cpu_s": 0.00403074499999434
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1119364,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 11,
+    "jk_h2d_s": 0.000524591188877821,
+    "jk_kernel_s": 0.002923852764070034,
+    "jk_d2h_s": 0.0004981548991054296,
+    "fp64_builds": 0,
+    "fp32_builds": 11,
+    "linalg_calls": 77,
+    "linalg_s": 0.013149747857823968,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 23,
+    "npair": 276,
+    "nprim_pairs": 1029,
+    "quartets_total": 38226,
+    "quartets_computed": 38226,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.509813591837883e-05,
+    "host_tables_s": 0.0002811439335346222,
+    "h2d_alloc_s": 0.0005155839920043945,
+    "pair_kernel_s": 2.969600073993206e-05,
+    "schwarz_kernel_s": 0.001961984038352966,
+    "quartet_kernel_s": 0.001271999955177307,
+    "device_total_s": 0.003779263973236084,
+    "G_bytes": 1119364
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.19509385512957,
+   "err_vs_ref": -6.285816169793179e-07,
+   "converged": true,
+   "iterations": 38,
+   "wall_s": 0.0853217609692365,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.04572881991043687,
+     "cpu_s": 0.04559906300000094
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.006260755006223917,
+     "cpu_s": 0.006243723000000756
+    },
+    "diag": {
+     "calls": 40,
+     "total_s": 0.003646232420578599,
+     "cpu_s": 0.0036628940000156263
+    },
+    "matmul": {
+     "calls": 156,
+     "total_s": 0.002204605843871832,
+     "cpu_s": 0.002342595999987651
+    },
+    "JK": {
+     "calls": 39,
+     "total_s": 0.0161592410877347,
+     "cpu_s": 0.016113712999985097
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1119364,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 39,
+    "jk_h2d_s": 0.0028246650472283363,
+    "jk_kernel_s": 0.01112820697017014,
+    "jk_d2h_s": 0.0018926174379885197,
+    "fp64_builds": 0,
+    "fp32_builds": 39,
+    "linalg_calls": 273,
+    "linalg_s": 0.00508217210881412,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 23,
+    "npair": 276,
+    "nprim_pairs": 1029,
+    "quartets_total": 38226,
+    "quartets_computed": 38226,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.512095332145691e-05,
+    "host_tables_s": 0.0002802631352096796,
+    "h2d_alloc_s": 0.0005034239888191223,
+    "pair_kernel_s": 2.655999921262264e-05,
+    "schwarz_kernel_s": 0.0019568639993667604,
+    "quartet_kernel_s": 0.001271008014678955,
+    "device_total_s": 0.0037578558921813965,
+    "G_bytes": 1119364
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195093226547954,
+   "err_vs_ref": 0.0,
+   "converged": true,
+   "iterations": 11,
+   "wall_s": 0.08723168191500008,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.04571464704349637,
+     "cpu_s": 0.045586324000002065
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.015345522901043296,
+     "cpu_s": 0.015300911000000639
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.007506874157115817,
+     "cpu_s": 0.007486844000005988
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.009880271507427096,
+     "cpu_s": 0.009911291000012312
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.004715092480182648,
+     "cpu_s": 0.004692240000004233
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1119364,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 12,
+    "jk_h2d_s": 0.0005779783241450787,
+    "jk_kernel_s": 0.0032711101230233908,
+    "jk_d2h_s": 0.0005344687961041927,
+    "fp64_builds": 3,
+    "fp32_builds": 9,
+    "linalg_calls": 84,
+    "linalg_s": 0.016803462989628315,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 23,
+    "npair": 276,
+    "nprim_pairs": 1029,
+    "quartets_total": 38226,
+    "quartets_computed": 38226,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5224097296595573e-05,
+    "host_tables_s": 0.00027905520983040333,
+    "h2d_alloc_s": 0.0006351360082626343,
+    "pair_kernel_s": 3.987200185656547e-05,
+    "schwarz_kernel_s": 0.004051968097686768,
+    "quartet_kernel_s": 0.008022015571594238,
+    "device_total_s": 0.012748991966247559,
+    "G_bytes": 2238728
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.19509335438285,
+   "err_vs_ref": -1.2783489466983156e-07,
+   "converged": true,
+   "iterations": 10,
+   "wall_s": 0.08488078392110765,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.045692296931520104,
+     "cpu_s": 0.04556710399999986
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.015351308975368738,
+     "cpu_s": 0.015313777999999445
+    },
+    "diag": {
+     "calls": 12,
+     "total_s": 0.006964498898014426,
+     "cpu_s": 0.0069675569999994025
+    },
+    "matmul": {
+     "calls": 44,
+     "total_s": 0.009077180409803987,
+     "cpu_s": 0.009080106000009636
+    },
+    "JK": {
+     "calls": 11,
+     "total_s": 0.0042720334604382515,
+     "cpu_s": 0.004279288999999409
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 1119364,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 11,
+    "jk_h2d_s": 0.0005378054920583963,
+    "jk_kernel_s": 0.0029206753242760897,
+    "jk_d2h_s": 0.0005021980032324791,
+    "fp64_builds": 1,
+    "fp32_builds": 10,
+    "linalg_calls": 77,
+    "linalg_s": 0.01549803209491074,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 23,
+    "npair": 276,
+    "nprim_pairs": 1029,
+    "quartets_total": 38226,
+    "quartets_computed": 38226,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.488998532295227e-05,
+    "host_tables_s": 0.00027972692623734474,
+    "h2d_alloc_s": 0.0006395840048789978,
+    "pair_kernel_s": 3.993599861860275e-05,
+    "schwarz_kernel_s": 0.004050943851470947,
+    "quartet_kernel_s": 0.008021120071411134,
+    "device_total_s": 0.01275158405303955,
+    "G_bytes": 2238728
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463197,
+   "err_vs_ref": 2.5579538487363607e-13,
+   "converged": true,
+   "iterations": 11,
+   "wall_s": 0.18364371382631361,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09820698807016015,
+     "cpu_s": 0.09793191300000004
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.0512742109131068,
+     "cpu_s": 0.051158590000000004
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.01496125035919249,
+     "cpu_s": 0.01490747099999723
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.01037886505946517,
+     "cpu_s": 0.010404510000022071
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.004479256924241781,
+     "cpu_s": 0.00447262700000195
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 16681088,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 12,
+    "jk_h2d_s": 0.000564447371289134,
+    "jk_kernel_s": 0.0032773506827652454,
+    "jk_d2h_s": 0.0005338131450116634,
+    "fp64_builds": 12,
+    "fp32_builds": 0,
+    "linalg_calls": 84,
+    "linalg_s": 0.02469444856978953,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 38,
+    "npair": 741,
+    "nprim_pairs": 2694,
+    "quartets_total": 274911,
+    "quartets_computed": 274911,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.0453007891774178e-05,
+    "host_tables_s": 0.0004666589666157961,
+    "h2d_alloc_s": 0.0007440320253372192,
+    "pair_kernel_s": 4.3935999274253844e-05,
+    "schwarz_kernel_s": 0.011729791641235351,
+    "quartet_kernel_s": 0.02939289665222168,
+    "device_total_s": 0.0419106559753418,
+    "G_bytes": 16681088
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.0307183992332,
+   "err_vs_ref": 2.560539903129211e-05,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 0.33160584210418165,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09859229903668165,
+     "cpu_s": 0.09832381400000045
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.011778953019529581,
+     "cpu_s": 0.011737972999998902
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.058129200944676995,
+     "cpu_s": 0.05796852100002425
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.09288929728791118,
+     "cpu_s": 0.09306170899995792
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.037056728499010205,
+     "cpu_s": 0.037059869999986006
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 8340544,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.004832952981814742,
+    "jk_kernel_s": 0.026561108184978366,
+    "jk_d2h_s": 0.004847547970712185,
+    "fp64_builds": 0,
+    "fp32_builds": 101,
+    "linalg_calls": 707,
+    "linalg_s": 0.14589795074425638,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 38,
+    "npair": 741,
+    "nprim_pairs": 2694,
+    "quartets_total": 274911,
+    "quartets_computed": 274911,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.6459031030535698e-05,
+    "host_tables_s": 0.0004520679358392954,
+    "h2d_alloc_s": 0.001076640009880066,
+    "pair_kernel_s": 3.174399957060814e-05,
+    "schwarz_kernel_s": 0.0022405118942260744,
+    "quartet_kernel_s": 0.002653183937072754,
+    "device_total_s": 0.006002079963684082,
+    "G_bytes": 8340544
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03073974772974,
+   "err_vs_ref": 4.2569024856220494e-06,
+   "converged": true,
+   "iterations": 23,
+   "wall_s": 0.1350968568585813,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09851954597979784,
+     "cpu_s": 0.09825884700000032
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.011045077117159963,
+     "cpu_s": 0.011008808999999786
+    },
+    "diag": {
+     "calls": 25,
+     "total_s": 0.00539838639087975,
+     "cpu_s": 0.005371635999996016
+    },
+    "matmul": {
+     "calls": 96,
+     "total_s": 0.0017187341582030058,
+     "cpu_s": 0.0017981490000025246
+    },
+    "JK": {
+     "calls": 24,
+     "total_s": 0.01052252110093832,
+     "cpu_s": 0.010541733000000164
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 8340544,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 24,
+    "jk_h2d_s": 0.0018836285453289747,
+    "jk_kernel_s": 0.007119026966392994,
+    "jk_d2h_s": 0.0013211893383413553,
+    "fp64_builds": 0,
+    "fp32_builds": 24,
+    "linalg_calls": 168,
+    "linalg_s": 0.006589073454961181,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 38,
+    "npair": 741,
+    "nprim_pairs": 2694,
+    "quartets_total": 274911,
+    "quartets_computed": 274911,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.499406062066555e-05,
+    "host_tables_s": 0.0004500357899814844,
+    "h2d_alloc_s": 0.0006387839913368225,
+    "pair_kernel_s": 2.969600073993206e-05,
+    "schwarz_kernel_s": 0.002233344078063965,
+    "quartet_kernel_s": 0.0026511359214782715,
+    "device_total_s": 0.00555295991897583,
+    "G_bytes": 8340544
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463197,
+   "err_vs_ref": 2.5579538487363607e-13,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.18206353392452002,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.098386085126549,
+     "cpu_s": 0.09811735299999924
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.04686967493034899,
+     "cpu_s": 0.046774657000000275
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.015937941847369075,
+     "cpu_s": 0.015880460000005314
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.011230201460421085,
+     "cpu_s": 0.011251947999991074
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.00522071192972362,
+     "cpu_s": 0.005214490000010841
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 8340544,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.0006481825839728117,
+    "jk_kernel_s": 0.003521702252328396,
+    "jk_d2h_s": 0.0006377100944519043,
+    "fp64_builds": 3,
+    "fp32_builds": 10,
+    "linalg_calls": 91,
+    "linalg_s": 0.026471273507922888,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 38,
+    "npair": 741,
+    "nprim_pairs": 2694,
+    "quartets_total": 274911,
+    "quartets_computed": 274911,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.5083001926541328e-05,
+    "host_tables_s": 0.0004387791268527508,
+    "h2d_alloc_s": 0.0006943039894104004,
+    "pair_kernel_s": 3.993599861860275e-05,
+    "schwarz_kernel_s": 0.01174630355834961,
+    "quartet_kernel_s": 0.028923904418945313,
+    "device_total_s": 0.041404449462890625,
+    "G_bytes": 16681088
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03075486164633,
+   "err_vs_ref": -1.0857014103748952e-05,
+   "converged": true,
+   "iterations": 17,
+   "wall_s": 0.19598118192516267,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0983914288226515,
+     "cpu_s": 0.09812644399999826
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.04695326811634004,
+     "cpu_s": 0.04686428099999773
+    },
+    "diag": {
+     "calls": 19,
+     "total_s": 0.02164597692899406,
+     "cpu_s": 0.021564001000005106
+    },
+    "matmul": {
+     "calls": 72,
+     "total_s": 0.01563700009137392,
+     "cpu_s": 0.015695845000010422
+    },
+    "JK": {
+     "calls": 18,
+     "total_s": 0.007279868936166167,
+     "cpu_s": 0.007279020000005687
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 8340544,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 18,
+    "jk_h2d_s": 0.000898206839337945,
+    "jk_kernel_s": 0.00490511953830719,
+    "jk_d2h_s": 0.0008871038444340229,
+    "fp64_builds": 1,
+    "fp32_builds": 17,
+    "linalg_calls": 126,
+    "linalg_s": 0.03630740731023252,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 38,
+    "npair": 741,
+    "nprim_pairs": 2694,
+    "quartets_total": 274911,
+    "quartets_computed": 274911,
+    "quartets_screened": 0,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 1.8452992662787437e-05,
+    "host_tables_s": 0.00045685097575187683,
+    "h2d_alloc_s": 0.0006479039788246155,
+    "pair_kernel_s": 3.987200185656547e-05,
+    "schwarz_kernel_s": 0.01174630355834961,
+    "quartet_kernel_s": 0.028711936950683595,
+    "device_total_s": 0.04114601516723633,
+    "G_bytes": 16681088
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70216365001912,
+   "err_vs_ref": 2.5579538487363607e-12,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 1.27409662399441,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.5895725849550217,
+     "cpu_s": 0.5880209900000004
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.5772078009322286,
+     "cpu_s": 0.5760736440000009
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.049219194799661636,
+     "cpu_s": 0.0491033109999961
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.01537107047624886,
+     "cpu_s": 0.015348407999994151
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.03469833638519049,
+     "cpu_s": 0.03462104000000821
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 865945728,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.000752180814743042,
+    "jk_kernel_s": 0.032876792130991817,
+    "jk_d2h_s": 0.0009438851848244667,
+    "fp64_builds": 13,
+    "fp32_builds": 0,
+    "linalg_calls": 91,
+    "linalg_s": 0.06348512694239616,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 102,
+    "npair": 5253,
+    "nprim_pairs": 18708,
+    "quartets_total": 13799631,
+    "quartets_computed": 13621436,
+    "quartets_screened": 178195,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.2690976038575172e-05,
+    "host_tables_s": 0.0019124560058116913,
+    "h2d_alloc_s": 0.0023117759227752684,
+    "pair_kernel_s": 4.300799965858459e-05,
+    "schwarz_kernel_s": 0.015712448120117187,
+    "quartet_kernel_s": 0.3507331237792969,
+    "device_total_s": 0.36880035400390626,
+    "G_bytes": 865945728
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70210716920568,
+   "err_vs_ref": 5.6480815999293554e-05,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 1.2696516611613333,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.5895934759173542,
+     "cpu_s": 0.5880361709999988
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.24181317002512515,
+     "cpu_s": 0.2411653600000001
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.12661600881256163,
+     "cpu_s": 0.1260933940000193
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.11468978063203394,
+     "cpu_s": 0.1148845439999846
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.1326577349100262,
+     "cpu_s": 0.13211066500004165
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 432972864,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.006106527987867594,
+    "jk_kernel_s": 0.11784974159672856,
+    "jk_d2h_s": 0.007800496648997068,
+    "fp64_builds": 0,
+    "fp32_builds": 101,
+    "linalg_calls": 707,
+    "linalg_s": 0.23432199656963348,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 102,
+    "npair": 5253,
+    "nprim_pairs": 18708,
+    "quartets_total": 13799631,
+    "quartets_computed": 13621436,
+    "quartets_screened": 178195,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 4.725903272628784e-05,
+    "host_tables_s": 0.0019961721263825893,
+    "h2d_alloc_s": 0.0017066240310668946,
+    "pair_kernel_s": 2.348800003528595e-05,
+    "schwarz_kernel_s": 0.0026757121086120605,
+    "quartet_kernel_s": 0.03134259223937988,
+    "device_total_s": 0.035748416900634766,
+    "G_bytes": 432972864
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.7021293714316,
+   "err_vs_ref": 3.427859007842926e-05,
+   "converged": true,
+   "iterations": 63,
+   "wall_s": 1.0567695919889957,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.5895257350057364,
+     "cpu_s": 0.5876072679999993
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.2403689711354673,
+     "cpu_s": 0.23959868099999682
+    },
+    "diag": {
+     "calls": 65,
+     "total_s": 0.0688980936538428,
+     "cpu_s": 0.06865538699998552
+    },
+    "matmul": {
+     "calls": 256,
+     "total_s": 0.028052053647115827,
+     "cpu_s": 0.028184037000027473
+    },
+    "JK": {
+     "calls": 64,
+     "total_s": 0.08746317005716264,
+     "cpu_s": 0.08708580099999352
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 432972864,
+    "eri_backend": "cuda-fp32",
+    "jk_calls": 64,
+    "jk_h2d_s": 0.006238969275727868,
+    "jk_kernel_s": 0.07555002230219543,
+    "jk_d2h_s": 0.005062005948275328,
+    "fp64_builds": 0,
+    "fp32_builds": 64,
+    "linalg_calls": 448,
+    "linalg_s": 0.0942947007715702,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {
+    "precision": "fp32",
+    "nbf": 102,
+    "npair": 5253,
+    "nprim_pairs": 18708,
+    "quartets_total": 13799631,
+    "quartets_computed": 13621436,
+    "quartets_screened": 178195,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.3827888071537018e-05,
+    "host_tables_s": 0.0018684889655560255,
+    "h2d_alloc_s": 0.0015899519920349122,
+    "pair_kernel_s": 2.2528000175952913e-05,
+    "schwarz_kernel_s": 0.0026767361164093018,
+    "quartet_kernel_s": 0.03134668731689453,
+    "device_total_s": 0.035635902404785154,
+    "G_bytes": 432972864
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "cuda",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70216365001951,
+   "err_vs_ref": 2.1600499167107046e-12,
+   "converged": true,
+   "iterations": 13,
+   "wall_s": 1.2683252801652998,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.5912512799259275,
+     "cpu_s": 0.5896337109999976
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.5739628309383988,
+     "cpu_s": 0.5724606349999988
+    },
+    "diag": {
+     "calls": 15,
+     "total_s": 0.05400468991138041,
+     "cpu_s": 0.0538395470000097
+    },
+    "matmul": {
+     "calls": 56,
+     "total_s": 0.016461286693811417,
+     "cpu_s": 0.016482064000022945
+    },
+    "JK": {
+     "calls": 14,
+     "total_s": 0.024085112614557147,
+     "cpu_s": 0.023989108999977304
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 432972864,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 14,
+    "jk_h2d_s": 0.0009061296004801989,
+    "jk_kernel_s": 0.02102034376002848,
+    "jk_d2h_s": 0.0011075574439018965,
+    "fp64_builds": 3,
+    "fp32_builds": 11,
+    "linalg_calls": 98,
+    "linalg_s": 0.06928798789158463,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 102,
+    "npair": 5253,
+    "nprim_pairs": 18708,
+    "quartets_total": 13799631,
+    "quartets_computed": 13621436,
+    "quartets_screened": 178195,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.7891946956515312e-05,
+    "host_tables_s": 0.001910629915073514,
+    "h2d_alloc_s": 0.0024200639724731446,
+    "pair_kernel_s": 4.300799965858459e-05,
+    "schwarz_kernel_s": 0.01571225643157959,
+    "quartet_kernel_s": 0.3502213134765625,
+    "device_total_s": 0.3683966369628906,
+    "G_bytes": 865945728
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70223389149166,
+   "err_vs_ref": -7.024146998446668e-05,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 1.8475730549544096,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.589193883119151,
+     "cpu_s": 0.5876555210000021
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.5744977782014757,
+     "cpu_s": 0.5730643810000018
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.35719882627017796,
+     "cpu_s": 0.3560914869999863
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.11963191744871438,
+     "cpu_s": 0.11975683400000747
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.14310251385904849,
+     "cpu_s": 0.1425358200000133
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 432972864,
+    "eri_backend": "cuda-fp64",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.006632150383666158,
+    "jk_kernel_s": 0.12164808204397559,
+    "jk_d2h_s": 0.007540935650467873,
+    "fp64_builds": 1,
+    "fp32_builds": 100,
+    "linalg_calls": 707,
+    "linalg_s": 0.4684043009765446,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {
+    "precision": "fp64",
+    "nbf": 102,
+    "npair": 5253,
+    "nprim_pairs": 18708,
+    "quartets_total": 13799631,
+    "quartets_computed": 13621436,
+    "quartets_screened": 178195,
+    "block": 128,
+    "order": "sorted",
+    "compile_or_load_s": 2.584303729236126e-05,
+    "host_tables_s": 0.0018860350828617811,
+    "h2d_alloc_s": 0.0024809279441833495,
+    "pair_kernel_s": 4.710400104522705e-05,
+    "schwarz_kernel_s": 0.015711232185363768,
+    "quartet_kernel_s": 0.350587890625,
+    "device_total_s": 0.3688271789550781,
+    "G_bytes": 865945728
+   },
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "cuda",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "instructor (CUDA ERI)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531244,
+   "err_vs_ref": 1.4210854715202004e-13,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.25887312297709286,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0265688959043473,
+     "cpu_s": 0.0264874610000021
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.2055431050248444,
+     "cpu_s": 0.20287275900000168
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.007329808548092842,
+     "cpu_s": 0.007288163000005454
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.010677785845473409,
+     "cpu_s": 0.01071239200001628
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.004671276081353426,
+     "cpu_s": 0.004679332000002034
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.20133618009276688,
+    "h2d_G_s": 0.00026639201678335667,
+    "G_bytes": 1042568,
+    "eri_backend": "numpy",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.0005664043128490448,
+    "jk_kernel_s": 0.003459326922893524,
+    "jk_d2h_s": 0.000528787961229682,
+    "fp64_builds": 13,
+    "fp32_builds": 0,
+    "linalg_calls": 91,
+    "linalg_s": 0.017382162855938077,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01057369524317,
+   "err_vs_ref": -6.869993057989632e-05,
+   "converged": true,
+   "iterations": 50,
+   "wall_s": 0.32019345997832716,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.02640908700414002,
+     "cpu_s": 0.02633538300000282
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.19941954594105482,
+     "cpu_s": 0.19887220900000102
+    },
+    "diag": {
+     "calls": 52,
+     "total_s": 0.01632077875547111,
+     "cpu_s": 0.01631452800000943
+    },
+    "matmul": {
+     "calls": 204,
+     "total_s": 0.04464698606170714,
+     "cpu_s": 0.04476242999991342
+    },
+    "JK": {
+     "calls": 51,
+     "total_s": 0.018785620108246803,
+     "cpu_s": 0.01878207499994744
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.19905034895054996,
+    "h2d_G_s": 0.00026638712733983994,
+    "G_bytes": 521284,
+    "eri_backend": "numpy",
+    "jk_calls": 51,
+    "jk_h2d_s": 0.0023868789430707693,
+    "jk_kernel_s": 0.013709645718336105,
+    "jk_d2h_s": 0.002272872719913721,
+    "fp64_builds": 0,
+    "fp32_builds": 51,
+    "linalg_calls": 357,
+    "linalg_s": 0.0585344061255455,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531243,
+   "err_vs_ref": 1.5631940186722204e-13,
+   "converged": true,
+   "iterations": 13,
+   "wall_s": 0.2554063720162958,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.026249419897794724,
+     "cpu_s": 0.026179385999995475
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.2004005720373243,
+     "cpu_s": 0.19986281999999989
+    },
+    "diag": {
+     "calls": 15,
+     "total_s": 0.0076449590269476175,
+     "cpu_s": 0.007651456999994366
+    },
+    "matmul": {
+     "calls": 56,
+     "total_s": 0.011690405895933509,
+     "cpu_s": 0.011690652999995166
+    },
+    "JK": {
+     "calls": 14,
+     "total_s": 0.004869220545515418,
+     "cpu_s": 0.004883357000011301
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.20004605082795024,
+    "h2d_G_s": 0.00024131196551024914,
+    "G_bytes": 521284,
+    "eri_backend": "numpy",
+    "jk_calls": 14,
+    "jk_h2d_s": 0.0005315919406712055,
+    "jk_kernel_s": 0.003071199171245098,
+    "jk_d2h_s": 0.0004950463771820068,
+    "fp64_builds": 3,
+    "fp32_builds": 11,
+    "linalg_calls": 98,
+    "linalg_s": 0.018649437464773655,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398206573491,
+   "err_vs_ref": 9.947598300641403e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.4414289139676839,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.035447787027806044,
+     "cpu_s": 0.03533752499999565
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.3769392319954932,
+     "cpu_s": 0.375994304999999
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.007840777281671762,
+     "cpu_s": 0.007811054999990574
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.010728939203545451,
+     "cpu_s": 0.010793925000001536
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0059660691767930984,
+     "cpu_s": 0.005937829000004058
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.3760169318411499,
+    "h2d_G_s": 0.0008079130202531815,
+    "G_bytes": 1555848,
+    "eri_backend": "numpy",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.0015149973332881927,
+    "jk_kernel_s": 0.003743633860722184,
+    "jk_d2h_s": 0.0005713622085750103,
+    "fp64_builds": 13,
+    "fp32_builds": 0,
+    "linalg_calls": 91,
+    "linalg_s": 0.017918811412528157,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18394445205945,
+   "err_vs_ref": 3.761367555910056e-05,
+   "converged": true,
+   "iterations": 51,
+   "wall_s": 0.5116547241341323,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.03544135903939605,
+     "cpu_s": 0.03534055200000097
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.3785798109602183,
+     "cpu_s": 0.37756057499999685
+    },
+    "diag": {
+     "calls": 53,
+     "total_s": 0.017263711895793676,
+     "cpu_s": 0.017273447000036413
+    },
+    "matmul": {
+     "calls": 208,
+     "total_s": 0.045950877480208874,
+     "cpu_s": 0.04605797800000744
+    },
+    "JK": {
+     "calls": 52,
+     "total_s": 0.01922295754775405,
+     "cpu_s": 0.019205186999990076
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.3778847970534116,
+    "h2d_G_s": 0.0005387880373746157,
+    "G_bytes": 777924,
+    "eri_backend": "numpy",
+    "jk_calls": 52,
+    "jk_h2d_s": 0.0024637156166136265,
+    "jk_kernel_s": 0.013992510503157973,
+    "jk_d2h_s": 0.0023349730763584375,
+    "fp64_builds": 0,
+    "fp32_builds": 52,
+    "linalg_calls": 364,
+    "linalg_s": 0.06067273369990289,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398206573491,
+   "err_vs_ref": 9.947598300641403e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.43998573580756783,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.03539915313012898,
+     "cpu_s": 0.0353002649999965
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.37723508477211,
+     "cpu_s": 0.3762644370000032
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.008021980756893754,
+     "cpu_s": 0.007986794999986557
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.010787843959406018,
+     "cpu_s": 0.010843658999988293
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0046530303079634905,
+     "cpu_s": 0.004624688999996351
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.37684796610847116,
+    "h2d_G_s": 0.000277993967756629,
+    "G_bytes": 777924,
+    "eri_backend": "numpy",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.00048010400496423244,
+    "jk_kernel_s": 0.0028196407947689295,
+    "jk_d2h_s": 0.00047112605534493923,
+    "fp64_builds": 3,
+    "fp32_builds": 10,
+    "linalg_calls": 91,
+    "linalg_s": 0.01815102668479085,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.19509322654794,
+   "err_vs_ref": 1.4210854715202004e-14,
+   "converged": true,
+   "iterations": 11,
+   "wall_s": 0.7216788600198925,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.045601255958899856,
+     "cpu_s": 0.04549027699999897
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.6504436549730599,
+     "cpu_s": 0.6484600369999995
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.006904332898557186,
+     "cpu_s": 0.006919312000015054
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.01008289004676044,
+     "cpu_s": 0.010048574999984794
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.004349507857114077,
+     "cpu_s": 0.004371333000001698
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.6495993149001151,
+    "h2d_G_s": 0.0007189309690147638,
+    "G_bytes": 2238728,
+    "eri_backend": "numpy",
+    "jk_calls": 12,
+    "jk_h2d_s": 0.0005350324790924788,
+    "jk_kernel_s": 0.003215177683159709,
+    "jk_d2h_s": 0.0004945620894432068,
+    "fp64_builds": 12,
+    "fp32_builds": 0,
+    "linalg_calls": 84,
+    "linalg_s": 0.0163719377014786,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195082982017325,
+   "err_vs_ref": 1.0244530628256143e-05,
+   "converged": true,
+   "iterations": 95,
+   "wall_s": 0.8814736609347165,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.045770986936986446,
+     "cpu_s": 0.0456267249999982
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.6536987910512835,
+     "cpu_s": 0.6519982300000038
+    },
+    "diag": {
+     "calls": 97,
+     "total_s": 0.03133432427421212,
+     "cpu_s": 0.03134275799997255
+    },
+    "matmul": {
+     "calls": 384,
+     "total_s": 0.08617101470008492,
+     "cpu_s": 0.08633872400006481
+    },
+    "JK": {
+     "calls": 96,
+     "total_s": 0.03514102008193731,
+     "cpu_s": 0.035120462999977065
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.6528690031263977,
+    "h2d_G_s": 0.0007145709823817015,
+    "G_bytes": 1119364,
+    "eri_backend": "numpy",
+    "jk_calls": 96,
+    "jk_h2d_s": 0.004576384089887142,
+    "jk_kernel_s": 0.025316652143374085,
+    "jk_d2h_s": 0.004419483942911029,
+    "fp64_builds": 0,
+    "fp32_builds": 96,
+    "linalg_calls": 672,
+    "linalg_s": 0.11274418281391263,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195093226547996,
+   "err_vs_ref": -4.263256414560601e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.7245159500744194,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.04573668888770044,
+     "cpu_s": 0.04560947600000276
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.6505605790298432,
+     "cpu_s": 0.6488762529999974
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.007925741840153933,
+     "cpu_s": 0.007926284000006945
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.010994300479069352,
+     "cpu_s": 0.010989634000019066
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.004783199867233634,
+     "cpu_s": 0.004792137999999113
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.6499965549446642,
+    "h2d_G_s": 0.000453591113910079,
+    "G_bytes": 1119364,
+    "eri_backend": "numpy",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.0004948710557073355,
+    "jk_kernel_s": 0.0027393221389502287,
+    "jk_d2h_s": 0.00046041118912398815,
+    "fp64_builds": 3,
+    "fp32_builds": 10,
+    "linalg_calls": 91,
+    "linalg_s": 0.01825273293070495,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.030744004632,
+   "err_vs_ref": 2.2737367544323206e-13,
+   "converged": true,
+   "iterations": 11,
+   "wall_s": 3.0179549669846892,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09826874593272805,
+     "cpu_s": 0.09801648499999516
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 2.885299385059625,
+     "cpu_s": 2.8777370780000027
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.015092178015038371,
+     "cpu_s": 0.015037020000015389
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.010399070801213384,
+     "cpu_s": 0.010428708000006282
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.004488697275519371,
+     "cpu_s": 0.004481802999997342
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 2.881917414953932,
+    "h2d_G_s": 0.0032219961285591125,
+    "G_bytes": 16681088,
+    "eri_backend": "numpy",
+    "jk_calls": 12,
+    "jk_h2d_s": 0.0005486330483108759,
+    "jk_kernel_s": 0.0032948986627161503,
+    "jk_d2h_s": 0.0005357458721846342,
+    "fp64_builds": 12,
+    "fp32_builds": 0,
+    "linalg_calls": 84,
+    "linalg_s": 0.024838818470016122,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074592274541,
+   "err_vs_ref": -1.918113184729009e-06,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 3.2272353710141033,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09872125508263707,
+     "cpu_s": 0.098451481000005
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 2.9065285299438983,
+     "cpu_s": 2.8980465169999974
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.058212497271597385,
+     "cpu_s": 0.058006414000018935
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.09321847488172352,
+     "cpu_s": 0.09337093400002772
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.0370594949927181,
+     "cpu_s": 0.03705765700004804
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 2.903186955023557,
+    "h2d_G_s": 0.0032080821692943573,
+    "G_bytes": 8340544,
+    "eri_backend": "numpy",
+    "jk_calls": 101,
+    "jk_h2d_s": 0.00486096297390759,
+    "jk_kernel_s": 0.026509844698011875,
+    "jk_d2h_s": 0.004847486037760973,
+    "fp64_builds": 0,
+    "fp32_builds": 101,
+    "linalg_calls": 707,
+    "linalg_s": 0.14622281794436276,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "student (CPU ERI -> GPU J/K)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463197,
+   "err_vs_ref": 2.5579538487363607e-13,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 3.0404971251264215,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09848053590394557,
+     "cpu_s": 0.0981422099999989
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 2.900748278014362,
+     "cpu_s": 2.8914735580000013
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.01619490352459252,
+     "cpu_s": 0.016106201000020803
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.011430189711973071,
+     "cpu_s": 0.011481607000014549
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.008862908696755767,
+     "cpu_s": 0.008838187000009157
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 2.8972845477983356,
+    "h2d_G_s": 0.0033328840509057045,
+    "G_bytes": 8340544,
+    "eri_backend": "numpy",
+    "jk_calls": 13,
+    "jk_h2d_s": 0.0005085247103124857,
+    "jk_kernel_s": 0.002856581937521696,
+    "jk_d2h_s": 0.0005121815484017134,
+    "fp64_builds": 3,
+    "fp32_builds": 10,
+    "linalg_calls": 91,
+    "linalg_s": 0.02691168920136988,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "cupy",
+    "device": "NVIDIA L40S",
+    "cupy": "14.2.0",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "student (CPU ERI -> GPU J/K)"
+  }
+ ],
+ "emulation": [
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553134572057,
+   "err_vs_ref": -3.441691376337985e-14,
+   "converged": true,
+   "iterations": 5,
+   "wall_s": 0.006239925976842642,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.003929411061108112,
+     "cpu_s": 0.003916410999998732
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5450641512870789e-06,
+     "cpu_s": 2.450000003761943e-06
+    },
+    "diag": {
+     "calls": 7,
+     "total_s": 0.00028825318440794945,
+     "cpu_s": 0.00029373300000656855
+    },
+    "matmul": {
+     "calls": 24,
+     "total_s": 0.00026215543039143085,
+     "cpu_s": 0.0002804940000018519
+    },
+    "JK": {
+     "calls": 6,
+     "total_s": 0.0001325220800936222,
+     "cpu_s": 0.00013741699999769708
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 6,
+    "jk_h2d_s": 6.0086604207754135e-06,
+    "jk_kernel_s": 9.358790703117847e-05,
+    "jk_d2h_s": 5.602138116955757e-06,
+    "fp64_builds": 6,
+    "fp32_builds": 0,
+    "linalg_calls": 42,
+    "linalg_s": 0.0004550844896584749,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553659509435,
+   "err_vs_ref": -5.2493772217943047e-08,
+   "converged": true,
+   "iterations": 8,
+   "wall_s": 0.007022158009931445,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.00386068201623857,
+     "cpu_s": 0.0038494630000016627
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.4780089259147644e-06,
+     "cpu_s": 2.3240000004420835e-06
+    },
+    "diag": {
+     "calls": 10,
+     "total_s": 0.00032744999043643475,
+     "cpu_s": 0.0003351550000090242
+    },
+    "matmul": {
+     "calls": 36,
+     "total_s": 0.0004975134506821632,
+     "cpu_s": 0.000520457000021679
+    },
+    "JK": {
+     "calls": 9,
+     "total_s": 0.0002173301763832569,
+     "cpu_s": 0.00022456199999254522
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 9,
+    "jk_h2d_s": 1.6298610717058182e-05,
+    "jk_kernel_s": 0.00014145229943096638,
+    "jk_d2h_s": 2.0053936168551445e-05,
+    "fp64_builds": 0,
+    "fp32_builds": 9,
+    "linalg_calls": 63,
+    "linalg_s": 0.0006752894259989262,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553093135037,
+   "err_vs_ref": 4.143667631240078e-09,
+   "converged": true,
+   "iterations": 6,
+   "wall_s": 0.006364535074681044,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.003870863001793623,
+     "cpu_s": 0.003858929999999816
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.601874828338623e-06,
+     "cpu_s": 2.551999997990606e-06
+    },
+    "diag": {
+     "calls": 8,
+     "total_s": 0.00020249001681804657,
+     "cpu_s": 0.00020837600000334078
+    },
+    "matmul": {
+     "calls": 28,
+     "total_s": 0.00024912343360483646,
+     "cpu_s": 0.00026987499997943587
+    },
+    "JK": {
+     "calls": 7,
+     "total_s": 0.00017408374696969986,
+     "cpu_s": 0.0001795920000020601
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 7,
+    "jk_h2d_s": 1.81528739631176e-05,
+    "jk_kernel_s": 0.00010390370152890682,
+    "jk_d2h_s": 1.823529601097107e-05,
+    "fp64_builds": 0,
+    "fp32_builds": 7,
+    "linalg_calls": 49,
+    "linalg_s": 0.00034759589470922947,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553134572061,
+   "err_vs_ref": -3.4861002973229915e-14,
+   "converged": true,
+   "iterations": 6,
+   "wall_s": 0.006388099864125252,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0038377379532903433,
+     "cpu_s": 0.003824459999997032
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6188714653253555e-06,
+     "cpu_s": 2.4729999950068304e-06
+    },
+    "diag": {
+     "calls": 8,
+     "total_s": 0.00022077793255448341,
+     "cpu_s": 0.0002235029999866356
+    },
+    "matmul": {
+     "calls": 28,
+     "total_s": 0.0002917703241109848,
+     "cpu_s": 0.00031262300000634013
+    },
+    "JK": {
+     "calls": 7,
+     "total_s": 0.00023772753775119781,
+     "cpu_s": 0.0002435059999967848
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 7,
+    "jk_h2d_s": 1.2045027688145638e-05,
+    "jk_kernel_s": 6.85681588947773e-05,
+    "jk_d2h_s": 1.2057134881615639e-05,
+    "fp64_builds": 2,
+    "fp32_builds": 5,
+    "linalg_calls": 49,
+    "linalg_s": 0.00040528131648898125,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2",
+   "nbf": 4,
+   "energy": -1.1267553020874435,
+   "err_vs_ref": 1.136972782589396e-08,
+   "converged": true,
+   "iterations": 5,
+   "wall_s": 0.006004425929859281,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0038637900725007057,
+     "cpu_s": 0.0038532819999943513
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.4780089259147644e-06,
+     "cpu_s": 2.420000001279732e-06
+    },
+    "diag": {
+     "calls": 7,
+     "total_s": 0.00019425898790359497,
+     "cpu_s": 0.00019983400000711526
+    },
+    "matmul": {
+     "calls": 24,
+     "total_s": 0.00025666062720119953,
+     "cpu_s": 0.0002704029999947011
+    },
+    "JK": {
+     "calls": 6,
+     "total_s": 0.0002148929052054882,
+     "cpu_s": 0.0002146510000002877
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 6,
+    "jk_h2d_s": 1.2308824807405472e-05,
+    "jk_kernel_s": 7.044896483421326e-05,
+    "jk_d2h_s": 1.2432225048542023e-05,
+    "fp64_builds": 1,
+    "fp32_builds": 5,
+    "linalg_calls": 42,
+    "linalg_s": 0.0003569638356566429,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531253,
+   "err_vs_ref": 5.684341886080802e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.03352843294851482,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.02629880397580564,
+     "cpu_s": 0.026213062000003617
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6100239008665085e-06,
+     "cpu_s": 2.5319999963357986e-06
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0010350421071052551,
+     "cpu_s": 0.0010465439999975956
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0007066556718200445,
+     "cpu_s": 0.0007503940000077591
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0021193900611251593,
+     "cpu_s": 0.0021237389999839706
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 13,
+    "jk_h2d_s": 1.308973878622055e-05,
+    "jk_kernel_s": 0.0020256927236914635,
+    "jk_d2h_s": 1.598312519490719e-05,
+    "fp64_builds": 13,
+    "fp32_builds": 0,
+    "linalg_calls": 91,
+    "linalg_s": 0.0015016496181488037,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.0105063535045,
+   "err_vs_ref": -1.3581919091620875e-06,
+   "converged": true,
+   "iterations": 17,
+   "wall_s": 0.03543794387951493,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.02626071614213288,
+     "cpu_s": 0.02619370000000032
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5760306268930435e-06,
+     "cpu_s": 2.5249999993093297e-06
+    },
+    "diag": {
+     "calls": 19,
+     "total_s": 0.0014892085455358028,
+     "cpu_s": 0.001500465999974665
+    },
+    "matmul": {
+     "calls": 72,
+     "total_s": 0.0012474129907786846,
+     "cpu_s": 0.0012986549999993713
+    },
+    "JK": {
+     "calls": 18,
+     "total_s": 0.0020586319733411074,
+     "cpu_s": 0.002066913000014381
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 18,
+    "jk_h2d_s": 4.155747592449188e-05,
+    "jk_kernel_s": 0.0018171959090977907,
+    "jk_d2h_s": 5.463603883981705e-05,
+    "fp64_builds": 0,
+    "fp32_builds": 18,
+    "linalg_calls": 126,
+    "linalg_s": 0.0023799065966159105,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050459502368,
+   "err_vs_ref": 4.00288911350799e-07,
+   "converged": true,
+   "iterations": 19,
+   "wall_s": 0.0357391310390085,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.02627652487717569,
+     "cpu_s": 0.026182728999998517
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.9639264792203903e-06,
+     "cpu_s": 2.8699999958803346e-06
+    },
+    "diag": {
+     "calls": 21,
+     "total_s": 0.001440080115571618,
+     "cpu_s": 0.0014526789999749212
+    },
+    "matmul": {
+     "calls": 80,
+     "total_s": 0.0009514801204204559,
+     "cpu_s": 0.0010105089999967731
+    },
+    "JK": {
+     "calls": 20,
+     "total_s": 0.0022903745993971825,
+     "cpu_s": 0.002294005999992521
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 20,
+    "jk_h2d_s": 6.437464617192745e-05,
+    "jk_kernel_s": 0.0020068329758942127,
+    "jk_d2h_s": 6.49942085146904e-05,
+    "fp64_builds": 0,
+    "fp32_builds": 20,
+    "linalg_calls": 140,
+    "linalg_s": 0.0020422209054231644,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531253,
+   "err_vs_ref": 5.684341886080802e-14,
+   "converged": true,
+   "iterations": 13,
+   "wall_s": 0.033850905019789934,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.026190102100372314,
+     "cpu_s": 0.02612152099999321
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6319099813699722e-06,
+     "cpu_s": 2.6749999975095307e-06
+    },
+    "diag": {
+     "calls": 15,
+     "total_s": 0.001074351603165269,
+     "cpu_s": 0.0010866130000053431
+    },
+    "matmul": {
+     "calls": 56,
+     "total_s": 0.0007539731450378895,
+     "cpu_s": 0.0007961500000064348
+    },
+    "JK": {
+     "calls": 14,
+     "total_s": 0.0019671772606670856,
+     "cpu_s": 0.001957330999985629
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 14,
+    "jk_h2d_s": 3.169337287545204e-05,
+    "jk_kernel_s": 0.0011292058043181896,
+    "jk_d2h_s": 3.5919249057769775e-05,
+    "fp64_builds": 3,
+    "fp32_builds": 11,
+    "linalg_calls": 98,
+    "linalg_s": 0.001575936796143651,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050143052107,
+   "err_vs_ref": 3.5647915126446605e-06,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.03296129312366247,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.026311384048312902,
+     "cpu_s": 0.02623173900000353
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.734122633934021e-06,
+     "cpu_s": 2.656999996020204e-06
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.001010542968288064,
+     "cpu_s": 0.0010172470000000544
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0006878843996673822,
+     "cpu_s": 0.000733024999981069
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0017481539398431778,
+     "cpu_s": 0.0017562019999957101
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 13,
+    "jk_h2d_s": 3.2835640013217926e-05,
+    "jk_kernel_s": 0.0012123172637075186,
+    "jk_d2h_s": 3.8105063140392303e-05,
+    "fp64_builds": 1,
+    "fp32_builds": 12,
+    "linalg_calls": 91,
+    "linalg_s": 0.0014655557461082935,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398206573491,
+   "err_vs_ref": 9.947598300641403e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.04361218400299549,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.035306200152263045,
+     "cpu_s": 0.035208986000000664
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6910489648580551e-06,
+     "cpu_s": 2.603999995187678e-06
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.001239635283127427,
+     "cpu_s": 0.0012380830000040532
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0007031871937215328,
+     "cpu_s": 0.0007463960000393399
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0028848345391452312,
+     "cpu_s": 0.002890432999997472
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 13,
+    "jk_h2d_s": 1.0998686775565147e-05,
+    "jk_kernel_s": 0.002790495054796338,
+    "jk_d2h_s": 1.7276033759117126e-05,
+    "fp64_builds": 13,
+    "fp32_builds": 0,
+    "linalg_calls": 91,
+    "linalg_s": 0.0017083329148590565,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.1839879749607,
+   "err_vs_ref": -5.909225691880238e-06,
+   "converged": true,
+   "iterations": 66,
+   "wall_s": 0.070517105050385,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.03521389304660261,
+     "cpu_s": 0.035117289999995194
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6409903764724731e-06,
+     "cpu_s": 2.4770000024432193e-06
+    },
+    "diag": {
+     "calls": 68,
+     "total_s": 0.005904864985495806,
+     "cpu_s": 0.005936606999974003
+    },
+    "matmul": {
+     "calls": 268,
+     "total_s": 0.0045573527459055185,
+     "cpu_s": 0.004766542000005813
+    },
+    "JK": {
+     "calls": 67,
+     "total_s": 0.008720633340999484,
+     "cpu_s": 0.008735244999975578
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 67,
+    "jk_h2d_s": 0.0001425282098352909,
+    "jk_kernel_s": 0.007980763679370284,
+    "jk_d2h_s": 0.00020290818065404892,
+    "fp64_builds": 0,
+    "fp32_builds": 67,
+    "linalg_calls": 469,
+    "linalg_s": 0.009159632492810488,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398120013025,
+   "err_vs_ref": 8.656047612021212e-07,
+   "converged": true,
+   "iterations": 24,
+   "wall_s": 0.04814477008767426,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.03516014199703932,
+     "cpu_s": 0.03505770900000016
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5888363122940063e-06,
+     "cpu_s": 2.5039999940190683e-06
+    },
+    "diag": {
+     "calls": 26,
+     "total_s": 0.002045464003458619,
+     "cpu_s": 0.0020578619999866987
+    },
+    "matmul": {
+     "calls": 100,
+     "total_s": 0.001191411865875125,
+     "cpu_s": 0.0012710599999508077
+    },
+    "JK": {
+     "calls": 25,
+     "total_s": 0.003389418823644519,
+     "cpu_s": 0.00338463400000677
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 25,
+    "jk_h2d_s": 8.074985817074776e-05,
+    "jk_kernel_s": 0.003012960311025381,
+    "jk_d2h_s": 9.059137664735317e-05,
+    "fp64_builds": 0,
+    "fp32_builds": 25,
+    "linalg_calls": 175,
+    "linalg_s": 0.0028022017795592546,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398206573494,
+   "err_vs_ref": 7.105427357601002e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.04254259401932359,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.035137974889948964,
+     "cpu_s": 0.035038870000001054
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6810372471809387e-06,
+     "cpu_s": 2.6769999976750114e-06
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0011801810469478369,
+     "cpu_s": 0.001179596000007166
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0006985131185501814,
+     "cpu_s": 0.0007417149999966455
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0021698391065001488,
+     "cpu_s": 0.0021862030000008303
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 13,
+    "jk_h2d_s": 2.7153175324201584e-05,
+    "jk_kernel_s": 0.001209598733112216,
+    "jk_d2h_s": 3.430107608437538e-05,
+    "fp64_builds": 3,
+    "fp32_builds": 10,
+    "linalg_calls": 91,
+    "linalg_s": 0.0016386816278100014,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18397884694353,
+   "err_vs_ref": 3.218791476911065e-06,
+   "converged": true,
+   "iterations": 13,
+   "wall_s": 0.0431626180652529,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.03524989704601467,
+     "cpu_s": 0.035148837000001265
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5511177480220795e-06,
+     "cpu_s": 2.4530000004574504e-06
+    },
+    "diag": {
+     "calls": 15,
+     "total_s": 0.0012567592784762383,
+     "cpu_s": 0.001268997999979149
+    },
+    "matmul": {
+     "calls": 56,
+     "total_s": 0.0007520383223891258,
+     "cpu_s": 0.000798664999976495
+    },
+    "JK": {
+     "calls": 14,
+     "total_s": 0.002232934348285198,
+     "cpu_s": 0.0022351199999945948
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 14,
+    "jk_h2d_s": 3.61371785402298e-05,
+    "jk_kernel_s": 0.0015698191709816456,
+    "jk_d2h_s": 4.422222264111042e-05,
+    "fp64_builds": 1,
+    "fp32_builds": 13,
+    "linalg_calls": 98,
+    "linalg_s": 0.0017509027384221554,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195093226548025,
+   "err_vs_ref": -7.105427357601002e-14,
+   "converged": true,
+   "iterations": 11,
+   "wall_s": 0.05492893187329173,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0457510850392282,
+     "cpu_s": 0.045628396999994436
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5790574252605438e-06,
+     "cpu_s": 2.508000001455457e-06
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.0010748081840574741,
+     "cpu_s": 0.0010859440000174914
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.0006882636807858944,
+     "cpu_s": 0.0007251799999750119
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.0038102336693555117,
+     "cpu_s": 0.0038042639999886774
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 12,
+    "jk_h2d_s": 1.0076910257339478e-05,
+    "jk_kernel_s": 0.0037222139071673155,
+    "jk_d2h_s": 1.635146327316761e-05,
+    "fp64_builds": 12,
+    "fp32_builds": 0,
+    "linalg_calls": 84,
+    "linalg_s": 0.0015307473950088024,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.19510307171399,
+   "err_vs_ref": -9.845166033528585e-06,
+   "converged": true,
+   "iterations": 18,
+   "wall_s": 0.057404532097280025,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.04551824904046953,
+     "cpu_s": 0.04539893000000461
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6989652067422867e-06,
+     "cpu_s": 2.6320000046098357e-06
+    },
+    "diag": {
+     "calls": 20,
+     "total_s": 0.0018680056091398,
+     "cpu_s": 0.0018838550000097598
+    },
+    "matmul": {
+     "calls": 76,
+     "total_s": 0.0013910147827118635,
+     "cpu_s": 0.0014405839999511727
+    },
+    "JK": {
+     "calls": 19,
+     "total_s": 0.0036276448518037796,
+     "cpu_s": 0.0036402019999997037
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 19,
+    "jk_h2d_s": 4.473840817809105e-05,
+    "jk_kernel_s": 0.003286177758127451,
+    "jk_d2h_s": 7.715681567788124e-05,
+    "fp64_builds": 0,
+    "fp32_builds": 19,
+    "linalg_calls": 133,
+    "linalg_s": 0.002873104065656662,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.19509673000681,
+   "err_vs_ref": -3.5034588563576108e-06,
+   "converged": true,
+   "iterations": 26,
+   "wall_s": 0.06153083895333111,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.04558515013195574,
+     "cpu_s": 0.04546113199999979
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5210825949907303e-06,
+     "cpu_s": 2.5040000011244956e-06
+    },
+    "diag": {
+     "calls": 28,
+     "total_s": 0.0023627206683158875,
+     "cpu_s": 0.0023722219999768868
+    },
+    "matmul": {
+     "calls": 108,
+     "total_s": 0.0013630837202072144,
+     "cpu_s": 0.0014482340000299132
+    },
+    "JK": {
+     "calls": 27,
+     "total_s": 0.005160550586879253,
+     "cpu_s": 0.0051517610000004765
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 27,
+    "jk_h2d_s": 9.642494842410088e-05,
+    "jk_kernel_s": 0.004686552099883556,
+    "jk_d2h_s": 0.00011145672760903835,
+    "fp64_builds": 0,
+    "fp32_builds": 27,
+    "linalg_calls": 189,
+    "linalg_s": 0.0032410661224275827,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195093226548025,
+   "err_vs_ref": -7.105427357601002e-14,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 0.05446679098531604,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.04554654587991536,
+     "cpu_s": 0.045428915000002235
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6069971024990082e-06,
+     "cpu_s": 2.537000000302214e-06
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.001193199073895812,
+     "cpu_s": 0.001200317999995093
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0007427562959492207,
+     "cpu_s": 0.0007812569999856578
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0030589706730097532,
+     "cpu_s": 0.003060830999984887
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 13,
+    "jk_h2d_s": 2.9547372832894325e-05,
+    "jk_kernel_s": 0.0018177209421992302,
+    "jk_d2h_s": 4.0616607293486595e-05,
+    "fp64_builds": 3,
+    "fp32_builds": 10,
+    "linalg_calls": 91,
+    "linalg_s": 0.0016870875842869282,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195085623008325,
+   "err_vs_ref": 7.60353962903082e-06,
+   "converged": true,
+   "iterations": 17,
+   "wall_s": 0.05777212791144848,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.04559735185466707,
+     "cpu_s": 0.04546079899999711
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.4880206435918808e-06,
+     "cpu_s": 2.440999999464566e-06
+    },
+    "diag": {
+     "calls": 19,
+     "total_s": 0.0016742779407650232,
+     "cpu_s": 0.0016764120000019034
+    },
+    "matmul": {
+     "calls": 72,
+     "total_s": 0.0010321869049221277,
+     "cpu_s": 0.0010885520000272209
+    },
+    "JK": {
+     "calls": 18,
+     "total_s": 0.00408287113532424,
+     "cpu_s": 0.004088605999996275
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 18,
+    "jk_h2d_s": 5.017523653805256e-05,
+    "jk_kernel_s": 0.003141005989164114,
+    "jk_d2h_s": 6.972602568566799e-05,
+    "fp64_builds": 1,
+    "fp32_builds": 17,
+    "linalg_calls": 126,
+    "linalg_s": 0.002364273415878415,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463194,
+   "err_vs_ref": 2.8421709430404007e-13,
+   "converged": true,
+   "iterations": 11,
+   "wall_s": 0.12285904190503061,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09808566002175212,
+     "cpu_s": 0.09779846200000009
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.7259735614061356e-06,
+     "cpu_s": 2.6909999988333766e-06
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.0026210525538772345,
+     "cpu_s": 0.0026240780000108543
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.0009354583453387022,
+     "cpu_s": 0.0009663999999816042
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.017647274304181337,
+     "cpu_s": 0.01759702699999366
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 12,
+    "jk_h2d_s": 1.6163568943738937e-05,
+    "jk_kernel_s": 0.017552971839904785,
+    "jk_d2h_s": 1.566135324537754e-05,
+    "fp64_builds": 12,
+    "fp32_builds": 0,
+    "linalg_calls": 84,
+    "linalg_s": 0.0033121153246611357,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074644574033,
+   "err_vs_ref": -2.441108108541812e-06,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 0.2407701681368053,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09819751395843923,
+     "cpu_s": 0.09787114799999586
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.711072400212288e-06,
+     "cpu_s": 2.6020000021276246e-06
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.02086304221302271,
+     "cpu_s": 0.02084371799997342
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.00965787097811699,
+     "cpu_s": 0.00995211300002552
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 0.08207670506089926,
+     "cpu_s": 0.08176174699996608
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 101,
+    "jk_h2d_s": 0.0002724954392760992,
+    "jk_kernel_s": 0.07910742657259107,
+    "jk_d2h_s": 0.0005175115074962378,
+    "fp64_builds": 0,
+    "fp32_builds": 101,
+    "linalg_calls": 707,
+    "linalg_s": 0.028217863291502,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074004808371,
+   "err_vs_ref": 3.956548511041547e-06,
+   "converged": true,
+   "iterations": 29,
+   "wall_s": 0.14065161114558578,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0980371730402112,
+     "cpu_s": 0.09777741699999609
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.7290003597736359e-06,
+     "cpu_s": 2.8870000008396346e-06
+    },
+    "diag": {
+     "calls": 31,
+     "total_s": 0.006054728524759412,
+     "cpu_s": 0.006058547999998609
+    },
+    "matmul": {
+     "calls": 120,
+     "total_s": 0.0022732792422175407,
+     "cpu_s": 0.002364382000024534
+    },
+    "JK": {
+     "calls": 30,
+     "total_s": 0.025137950899079442,
+     "cpu_s": 0.025037220000029947
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 30,
+    "jk_h2d_s": 0.00012263422831892967,
+    "jk_kernel_s": 0.023374348413199186,
+    "jk_d2h_s": 0.00016224058344960213,
+    "fp64_builds": 0,
+    "fp32_builds": 30,
+    "linalg_calls": 210,
+    "linalg_s": 0.007721493719145656,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463188,
+   "err_vs_ref": 3.410605131648481e-13,
+   "converged": true,
+   "iterations": 13,
+   "wall_s": 0.12045481614768505,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09781302511692047,
+     "cpu_s": 0.09755037699999747
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.6649719327688217e-06,
+     "cpu_s": 2.630000004444355e-06
+    },
+    "diag": {
+     "calls": 15,
+     "total_s": 0.003031410276889801,
+     "cpu_s": 0.0030378570000095806
+    },
+    "matmul": {
+     "calls": 56,
+     "total_s": 0.0011649099178612232,
+     "cpu_s": 0.0012044580000321048
+    },
+    "JK": {
+     "calls": 14,
+     "total_s": 0.014201809884980321,
+     "cpu_s": 0.014156456999991462
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 14,
+    "jk_h2d_s": 3.7682708352804184e-05,
+    "jk_kernel_s": 0.008596370462328196,
+    "jk_d2h_s": 5.790567956864834e-05,
+    "fp64_builds": 3,
+    "fp32_builds": 11,
+    "linalg_calls": 98,
+    "linalg_s": 0.0038994294591248035,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.0307590728525,
+   "err_vs_ref": -1.5068220278635636e-05,
+   "converged": true,
+   "iterations": 14,
+   "wall_s": 0.12090922589413822,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.09804327297024429,
+     "cpu_s": 0.097782598000002
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.5939585864543915e-06,
+     "cpu_s": 2.6040000022931054e-06
+    },
+    "diag": {
+     "calls": 16,
+     "total_s": 0.00325094279833138,
+     "cpu_s": 0.003242869999986908
+    },
+    "matmul": {
+     "calls": 60,
+     "total_s": 0.0012371109332889318,
+     "cpu_s": 0.0012835870000103
+    },
+    "JK": {
+     "calls": 15,
+     "total_s": 0.013737993780523539,
+     "cpu_s": 0.013686752000019453
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 15,
+    "jk_h2d_s": 4.732748493552208e-05,
+    "jk_kernel_s": 0.010949213057756424,
+    "jk_d2h_s": 7.355748675763607e-05,
+    "fp64_builds": 1,
+    "fp32_builds": 14,
+    "linalg_calls": 105,
+    "linalg_s": 0.0041705898474901915,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70216365001883,
+   "err_vs_ref": 2.8421709430404007e-12,
+   "converged": true,
+   "iterations": 12,
+   "wall_s": 2.156393869081512,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.5875838918145746,
+     "cpu_s": 0.5860409670000024
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.916196197271347e-06,
+     "cpu_s": 2.9560000029960065e-06
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.015251176431775093,
+     "cpu_s": 0.015219085999994775
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.007425687508657575,
+     "cpu_s": 0.007451005999939753
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 1.535681047476828,
+     "cpu_s": 1.5321042099999929
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 13,
+    "jk_h2d_s": 1.521129161119461e-05,
+    "jk_kernel_s": 1.5354404100216925,
+    "jk_d2h_s": 5.9582991525530815e-05,
+    "fp64_builds": 13,
+    "fp32_builds": 0,
+    "linalg_calls": 91,
+    "linalg_s": 0.022012202069163322,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp64",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "fp64",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70211707509387,
+   "err_vs_ref": 4.6574927807796485e-05,
+   "converged": true,
+   "iterations": 44,
+   "wall_s": 3.6039092768914998,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.5873498821165413,
+     "cpu_s": 0.5856068960000016
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 2.393033355474472e-06,
+     "cpu_s": 3.332999995109276e-06
+    },
+    "diag": {
+     "calls": 46,
+     "total_s": 0.053031645715236664,
+     "cpu_s": 0.05286873100000378
+    },
+    "matmul": {
+     "calls": 180,
+     "total_s": 0.023461630335077643,
+     "cpu_s": 0.023014394000014704
+    },
+    "JK": {
+     "calls": 45,
+     "total_s": 2.9016483961604536,
+     "cpu_s": 2.8949952390000107
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 45,
+    "jk_h2d_s": 0.0002882075496017933,
+    "jk_kernel_s": 2.77171463589184,
+    "jk_d2h_s": 0.0012188747059553862,
+    "fp64_builds": 0,
+    "fp32_builds": 45,
+    "linalg_calls": 315,
+    "linalg_s": 0.07410650118254125,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70215594407054,
+   "err_vs_ref": 7.705951134084899e-06,
+   "converged": true,
+   "iterations": 56,
+   "wall_s": 4.374166003894061,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.587912293151021,
+     "cpu_s": 0.5863706880000024
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.7338898032903671e-06,
+     "cpu_s": 2.7450000033013566e-06
+    },
+    "diag": {
+     "calls": 58,
+     "total_s": 0.06420720973983407,
+     "cpu_s": 0.06401995500003466
+    },
+    "matmul": {
+     "calls": 228,
+     "total_s": 0.033362978836521506,
+     "cpu_s": 0.03350249300005714
+    },
+    "JK": {
+     "calls": 57,
+     "total_s": 3.6407117187045515,
+     "cpu_s": 3.6321682620000075
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 57,
+    "jk_h2d_s": 0.0005789571441709995,
+    "jk_kernel_s": 3.5095744295977056,
+    "jk_d2h_s": 0.0015777463559061289,
+    "fp64_builds": 0,
+    "fp32_builds": 57,
+    "linalg_calls": 399,
+    "linalg_s": 0.09471546462737024,
+    "eigh_on": "host"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "fp32",
+    "eri": "auto",
+    "linalg": "host",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": {
+    "e_tol": 1e-07,
+    "d_tol": 1e-05
+   },
+   "mode": "fp32-jk-only",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70216365001917,
+   "err_vs_ref": 2.5011104298755527e-12,
+   "converged": true,
+   "iterations": 13,
+   "wall_s": 1.7838880259077996,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.5875012290198356,
+     "cpu_s": 0.5859460550000009
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 7.466180250048637e-06,
+     "cpu_s": 8.569000002012217e-06
+    },
+    "diag": {
+     "calls": 15,
+     "total_s": 0.016516791190952063,
+     "cpu_s": 0.016484114999997246
+    },
+    "matmul": {
+     "calls": 56,
+     "total_s": 0.007819127291440964,
+     "cpu_s": 0.007870883999999023
+    },
+    "JK": {
+     "calls": 14,
+     "total_s": 1.161009577801451,
+     "cpu_s": 1.1581630330000081
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 14,
+    "jk_h2d_s": 8.486420847475529e-05,
+    "jk_kernel_s": 0.6750724567100406,
+    "jk_d2h_s": 0.00030573527328670025,
+    "fp64_builds": 3,
+    "fp32_builds": 11,
+    "linalg_calls": 98,
+    "linalg_s": 0.02360472595319152,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.001
+   },
+   "tolerances": "default",
+   "mode": "mixed",
+   "path": "numpy target (CPU FP32 emulation)"
+  },
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70220357969194,
+   "err_vs_ref": -3.9929670265337336e-05,
+   "converged": false,
+   "iterations": 100,
+   "wall_s": 7.233771414030343,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.5869047739543021,
+     "cpu_s": 0.5853959009999983
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.72504223883152e-06,
+     "cpu_s": 2.7889999998365056e-06
+    },
+    "diag": {
+     "calls": 102,
+     "total_s": 0.1147036012262106,
+     "cpu_s": 0.11425006000008153
+    },
+    "matmul": {
+     "calls": 404,
+     "total_s": 0.062397261848673224,
+     "cpu_s": 0.06254562399983143
+    },
+    "JK": {
+     "calls": 101,
+     "total_s": 6.383573272265494,
+     "cpu_s": 6.365811767000082
+    }
+   },
+   "gpu_stats": {
+    "eri_cpu_s": 0.0,
+    "h2d_G_s": 0.0,
+    "G_bytes": 0,
+    "eri_backend": null,
+    "jk_calls": 101,
+    "jk_h2d_s": 0.0007650014013051987,
+    "jk_kernel_s": 6.123923149192706,
+    "jk_d2h_s": 0.002616488840430975,
+    "fp64_builds": 1,
+    "fp32_builds": 100,
+    "linalg_calls": 707,
+    "linalg_s": 0.1718585044145584,
+    "eigh_on": "device"
+   },
+   "cuda_stats": {},
+   "backend": {
+    "target": "numpy",
+    "device": "CPU (NumPy)",
+    "precision": "mixed",
+    "eri": "auto",
+    "linalg": "device",
+    "jk": "matmul",
+    "anchor_factor": 0.0
+   },
+   "tolerances": "default",
+   "mode": "mixed-no-reanchor",
+   "path": "numpy target (CPU FP32 emulation)"
+  }
+ ],
+ "finished": "2026-11-21 16:28:46"
+}

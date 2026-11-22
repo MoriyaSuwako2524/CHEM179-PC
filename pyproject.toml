@@ -1,0 +1,33 @@
+[project]
+name = "hfperf"
+version = "0.1.0"
+description = "From-scratch RHF/6-31G* for teaching where computing time goes (Chem179)"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff"]
+profile = ["line_profiler", "scalene", "py-spy", "memray; sys_platform != 'win32'"]
+mpi = ["mpi4py"]
+gpu-nvidia = ["cupy-cuda12x"]
+gpu-mac = ["torch"]
+
+[project.scripts]
+hfperf = "hfperf.cli:main"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hfperf = ["data/*.json", "data/molecules/*.xyz", "backends/gpu/*.cu"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: takes more than a few seconds with the naive backend"]
+
+[tool.ruff]
+line-length = 110

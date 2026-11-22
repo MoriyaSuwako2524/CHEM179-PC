@@ -1,0 +1,161 @@
+{
+ "kind": "flags",
+ "molecule": "h2o",
+ "nbf": 19,
+ "rows": [
+  {
+   "profile": "O0",
+   "variant": "naive",
+   "eri_s_best": 6.101769770961255,
+   "eri_s_all": [
+    6.106041417922825,
+    6.101769770961255,
+    6.102429240010679
+   ],
+   "max_abs_err_vs_pyscf": 2.1926904736346842e-14
+  },
+  {
+   "profile": "O0",
+   "variant": "sym8",
+   "eri_s_best": 0.12420652294531465,
+   "eri_s_all": [
+    0.12485703406855464,
+    0.12420652294531465,
+    0.12423774413764477
+   ],
+   "max_abs_err_vs_pyscf": 2.1871393585115584e-14
+  },
+  {
+   "profile": "O2",
+   "variant": "naive",
+   "eri_s_best": 4.2011497230269015,
+   "eri_s_all": [
+    4.202887361869216,
+    4.201796543085948,
+    4.2011497230269015
+   ],
+   "max_abs_err_vs_pyscf": 2.1926904736346842e-14
+  },
+  {
+   "profile": "O2",
+   "variant": "sym8",
+   "eri_s_best": 0.04921949305571616,
+   "eri_s_all": [
+    0.04964892100542784,
+    0.04922711988911033,
+    0.04921949305571616
+   ],
+   "max_abs_err_vs_pyscf": 2.1871393585115584e-14
+  },
+  {
+   "profile": "O3",
+   "variant": "naive",
+   "eri_s_best": 3.90509301610291,
+   "eri_s_all": [
+    3.9062461021821946,
+    3.905556811951101,
+    3.90509301610291
+   ],
+   "max_abs_err_vs_pyscf": 2.1926904736346842e-14
+  },
+  {
+   "profile": "O3",
+   "variant": "sym8",
+   "eri_s_best": 0.05175965209491551,
+   "eri_s_all": [
+    0.052211483009159565,
+    0.051811886951327324,
+    0.05175965209491551
+   ],
+   "max_abs_err_vs_pyscf": 2.1871393585115584e-14
+  },
+  {
+   "profile": "native",
+   "variant": "naive",
+   "eri_s_best": 4.0896081128157675,
+   "eri_s_all": [
+    4.0896081128157675,
+    4.093380081001669,
+    4.0909273670986295
+   ],
+   "max_abs_err_vs_pyscf": 2.1926904736346842e-14
+  },
+  {
+   "profile": "native",
+   "variant": "sym8",
+   "eri_s_best": 0.05640971986576915,
+   "eri_s_all": [
+    0.05663102981634438,
+    0.05640971986576915,
+    0.05663401703350246
+   ],
+   "max_abs_err_vs_pyscf": 2.1815882433884326e-14
+  }
+ ],
+ "machine": {
+  "cpu": "Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "numpy": "2.2.6",
+  "host": "n153.cluster",
+  "build": {
+   "_hfcpp_O0": {
+    "module": "_hfcpp_O0",
+    "profile": "O0",
+    "flags": [
+     "-O0"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp_O0.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   },
+   "_hfcpp_O2": {
+    "module": "_hfcpp_O2",
+    "profile": "O2",
+    "flags": [
+     "-O2"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp_O2.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   },
+   "_hfcpp_O3": {
+    "module": "_hfcpp_O3",
+    "profile": "O3",
+    "flags": [
+     "-O3"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp_O3.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   },
+   "_hfcpp_native": {
+    "module": "_hfcpp_native",
+    "profile": "native",
+    "flags": [
+     "-O3",
+     "-march=native"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp_native.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   },
+   "_hfcpp": {
+    "module": "_hfcpp",
+    "profile": "native",
+    "flags": [
+     "-O3",
+     "-march=native"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   }
+  }
+ }
+}

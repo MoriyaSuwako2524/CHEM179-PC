@@ -1,0 +1,14 @@
+[build-system]
+requires = ["maturin>=1.5,<2"]
+build-backend = "maturin"
+
+[project]
+name = "hfperf-rust"
+version = "0.1.0"
+description = "Rust (PyO3) ERI / J,K kernels for the hfperf teaching code"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[tool.maturin]
+module-name = "hfperf_rust"
+features = ["pyo3/extension-module"]

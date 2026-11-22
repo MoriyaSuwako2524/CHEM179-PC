@@ -1,0 +1,6 @@
+source,molecule,nbf,variant,i0,i1,quartets,eri_s,max_abs_diff_vs_sym8,cpu
+slab_benzene_naive_0_26.json,benzene,102,naive,0,26,27591408,1648.4187008710578,9.967584358072046e-13,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+slab_benzene_naive_26_52.json,benzene,102,naive,26,52,27591408,1418.101387757808,9.967584358072046e-13,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+slab_benzene_naive_52_78.json,benzene,102,naive,52,78,27591408,1310.1700527491048,9.967584358072046e-13,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+slab_benzene_naive_78_102.json,benzene,102,naive,78,102,25468992,961.4795647640713,8.99629783102165e-13,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+SUM,benzene,102,naive,0,102,108243216,5338.169706142042,9.967584358072046e-13,Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz

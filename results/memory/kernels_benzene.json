@@ -1,0 +1,23 @@
+{
+ "meta": {
+  "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "numpy": "2.2.6",
+  "python": "3.10.14",
+  "host": "n183.cluster"
+ },
+ "rows": [
+  {
+   "molecule": "benzene",
+   "nbf": 102,
+   "jk_blas_s": 0.13638637005351484,
+   "jk_einsum_s": 0.15007040603086352,
+   "jk_einsum_maxdiff": 6.750155989720952e-14,
+   "jk_loop_s": 62.30786251905374,
+   "jk_loop_maxdiff": 1.4566126083082054e-13,
+   "eigh_lapack_s": 0.0008181850425899029,
+   "eigh_jacobi_s": 8.23483175598085,
+   "eigh_maxdiff": 3.659295089164516e-13,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  }
+ ]
+}

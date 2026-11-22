@@ -1,0 +1,33 @@
+{
+ "kind": "eri_slab",
+ "molecule": "benzene",
+ "variant": "naive",
+ "module": "_hfcpp",
+ "nbf": 102,
+ "i0": 78,
+ "i1": 102,
+ "quartets": 25468992,
+ "eri_s": 961.4795647640713,
+ "max_abs_diff_vs_sym8": 8.99629783102165e-13,
+ "machine": {
+  "cpu": "Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "numpy": "2.2.6",
+  "host": "n155.cluster",
+  "build": {
+   "_hfcpp": {
+    "module": "_hfcpp",
+    "profile": "native",
+    "flags": [
+     "-O3",
+     "-march=native"
+    ],
+    "compiler": "c++ (GCC) 13.2.0",
+    "file": "_hfcpp.cpython-310-x86_64-linux-gnu.so",
+    "machine": "x86_64",
+    "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17"
+   }
+  }
+ }
+}

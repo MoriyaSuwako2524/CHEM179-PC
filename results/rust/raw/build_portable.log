@@ -1,0 +1,37 @@
+🐍 Found CPython 3.10 at /scratch/moriya/chem179/venv/bin/python
+🔗 Found pyo3 bindings
+📡 Using build options features from pyproject.toml
+   Compiling target-lexicon v0.12.16
+   Compiling autocfg v1.5.1
+   Compiling once_cell v1.21.4
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling num-traits v0.2.19
+   Compiling libc v0.2.191
+   Compiling pyo3-build-config v0.22.6
+   Compiling memoffset v0.9.1
+   Compiling matrixmultiply v0.3.11
+   Compiling syn v2.0.119
+   Compiling heck v0.5.0
+   Compiling rawpointer v0.2.1
+   Compiling pyo3-macros-backend v0.22.6
+   Compiling pyo3-ffi v0.22.6
+   Compiling pyo3 v0.22.6
+   Compiling num-integer v0.1.47
+   Compiling num-complex v0.4.6
+   Compiling unindent v0.2.4
+   Compiling cfg-if v1.0.5
+   Compiling indoc v2.0.8
+   Compiling libm v0.2.16
+   Compiling ndarray v0.16.1
+   Compiling rustc-hash v1.1.0
+   Compiling pyo3-macros v0.22.6
+   Compiling numpy v0.22.1
+   Compiling hfperf_rust v0.1.0 (/scratch/moriya/chem179/rust_track/chem179-hf-perf/ext/rust)
+    Finished `release` profile [optimized] target(s) in 21.41s
+📦 Built wheel for CPython 3.10 to /scratch/moriya/chem179/rust_track/native/wheel_portable/hfperf_rust-0.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+
+real	0m24.244s
+user	0m29.665s
+sys	0m6.984s

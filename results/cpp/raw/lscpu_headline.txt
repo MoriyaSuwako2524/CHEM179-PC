@@ -1,0 +1,6 @@
+CPU(s):                32
+Model name:            Intel(R) Xeon(R) Gold 6130F CPU @ 2.10GHz
+L1d cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+g++ (GCC) 13.2.0

@@ -1,0 +1,62 @@
+{
+ "meta": {
+  "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "numpy": "2.2.6",
+  "python": "3.10.14",
+  "host": "n183.cluster"
+ },
+ "rows": [
+  {
+   "molecule": "h2o",
+   "nbf": 19,
+   "jk_blas_s": 0.00012005819007754326,
+   "jk_einsum_s": 0.0002550799399614334,
+   "jk_einsum_maxdiff": 5.329070518200751e-15,
+   "jk_loop_s": 0.09517319803126156,
+   "jk_loop_maxdiff": 1.7763568394002505e-14,
+   "eigh_lapack_s": 5.965912714600563e-05,
+   "eigh_jacobi_s": 0.040606776950880885,
+   "eigh_maxdiff": 3.197442310920451e-14,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "molecule": "nh3",
+   "nbf": 21,
+   "jk_blas_s": 0.00017672590911388397,
+   "jk_einsum_s": 0.00028662895783782005,
+   "jk_einsum_maxdiff": 7.105427357601002e-15,
+   "jk_loop_s": 0.11459654103964567,
+   "jk_loop_maxdiff": 1.2434497875801753e-14,
+   "eigh_lapack_s": 7.10049644112587e-05,
+   "eigh_jacobi_s": 0.05349648604169488,
+   "eigh_maxdiff": 9.592326932761353e-14,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "molecule": "ch4",
+   "nbf": 23,
+   "jk_blas_s": 0.00024960911832749844,
+   "jk_einsum_s": 0.00038404297083616257,
+   "jk_einsum_maxdiff": 5.329070518200751e-15,
+   "jk_loop_s": 0.16451470786705613,
+   "jk_loop_maxdiff": 3.730349362740526e-14,
+   "eigh_lapack_s": 6.718700751662254e-05,
+   "eigh_jacobi_s": 0.07359106792137027,
+   "eigh_maxdiff": 9.414691248821327e-14,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  },
+  {
+   "molecule": "c2h4",
+   "nbf": 38,
+   "jk_blas_s": 0.0017269188538193703,
+   "jk_einsum_s": 0.002677988028153777,
+   "jk_einsum_maxdiff": 1.0658141036401503e-14,
+   "jk_loop_s": 1.2182730580680072,
+   "jk_loop_maxdiff": 1.4210854715202004e-14,
+   "eigh_lapack_s": 0.0001976268831640482,
+   "eigh_jacobi_s": 0.29457646585069597,
+   "eigh_maxdiff": 5.3290705182007514e-14,
+   "cpu": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz"
+  }
+ ]
+}

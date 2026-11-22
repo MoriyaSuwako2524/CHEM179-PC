@@ -1,0 +1,4 @@
+gcc -O2 -fPIC -shared matmul.c -o libmm_O2.so
+gcc -O3 -march=native -fPIC -shared matmul.c -o libmm_O3native.so
+gcc -O3 -march=native -mprefer-vector-width=512 -fPIC -shared matmul.c -o libmm_O3native512.so
+gcc (GCC) 13.2.0

@@ -1,0 +1,27 @@
+..s.s.s..ss..ss...s..................................................... [ 50%]
+......ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_cpp.py:11: C++ module not built: python ext/cpp/build.py
+SKIPPED [4] tests/test_gpu.py:24: target torch-cpu unavailable: No module named 'torch'
+SKIPPED [4] tests/test_gpu.py:24: target mps unavailable: No module named 'torch'
+SKIPPED [12] tests/test_parallel.py:83: OpenMP module not built: python ext/cpp/build.py --openmp
+SKIPPED [1] tests/test_parallel.py:92: OpenMP module not built: python ext/cpp/build.py --openmp
+SKIPPED [1] tests/test_parallel.py:99: OpenMP module not built: python ext/cpp/build.py --openmp
+SKIPPED [4] tests/test_parallel.py:109: OpenMP module not built: python ext/cpp/build.py --openmp
+SKIPPED [1] tests/test_parallel.py:121: OpenMP module not built: python ext/cpp/build.py --openmp
+SKIPPED [6] tests/test_parallel.py:142: OpenMP module not built: python ext/cpp/build.py --openmp
+SKIPPED [4] tests/test_parallel.py:161: Rust module (with Rayon) not built
+SKIPPED [1] tests/test_parallel.py:170: Rust module (with Rayon) not built
+SKIPPED [4] tests/test_parallel.py:183: Rust module (with Rayon) not built
+SKIPPED [4] tests/test_parallel.py:198: Rust module (with Rayon) not built
+SKIPPED [1] tests/test_parallel.py:212: needs mpi4py and a compiled DirectJK
+SKIPPED [2] tests/test_parallel.py:219: needs mpirun, mpi4py and a compiled DirectJK
+SKIPPED [2] tests/test_rust.py:17: hfperf_rust not built (cd ext/rust && maturin develop --release)
+SKIPPED [8] tests/test_rust.py:28: hfperf_rust not built (cd ext/rust && maturin develop --release)
+SKIPPED [1] tests/test_rust.py:36: hfperf_rust not built (cd ext/rust && maturin develop --release)
+SKIPPED [3] tests/test_rust.py:43: hfperf_rust not built (cd ext/rust && maturin develop --release)
+SKIPPED [1] tests/test_rust.py:59: hfperf_rust not built (cd ext/rust && maturin develop --release)
+SKIPPED [1] tests/test_rust.py:67: hfperf_rust not built (cd ext/rust && maturin develop --release)
+SKIPPED [8] tests/test_rust.py:77: hfperf_rust not built (cd ext/rust && maturin develop --release)
+SKIPPED [1] tests/test_rust.py:85: hfperf_rust not built (cd ext/rust && maturin develop --release)
+70 passed, 75 skipped, 1 deselected in 13.33s

@@ -1,0 +1,723 @@
+{
+ "machine": {
+  "cpu_model": "Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz",
+  "platform": "Linux-3.10.0-1160.31.1.el7.x86_64-x86_64-with-glibc2.17",
+  "python": "3.10.14",
+  "numpy": "2.2.6",
+  "hostname": "n183.cluster",
+  "threads_env": {
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "SLURM_CPUS_PER_TASK": "1"
+  },
+  "lscpu": "Architecture:          x86_64\nCPU op-mode(s):        32-bit, 64-bit\nByte Order:            Little Endian\nCPU(s):                32\nOn-line CPU(s) list:   0-31\nThread(s) per core:    1\nCore(s) per socket:    16\nSocket(s):             2\nNUMA node(s):          2\nVendor ID:             GenuineIntel\nCPU family:            6\nModel:                 85\nModel name:            Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz\nStepping:              7\nCPU MHz:               2901.000\nCPU max MHz:           2901.0000\nCPU min MHz:           1200.0000\nBogoMIPS:              5800.00\nVirtualization:        VT-x\nL1d cache:             32K\nL1i cache:             32K\nL2 cache:              1024K\nL3 cache:              22528K\nNUMA node0 CPU(s):     0-15\nNUMA node1 CPU(s):     16-31\nFlags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities\n"
+ },
+ "records": [
+  {
+   "variant": "sym8",
+   "backend": "rust",
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531242,
+   "e_ref": -76.01050499531259,
+   "abs_err": 1.7053025658242404e-13,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 0.33354543801397085,
+   "jk_s": 0.0019828013610094786,
+   "jk_calls": 13,
+   "stv_s": 0.0058886162005364895,
+   "scf_wall_s": 0.4113274400588125,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0058886162005364895
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.33354543801397085
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0013445676304399967
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0004957786295562983
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0019828013610094786
+    }
+   },
+   "eri_stats": {
+    "computed": 18145,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.0001402059569954872,
+    "checked": 0.00018750503659248352,
+    "unchecked": 0.00017860508523881435
+   }
+  },
+  {
+   "variant": "tab",
+   "backend": "rust-tab",
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531235,
+   "e_ref": -76.01050499531259,
+   "abs_err": 2.4158453015843406e-13,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 0.13365811901167035,
+   "jk_s": 0.0019367581699043512,
+   "jk_calls": 13,
+   "stv_s": 0.002645275089889765,
+   "scf_wall_s": 0.2070530760101974,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.002645275089889765
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.13365811901167035
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0011193433310836554
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0004412462003529072
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0019367581699043512
+    }
+   },
+   "eri_stats": {
+    "computed": 18145,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.00014002202078700066,
+    "checked": 0.00018758699297904968,
+    "unchecked": 0.00017864489927887917
+   }
+  },
+  {
+   "variant": "unchecked",
+   "backend": "rust-unchecked",
+   "molecule": "h2o",
+   "nbf": 19,
+   "energy": -76.01050499531252,
+   "e_ref": -76.01050499531259,
+   "abs_err": 7.105427357601002e-14,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 0.07978667202405632,
+   "jk_s": 0.0024496791884303093,
+   "jk_calls": 13,
+   "stv_s": 0.0026409169659018517,
+   "scf_wall_s": 0.15383199998177588,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0026409169659018517
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.07978667202405632
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0011290616821497679
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.00044665252789855003
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0024496791884303093
+    }
+   },
+   "eri_stats": {
+    "computed": 18145,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.00011282786726951599,
+    "checked": 0.00015109311789274216,
+    "unchecked": 0.00014391704462468624
+   }
+  },
+  {
+   "variant": "sym8",
+   "backend": "rust",
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.1839820657345,
+   "e_ref": -56.18398206573501,
+   "abs_err": 5.115907697472721e-13,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 0.3338492549955845,
+   "jk_s": 0.003056631190702319,
+   "jk_calls": 13,
+   "stv_s": 0.0031115419697016478,
+   "scf_wall_s": 0.4099437799304724,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0031115419697016478
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.3338492549955845
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0011878826189786196
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0005301737692207098
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.003056631190702319
+    }
+   },
+   "eri_stats": {
+    "computed": 26796,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.00017407978884875774,
+    "checked": 0.00022851210087537766,
+    "unchecked": 0.00021864892914891243
+   }
+  },
+  {
+   "variant": "tab",
+   "backend": "rust-tab",
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.18398206573454,
+   "e_ref": -56.18398206573501,
+   "abs_err": 4.689582056016661e-13,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 0.14830289408564568,
+   "jk_s": 0.0025918642058968544,
+   "jk_calls": 13,
+   "stv_s": 0.003157383995130658,
+   "scf_wall_s": 0.22242968087084591,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.003157383995130658
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.14830289408564568
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0012040880974382162
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0004893324803560972
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0025918642058968544
+    }
+   },
+   "eri_stats": {
+    "computed": 26796,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.00017351307906210423,
+    "checked": 0.00022855005227029324,
+    "unchecked": 0.00021858210675418377
+   }
+  },
+  {
+   "variant": "unchecked",
+   "backend": "rust-unchecked",
+   "molecule": "nh3",
+   "nbf": 21,
+   "energy": -56.183982065734696,
+   "e_ref": -56.18398206573501,
+   "abs_err": 3.126388037344441e-13,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 0.09173153410665691,
+   "jk_s": 0.0032656111288815737,
+   "jk_calls": 13,
+   "stv_s": 0.0031070460099726915,
+   "scf_wall_s": 0.16633362811990082,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.0031070460099726915
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.09173153410665691
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.0011224173940718174
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.0004864239599555731
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 0.0032656111288815737
+    }
+   },
+   "eri_stats": {
+    "computed": 26796,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.00017345696687698364,
+    "checked": 0.00022888206876814365,
+    "unchecked": 0.0002188121434301138
+   }
+  },
+  {
+   "variant": "sym8",
+   "backend": "rust",
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.19509322654798,
+   "e_ref": -40.195093226547954,
+   "abs_err": 2.842170943040401e-14,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 0.4608923888299614,
+   "jk_s": 0.0034466248471289873,
+   "jk_calls": 12,
+   "stv_s": 0.004240615991875529,
+   "scf_wall_s": 0.5579109110403806,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.004240615991875529
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.4608923888299614
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.00103791244328022
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.00042372592724859715
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.0034466248471289873
+    }
+   },
+   "eri_stats": {
+    "computed": 38226,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.000252407044172287,
+    "checked": 0.00032731005921959877,
+    "unchecked": 0.0003144799266010523
+   }
+  },
+  {
+   "variant": "tab",
+   "backend": "rust-tab",
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.195093226548025,
+   "e_ref": -40.195093226547954,
+   "abs_err": 7.105427357601002e-14,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 0.1998185960110277,
+   "jk_s": 0.004107665969058871,
+   "jk_calls": 12,
+   "stv_s": 0.004215381108224392,
+   "scf_wall_s": 0.29811950703151524,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.004215381108224392
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.1998185960110277
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.0010811141692101955
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.00043035182170569897
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.004107665969058871
+    }
+   },
+   "eri_stats": {
+    "computed": 38226,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.00025217095389962196,
+    "checked": 0.0003275859635323286,
+    "unchecked": 0.00031441194005310535
+   }
+  },
+  {
+   "variant": "unchecked",
+   "backend": "rust-unchecked",
+   "molecule": "ch4",
+   "nbf": 23,
+   "energy": -40.19509322654798,
+   "e_ref": -40.195093226547954,
+   "abs_err": 2.842170943040401e-14,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 0.12743918085470796,
+   "jk_s": 0.004301964538171887,
+   "jk_calls": 12,
+   "stv_s": 0.004204245051369071,
+   "scf_wall_s": 0.22552251699380577,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.004204245051369071
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 0.12743918085470796
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.0011334121227264404
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.00043320166878402233
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.004301964538171887
+    }
+   },
+   "eri_stats": {
+    "computed": 38226,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.00025255209766328335,
+    "checked": 0.00032710214145481586,
+    "unchecked": 0.00031430204398930073
+   }
+  },
+  {
+   "variant": "sym8",
+   "backend": "rust",
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463208,
+   "e_ref": -78.03074400463223,
+   "abs_err": 1.4210854715202004e-13,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 5.537618943024427,
+   "jk_s": 0.02362182200886309,
+   "jk_calls": 12,
+   "stv_s": 0.01542503503151238,
+   "scf_wall_s": 5.762375683989376,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.01542503503151238
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 5.537618943024427
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.002811162732541561
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.0007288253400474787
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.02362182200886309
+    }
+   },
+   "eri_stats": {
+    "computed": 274911,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.001925766933709383,
+    "checked": 0.0024071468506008387,
+    "unchecked": 0.002354721073061228
+   }
+  },
+  {
+   "variant": "tab",
+   "backend": "rust-tab",
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463214,
+   "e_ref": -78.03074400463223,
+   "abs_err": 8.526512829121202e-14,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 1.7210701040457934,
+   "jk_s": 0.02371270675212145,
+   "jk_calls": 12,
+   "stv_s": 0.015436633955687284,
+   "scf_wall_s": 1.9460593578405678,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.015436633955687284
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.7210701040457934
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.002831327961757779
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.0007534024771302938
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.02371270675212145
+    }
+   },
+   "eri_stats": {
+    "computed": 274911,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.0019279250409454107,
+    "checked": 0.0024045289028435946,
+    "unchecked": 0.0023582209832966328
+   }
+  },
+  {
+   "variant": "unchecked",
+   "backend": "rust-unchecked",
+   "molecule": "c2h4",
+   "nbf": 38,
+   "energy": -78.03074400463217,
+   "e_ref": -78.03074400463223,
+   "abs_err": 5.684341886080802e-14,
+   "converged": true,
+   "iterations": 11,
+   "eri_s": 1.0802202341146767,
+   "jk_s": 0.029195894952863455,
+   "jk_calls": 12,
+   "stv_s": 0.015434066997841,
+   "scf_wall_s": 1.310583621961996,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.015434066997841
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 1.0802202341146767
+    },
+    "diag": {
+     "calls": 13,
+     "total_s": 0.0028034746646881104
+    },
+    "matmul": {
+     "calls": 48,
+     "total_s": 0.0007525654509663582
+    },
+    "JK": {
+     "calls": 12,
+     "total_s": 0.029195894952863455
+    }
+   },
+   "eri_stats": {
+    "computed": 274911,
+    "screened": 0
+   },
+   "jk_micro_s": {
+    "iter": 0.0019110538996756077,
+    "checked": 0.0024069189094007015,
+    "unchecked": 0.002355481032282114
+   }
+  },
+  {
+   "variant": "sym8",
+   "backend": "rust",
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70216365001798,
+   "e_ref": -230.70216365002167,
+   "abs_err": 3.694822225952521e-12,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 380.5392972200643,
+   "jk_s": 2.013387297745794,
+   "jk_calls": 13,
+   "stv_s": 0.21012254687957466,
+   "scf_wall_s": 384.23491358198225,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.21012254687957466
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 380.5392972200643
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.013482140144333243
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.005256418138742447
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 2.013387297745794
+    }
+   },
+   "eri_stats": {
+    "computed": 13621436,
+    "screened": 178195
+   },
+   "jk_micro_s": {
+    "iter": 0.15427052788436413,
+    "checked": 0.18178479094058275,
+    "unchecked": 0.16194386198185384
+   }
+  },
+  {
+   "variant": "tab",
+   "backend": "rust-tab",
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.70216365001997,
+   "e_ref": -230.70216365002167,
+   "abs_err": 1.7053025658242404e-12,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 92.18032920104451,
+   "jk_s": 2.0154470964334905,
+   "jk_calls": 13,
+   "stv_s": 0.2093195440247655,
+   "scf_wall_s": 95.88418258610182,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.2093195440247655
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 92.18032920104451
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.013328986009582877
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.005272736307233572
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 2.0154470964334905
+    }
+   },
+   "eri_stats": {
+    "computed": 13621436,
+    "screened": 178195
+   },
+   "jk_micro_s": {
+    "iter": 0.1527678540442139,
+    "checked": 0.18052480299957097,
+    "unchecked": 0.1620632871054113
+   }
+  },
+  {
+   "variant": "unchecked",
+   "backend": "rust-unchecked",
+   "molecule": "benzene",
+   "nbf": 102,
+   "energy": -230.702163650021,
+   "e_ref": -230.70216365002167,
+   "abs_err": 6.821210263296962e-13,
+   "converged": true,
+   "iterations": 12,
+   "eri_s": 56.72989387484267,
+   "jk_s": 2.1058347895741463,
+   "jk_calls": 13,
+   "stv_s": 0.21062622591853142,
+   "scf_wall_s": 60.51816605892964,
+   "kernels": {
+    "S,T,V": {
+     "calls": 1,
+     "total_s": 0.21062622591853142
+    },
+    "ERI": {
+     "calls": 1,
+     "total_s": 56.72989387484267
+    },
+    "diag": {
+     "calls": 14,
+     "total_s": 0.013876459794119
+    },
+    "matmul": {
+     "calls": 52,
+     "total_s": 0.005345906363800168
+    },
+    "JK": {
+     "calls": 13,
+     "total_s": 2.1058347895741463
+    }
+   },
+   "eri_stats": {
+    "computed": 13621436,
+    "screened": 178195
+   },
+   "jk_micro_s": {
+    "iter": 0.15494973701424897,
+    "checked": 0.18231950397603214,
+    "unchecked": 0.16009850590489805
+   }
+  }
+ ]
+}
